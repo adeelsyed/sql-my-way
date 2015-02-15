@@ -1,0 +1,3 @@
+1) let TSqlParser take care of tokenization and parsing -> frag.
+2) Use Arvind's code to convert to XML -> XDoc
+3) Write something to traverse the xml and output appropriately
