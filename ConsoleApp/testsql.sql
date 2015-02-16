@@ -1,14 +1,5 @@
-select Column1, Column2, Column1 + Column2 as SumOfCols from MyTable m 
---00
-where m.Id > 0
+--simplest select
+select col1, [select+from] from tab1 where col1 = 5
 
-
-select * from phone /*ggg*/ where phonenumber = '9256910800'
-				--set transaction isolation level read uncommitted
-				--update Phone
-				--set PhoneNumber = '3107175106'
-				--where PhoneNumber = '9256910800'
-
-select * from phone where phoneid in (34861465,50327981)
-
-exec prcIVRGetAccountBalance '3107175106'
+--all select clauses
+select col1, col2 into tab1 from tab2 where col1 = 5 and col2 = 1 group by col1, col2 having count(*) > 1 order by col3
