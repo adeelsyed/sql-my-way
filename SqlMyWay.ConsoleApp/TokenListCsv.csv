@@ -1,5 +1,5 @@
 Id,Text,TokenType,IsKeyword
-0,CREATE,Create,True
+0,ALTER,Alter,True
 2,PROCEDURE,Procedure,True
 4,[HumanResources],QuotedIdentifier,False
 5,.,Dot,False
@@ -97,8 +97,8 @@ Id,Text,TokenType,IsKeyword
 196,TRY,Identifier,False
 199,BEGIN,Begin,True
 201,CATCH,Identifier,False
-204,-- Rollback any active or uncommittable transactions before,SingleLineComment,False
-207,-- inserting information in the ErrorLog,SingleLineComment,False
+204,'-- Rollback any active or uncommittable transactions before,SingleLineComment,False
+207,'-- inserting information in the ErrorLog,SingleLineComment,False
 210,IF,If,True
 212,@@TRANCOUNT,Variable,False
 214,>,GreaterThan,False

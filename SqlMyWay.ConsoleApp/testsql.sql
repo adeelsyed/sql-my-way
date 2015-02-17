@@ -1,1 +1,0 @@
-select * from (select col1 from tab1) dt

@@ -64,7 +64,7 @@
     <None Include="TokenListCsv.csv" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="testsql.sql" />
+    <Content Include="SqlInput.sql" />
     <Content Include="XmlVisualiser.xml" />
   </ItemGroup>
   <ItemGroup>

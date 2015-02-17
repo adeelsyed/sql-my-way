@@ -1,916 +1,353 @@
 <TSqlScript memberName = 'root'>
-	<TSqlBatch memberName = 'Batches'>
-		<CreateProcedureStatement memberName = 'Statements'>
-			<ProcedureReference memberName = 'ProcedureReference'>
-				<SchemaObjectName memberName = 'Name'>
-					<Identifier memberName = 'SchemaIdentifier'>
-						HumanResources<QuoteType.SquareBracket/>
-						<StartOffset>17</StartOffset><FragmentLength>16</FragmentLength><StartLine>1</StartLine><StartColumn>18</StartColumn><FirstTokenIndex>4</FirstTokenIndex><LastTokenIndex>4</LastTokenIndex>
-					</Identifier>
-					<Identifier memberName = 'BaseIdentifier'>
-						uspUpdateEmployeeHireInfo<QuoteType.SquareBracket/>
-						<StartOffset>34</StartOffset><FragmentLength>27</FragmentLength><StartLine>1</StartLine><StartColumn>35</StartColumn><FirstTokenIndex>6</FirstTokenIndex><LastTokenIndex>6</LastTokenIndex>
-					</Identifier>
-					<Identifier memberName = 'Identifiers'>
-						HumanResources<QuoteType.SquareBracket/>
-						<StartOffset>17</StartOffset><FragmentLength>16</FragmentLength><StartLine>1</StartLine><StartColumn>18</StartColumn><FirstTokenIndex>4</FirstTokenIndex><LastTokenIndex>4</LastTokenIndex>
-					</Identifier>
-					<Identifier memberName = 'Identifiers'>
-						uspUpdateEmployeeHireInfo<QuoteType.SquareBracket/>
-						<StartOffset>34</StartOffset><FragmentLength>27</FragmentLength><StartLine>1</StartLine><StartColumn>35</StartColumn><FirstTokenIndex>6</FirstTokenIndex><LastTokenIndex>6</LastTokenIndex>
-					</Identifier>
-					<Count>2</Count>
-					<StartOffset>17</StartOffset>
-					<FragmentLength>44</FragmentLength>
-					<StartLine>1</StartLine>
-					<StartColumn>18</StartColumn>
-					<FirstTokenIndex>4</FirstTokenIndex>
-					<LastTokenIndex>6</LastTokenIndex>
-				</SchemaObjectName>
-				<StartOffset>17</StartOffset>
-				<FragmentLength>44</FragmentLength>
-				<StartLine>1</StartLine>
-				<StartColumn>18</StartColumn>
-				<FirstTokenIndex>4</FirstTokenIndex>
-				<LastTokenIndex>6</LastTokenIndex>
-			</ProcedureReference>
-			<IsForReplication>False</IsForReplication>
-			<ExecuteAsProcedureOption memberName = 'Options'>
-				<ExecuteAsClause memberName = 'ExecuteAs'>
-					<ExecuteAsOption.Caller/>
-					<StartOffset>277</StartOffset>
-					<FragmentLength>7</FragmentLength>
-					<StartLine>9</StartLine>
-					<StartColumn>6</StartColumn>
-					<FirstTokenIndex>63</FirstTokenIndex>
-					<LastTokenIndex>63</LastTokenIndex>
-				</ExecuteAsClause>
-				<ProcedureOptionKind.ExecuteAs/>
-				<StartOffset>277</StartOffset>
-				<FragmentLength>7</FragmentLength>
-				<StartLine>9</StartLine>
-				<StartColumn>6</StartColumn>
-				<FirstTokenIndex>63</FirstTokenIndex>
-				<LastTokenIndex>63</LastTokenIndex>
-			</ExecuteAsProcedureOption>
-			<ProcedureParameter memberName = 'Parameters'>
-				<IsVarying>False</IsVarying>
-				<ParameterModifier.None/>
-				<Identifier memberName = 'VariableName'>
-					@BusinessEntityID<QuoteType.NotQuoted/>
-					<StartOffset>67</StartOffset><FragmentLength>17</FragmentLength><StartLine>2</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>9</FirstTokenIndex><LastTokenIndex>9</LastTokenIndex>
-				</Identifier>
-				<SqlDataTypeReference memberName = 'DataType'>
-					<SqlDataTypeOption.Int/>
-					<SchemaObjectName memberName = 'Name'>
-						<Identifier memberName = 'BaseIdentifier'>
-							int<QuoteType.SquareBracket/>
-							<StartOffset>85</StartOffset><FragmentLength>5</FragmentLength><StartLine>2</StartLine><StartColumn>23</StartColumn><FirstTokenIndex>11</FirstTokenIndex><LastTokenIndex>11</LastTokenIndex>
-						</Identifier>
-						<Identifier memberName = 'Identifiers'>
-							int<QuoteType.SquareBracket/>
-							<StartOffset>85</StartOffset><FragmentLength>5</FragmentLength><StartLine>2</StartLine><StartColumn>23</StartColumn><FirstTokenIndex>11</FirstTokenIndex><LastTokenIndex>11</LastTokenIndex>
-						</Identifier>
-						<Count>1</Count>
-						<StartOffset>85</StartOffset>
-						<FragmentLength>5</FragmentLength>
-						<StartLine>2</StartLine>
-						<StartColumn>23</StartColumn>
-						<FirstTokenIndex>11</FirstTokenIndex>
-						<LastTokenIndex>11</LastTokenIndex>
-					</SchemaObjectName>
-					<StartOffset>85</StartOffset>
-					<FragmentLength>5</FragmentLength>
-					<StartLine>2</StartLine>
-					<StartColumn>23</StartColumn>
-					<FirstTokenIndex>11</FirstTokenIndex>
-					<LastTokenIndex>11</LastTokenIndex>
-				</SqlDataTypeReference>
-				<StartOffset>67</StartOffset>
-				<FragmentLength>23</FragmentLength>
-				<StartLine>2</StartLine>
-				<StartColumn>5</StartColumn>
-				<FirstTokenIndex>9</FirstTokenIndex>
-				<LastTokenIndex>11</LastTokenIndex>
-			</ProcedureParameter>
-			<ProcedureParameter memberName = 'Parameters'>
-				<IsVarying>False</IsVarying>
-				<ParameterModifier.None/>
-				<Identifier memberName = 'VariableName'>
-					@JobTitle<QuoteType.NotQuoted/>
-					<StartOffset>98</StartOffset><FragmentLength>9</FragmentLength><StartLine>3</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>16</FirstTokenIndex><LastTokenIndex>16</LastTokenIndex>
-				</Identifier>
-				<SqlDataTypeReference memberName = 'DataType'>
-					<SqlDataTypeOption.NVarChar/>
-					<IntegerLiteral memberName = 'Parameters'>
-						<LiteralType.Integer/>
-						50<StartOffset>119</StartOffset><FragmentLength>2</FragmentLength><StartLine>3</StartLine><StartColumn>26</StartColumn><FirstTokenIndex>20</FirstTokenIndex><LastTokenIndex>20</LastTokenIndex>
-					</IntegerLiteral>
-					<SchemaObjectName memberName = 'Name'>
-						<Identifier memberName = 'BaseIdentifier'>
-							nvarchar<QuoteType.SquareBracket/>
-							<StartOffset>108</StartOffset><FragmentLength>10</FragmentLength><StartLine>3</StartLine><StartColumn>15</StartColumn><FirstTokenIndex>18</FirstTokenIndex><LastTokenIndex>18</LastTokenIndex>
-						</Identifier>
-						<Identifier memberName = 'Identifiers'>
-							nvarchar<QuoteType.SquareBracket/>
-							<StartOffset>108</StartOffset><FragmentLength>10</FragmentLength><StartLine>3</StartLine><StartColumn>15</StartColumn><FirstTokenIndex>18</FirstTokenIndex><LastTokenIndex>18</LastTokenIndex>
-						</Identifier>
-						<Count>1</Count>
-						<StartOffset>108</StartOffset>
-						<FragmentLength>10</FragmentLength>
-						<StartLine>3</StartLine>
-						<StartColumn>15</StartColumn>
-						<FirstTokenIndex>18</FirstTokenIndex>
-						<LastTokenIndex>18</LastTokenIndex>
-					</SchemaObjectName>
-					<StartOffset>108</StartOffset>
-					<FragmentLength>14</FragmentLength>
-					<StartLine>3</StartLine>
-					<StartColumn>15</StartColumn>
-					<FirstTokenIndex>18</FirstTokenIndex>
-					<LastTokenIndex>21</LastTokenIndex>
-				</SqlDataTypeReference>
-				<StartOffset>98</StartOffset>
-				<FragmentLength>24</FragmentLength>
-				<StartLine>3</StartLine>
-				<StartColumn>5</StartColumn>
-				<FirstTokenIndex>16</FirstTokenIndex>
-				<LastTokenIndex>21</LastTokenIndex>
-			</ProcedureParameter>
-			<ProcedureParameter memberName = 'Parameters'>
-				<IsVarying>False</IsVarying>
-				<ParameterModifier.None/>
-				<Identifier memberName = 'VariableName'>
-					@HireDate<QuoteType.NotQuoted/>
-					<StartOffset>130</StartOffset><FragmentLength>9</FragmentLength><StartLine>4</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>26</FirstTokenIndex><LastTokenIndex>26</LastTokenIndex>
-				</Identifier>
-				<SqlDataTypeReference memberName = 'DataType'>
-					<SqlDataTypeOption.DateTime/>
-					<SchemaObjectName memberName = 'Name'>
-						<Identifier memberName = 'BaseIdentifier'>
-							datetime<QuoteType.SquareBracket/>
-							<StartOffset>140</StartOffset><FragmentLength>10</FragmentLength><StartLine>4</StartLine><StartColumn>15</StartColumn><FirstTokenIndex>28</FirstTokenIndex><LastTokenIndex>28</LastTokenIndex>
-						</Identifier>
-						<Identifier memberName = 'Identifiers'>
-							datetime<QuoteType.SquareBracket/>
-							<StartOffset>140</StartOffset><FragmentLength>10</FragmentLength><StartLine>4</StartLine><StartColumn>15</StartColumn><FirstTokenIndex>28</FirstTokenIndex><LastTokenIndex>28</LastTokenIndex>
-						</Identifier>
-						<Count>1</Count>
-						<StartOffset>140</StartOffset>
-						<FragmentLength>10</FragmentLength>
-						<StartLine>4</StartLine>
-						<StartColumn>15</StartColumn>
-						<FirstTokenIndex>28</FirstTokenIndex>
-						<LastTokenIndex>28</LastTokenIndex>
-					</SchemaObjectName>
-					<StartOffset>140</StartOffset>
-					<FragmentLength>10</FragmentLength>
-					<StartLine>4</StartLine>
-					<StartColumn>15</StartColumn>
-					<FirstTokenIndex>28</FirstTokenIndex>
-					<LastTokenIndex>28</LastTokenIndex>
-				</SqlDataTypeReference>
-				<StartOffset>130</StartOffset>
-				<FragmentLength>20</FragmentLength>
-				<StartLine>4</StartLine>
-				<StartColumn>5</StartColumn>
-				<FirstTokenIndex>26</FirstTokenIndex>
-				<LastTokenIndex>28</LastTokenIndex>
-			</ProcedureParameter>
-			<ProcedureParameter memberName = 'Parameters'>
-				<IsVarying>False</IsVarying>
-				<ParameterModifier.None/>
-				<Identifier memberName = 'VariableName'>
-					@RateChangeDate<QuoteType.NotQuoted/>
-					<StartOffset>158</StartOffset><FragmentLength>15</FragmentLength><StartLine>5</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>33</FirstTokenIndex><LastTokenIndex>33</LastTokenIndex>
-				</Identifier>
-				<SqlDataTypeReference memberName = 'DataType'>
-					<SqlDataTypeOption.DateTime/>
-					<SchemaObjectName memberName = 'Name'>
-						<Identifier memberName = 'BaseIdentifier'>
-							datetime<QuoteType.SquareBracket/>
-							<StartOffset>174</StartOffset><FragmentLength>10</FragmentLength><StartLine>5</StartLine><StartColumn>21</StartColumn><FirstTokenIndex>35</FirstTokenIndex><LastTokenIndex>35</LastTokenIndex>
-						</Identifier>
-						<Identifier memberName = 'Identifiers'>
-							datetime<QuoteType.SquareBracket/>
-							<StartOffset>174</StartOffset><FragmentLength>10</FragmentLength><StartLine>5</StartLine><StartColumn>21</StartColumn><FirstTokenIndex>35</FirstTokenIndex><LastTokenIndex>35</LastTokenIndex>
-						</Identifier>
-						<Count>1</Count>
-						<StartOffset>174</StartOffset>
-						<FragmentLength>10</FragmentLength>
-						<StartLine>5</StartLine>
-						<StartColumn>21</StartColumn>
-						<FirstTokenIndex>35</FirstTokenIndex>
-						<LastTokenIndex>35</LastTokenIndex>
-					</SchemaObjectName>
-					<StartOffset>174</StartOffset>
-					<FragmentLength>10</FragmentLength>
-					<StartLine>5</StartLine>
-					<StartColumn>21</StartColumn>
-					<FirstTokenIndex>35</FirstTokenIndex>
-					<LastTokenIndex>35</LastTokenIndex>
-				</SqlDataTypeReference>
-				<StartOffset>158</StartOffset>
-				<FragmentLength>26</FragmentLength>
-				<StartLine>5</StartLine>
-				<StartColumn>5</StartColumn>
-				<FirstTokenIndex>33</FirstTokenIndex>
-				<LastTokenIndex>35</LastTokenIndex>
-			</ProcedureParameter>
-			<ProcedureParameter memberName = 'Parameters'>
-				<IsVarying>False</IsVarying>
-				<ParameterModifier.None/>
-				<Identifier memberName = 'VariableName'>
-					@Rate<QuoteType.NotQuoted/>
-					<StartOffset>192</StartOffset><FragmentLength>5</FragmentLength><StartLine>6</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>40</FirstTokenIndex><LastTokenIndex>40</LastTokenIndex>
-				</Identifier>
-				<SqlDataTypeReference memberName = 'DataType'>
-					<SqlDataTypeOption.Money/>
-					<SchemaObjectName memberName = 'Name'>
-						<Identifier memberName = 'BaseIdentifier'>
-							money<QuoteType.SquareBracket/>
-							<StartOffset>198</StartOffset><FragmentLength>7</FragmentLength><StartLine>6</StartLine><StartColumn>11</StartColumn><FirstTokenIndex>42</FirstTokenIndex><LastTokenIndex>42</LastTokenIndex>
-						</Identifier>
-						<Identifier memberName = 'Identifiers'>
-							money<QuoteType.SquareBracket/>
-							<StartOffset>198</StartOffset><FragmentLength>7</FragmentLength><StartLine>6</StartLine><StartColumn>11</StartColumn><FirstTokenIndex>42</FirstTokenIndex><LastTokenIndex>42</LastTokenIndex>
-						</Identifier>
-						<Count>1</Count>
-						<StartOffset>198</StartOffset>
-						<FragmentLength>7</FragmentLength>
-						<StartLine>6</StartLine>
-						<StartColumn>11</StartColumn>
-						<FirstTokenIndex>42</FirstTokenIndex>
-						<LastTokenIndex>42</LastTokenIndex>
-					</SchemaObjectName>
-					<StartOffset>198</StartOffset>
-					<FragmentLength>7</FragmentLength>
-					<StartLine>6</StartLine>
-					<StartColumn>11</StartColumn>
-					<FirstTokenIndex>42</FirstTokenIndex>
-					<LastTokenIndex>42</LastTokenIndex>
-				</SqlDataTypeReference>
-				<StartOffset>192</StartOffset>
-				<FragmentLength>13</FragmentLength>
-				<StartLine>6</StartLine>
-				<StartColumn>5</StartColumn>
-				<FirstTokenIndex>40</FirstTokenIndex>
-				<LastTokenIndex>42</LastTokenIndex>
-			</ProcedureParameter>
-			<ProcedureParameter memberName = 'Parameters'>
-				<IsVarying>False</IsVarying>
-				<ParameterModifier.None/>
-				<Identifier memberName = 'VariableName'>
-					@PayFrequency<QuoteType.NotQuoted/>
-					<StartOffset>213</StartOffset><FragmentLength>13</FragmentLength><StartLine>7</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>47</FirstTokenIndex><LastTokenIndex>47</LastTokenIndex>
-				</Identifier>
-				<SqlDataTypeReference memberName = 'DataType'>
-					<SqlDataTypeOption.TinyInt/>
-					<SchemaObjectName memberName = 'Name'>
-						<Identifier memberName = 'BaseIdentifier'>
-							tinyint<QuoteType.SquareBracket/>
-							<StartOffset>227</StartOffset><FragmentLength>9</FragmentLength><StartLine>7</StartLine><StartColumn>19</StartColumn><FirstTokenIndex>49</FirstTokenIndex><LastTokenIndex>49</LastTokenIndex>
-						</Identifier>
-						<Identifier memberName = 'Identifiers'>
-							tinyint<QuoteType.SquareBracket/>
-							<StartOffset>227</StartOffset><FragmentLength>9</FragmentLength><StartLine>7</StartLine><StartColumn>19</StartColumn><FirstTokenIndex>49</FirstTokenIndex><LastTokenIndex>49</LastTokenIndex>
-						</Identifier>
-						<Count>1</Count>
-						<StartOffset>227</StartOffset>
-						<FragmentLength>9</FragmentLength>
-						<StartLine>7</StartLine>
-						<StartColumn>19</StartColumn>
-						<FirstTokenIndex>49</FirstTokenIndex>
-						<LastTokenIndex>49</LastTokenIndex>
-					</SchemaObjectName>
-					<StartOffset>227</StartOffset>
-					<FragmentLength>9</FragmentLength>
-					<StartLine>7</StartLine>
-					<StartColumn>19</StartColumn>
-					<FirstTokenIndex>49</FirstTokenIndex>
-					<LastTokenIndex>49</LastTokenIndex>
-				</SqlDataTypeReference>
-				<StartOffset>213</StartOffset>
-				<FragmentLength>23</FragmentLength>
-				<StartLine>7</StartLine>
-				<StartColumn>5</StartColumn>
-				<FirstTokenIndex>47</FirstTokenIndex>
-				<LastTokenIndex>49</LastTokenIndex>
-			</ProcedureParameter>
-			<ProcedureParameter memberName = 'Parameters'>
-				<IsVarying>False</IsVarying>
-				<ParameterModifier.None/>
-				<Identifier memberName = 'VariableName'>
-					@CurrentFlag<QuoteType.NotQuoted/>
-					<StartOffset>244</StartOffset><FragmentLength>12</FragmentLength><StartLine>8</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>54</FirstTokenIndex><LastTokenIndex>54</LastTokenIndex>
-				</Identifier>
-				<UserDataTypeReference memberName = 'DataType'>
-					<SchemaObjectName memberName = 'Name'>
-						<Identifier memberName = 'SchemaIdentifier'>
-							dbo<QuoteType.SquareBracket/>
-							<StartOffset>257</StartOffset><FragmentLength>5</FragmentLength><StartLine>8</StartLine><StartColumn>18</StartColumn><FirstTokenIndex>56</FirstTokenIndex><LastTokenIndex>56</LastTokenIndex>
-						</Identifier>
-						<Identifier memberName = 'BaseIdentifier'>
-							Flag<QuoteType.SquareBracket/>
-							<StartOffset>263</StartOffset><FragmentLength>6</FragmentLength><StartLine>8</StartLine><StartColumn>24</StartColumn><FirstTokenIndex>58</FirstTokenIndex><LastTokenIndex>58</LastTokenIndex>
-						</Identifier>
-						<Identifier memberName = 'Identifiers'>
-							dbo<QuoteType.SquareBracket/>
-							<StartOffset>257</StartOffset><FragmentLength>5</FragmentLength><StartLine>8</StartLine><StartColumn>18</StartColumn><FirstTokenIndex>56</FirstTokenIndex><LastTokenIndex>56</LastTokenIndex>
-						</Identifier>
-						<Identifier memberName = 'Identifiers'>
-							Flag<QuoteType.SquareBracket/>
-							<StartOffset>263</StartOffset><FragmentLength>6</FragmentLength><StartLine>8</StartLine><StartColumn>24</StartColumn><FirstTokenIndex>58</FirstTokenIndex><LastTokenIndex>58</LastTokenIndex>
-						</Identifier>
-						<Count>2</Count>
-						<StartOffset>257</StartOffset>
-						<FragmentLength>12</FragmentLength>
-						<StartLine>8</StartLine>
-						<StartColumn>18</StartColumn>
-						<FirstTokenIndex>56</FirstTokenIndex>
-						<LastTokenIndex>58</LastTokenIndex>
-					</SchemaObjectName>
-					<StartOffset>257</StartOffset>
-					<FragmentLength>12</FragmentLength>
-					<StartLine>8</StartLine>
-					<StartColumn>18</StartColumn>
-					<FirstTokenIndex>56</FirstTokenIndex>
-					<LastTokenIndex>58</LastTokenIndex>
-				</UserDataTypeReference>
-				<StartOffset>244</StartOffset>
-				<FragmentLength>25</FragmentLength>
-				<StartLine>8</StartLine>
-				<StartColumn>5</StartColumn>
-				<FirstTokenIndex>54</FirstTokenIndex>
-				<LastTokenIndex>58</LastTokenIndex>
-			</ProcedureParameter>
-			<StatementList memberName = 'StatementList'>
-				<BeginEndBlockStatement memberName = 'Statements'>
-					<StatementList memberName = 'StatementList'>
-						<PredicateSetStatement memberName = 'Statements'>
-							<SetOptions.NoCount/>
-							<IsOn>True</IsOn>
-							<StartOffset>311</StartOffset>
-							<FragmentLength>15</FragmentLength>
-							<StartLine>12</StartLine>
-							<StartColumn>5</StartColumn>
-							<FirstTokenIndex>74</FirstTokenIndex>
-							<LastTokenIndex>79</LastTokenIndex>
-						</PredicateSetStatement>
-						<TryCatchStatement memberName = 'Statements'>
-							<StatementList memberName = 'TryStatements'>
-								<BeginTransactionStatement memberName = 'Statements'>
-									<Distributed>False</Distributed>
-									<MarkDefined>False</MarkDefined>
-									<StartOffset>353</StartOffset>
-									<FragmentLength>18</FragmentLength>
-									<StartLine>15</StartLine>
-									<StartColumn>9</StartColumn>
-									<FirstTokenIndex>88</FirstTokenIndex>
-									<LastTokenIndex>91</LastTokenIndex>
-								</BeginTransactionStatement>
-								<UpdateStatement memberName = 'Statements'>
-									<UpdateSpecification memberName = 'UpdateSpecification'>
-										<AssignmentSetClause memberName = 'SetClauses'>
-											<ColumnReferenceExpression memberName = 'Column'>
-												<ColumnType.Regular/>
-												<MultiPartIdentifier memberName = 'MultiPartIdentifier'>
-													<Identifier memberName = 'Identifiers'>
-														JobTitle<QuoteType.SquareBracket/>
-														<StartOffset>432</StartOffset><FragmentLength>10</FragmentLength><StartLine>18</StartLine><StartColumn>13</StartColumn><FirstTokenIndex>105</FirstTokenIndex><LastTokenIndex>105</LastTokenIndex>
-													</Identifier>
-													<Count>1</Count>
-													<StartOffset>432</StartOffset>
-													<FragmentLength>10</FragmentLength>
-													<StartLine>18</StartLine>
-													<StartColumn>13</StartColumn>
-													<FirstTokenIndex>105</FirstTokenIndex>
-													<LastTokenIndex>105</LastTokenIndex>
-												</MultiPartIdentifier>
-												<StartOffset>432</StartOffset>
-												<FragmentLength>10</FragmentLength>
-												<StartLine>18</StartLine>
-												<StartColumn>13</StartColumn>
-												<FirstTokenIndex>105</FirstTokenIndex>
-												<LastTokenIndex>105</LastTokenIndex>
-											</ColumnReferenceExpression>
-											<VariableReference memberName = 'NewValue'>
-												@JobTitle<StartOffset>445</StartOffset><FragmentLength>9</FragmentLength><StartLine>18</StartLine><StartColumn>26</StartColumn><FirstTokenIndex>109</FirstTokenIndex><LastTokenIndex>109</LastTokenIndex>
-											</VariableReference>
-											<AssignmentKind.Equals/>
-											<StartOffset>432</StartOffset>
-											<FragmentLength>22</FragmentLength>
-											<StartLine>18</StartLine>
-											<StartColumn>13</StartColumn>
-											<FirstTokenIndex>105</FirstTokenIndex>
-											<LastTokenIndex>109</LastTokenIndex>
-										</AssignmentSetClause>
-										<AssignmentSetClause memberName = 'SetClauses'>
-											<ColumnReferenceExpression memberName = 'Column'>
-												<ColumnType.Regular/>
-												<MultiPartIdentifier memberName = 'MultiPartIdentifier'>
-													<Identifier memberName = 'Identifiers'>
-														HireDate<QuoteType.SquareBracket/>
-														<StartOffset>470</StartOffset><FragmentLength>10</FragmentLength><StartLine>19</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>114</FirstTokenIndex><LastTokenIndex>114</LastTokenIndex>
-													</Identifier>
-													<Count>1</Count>
-													<StartOffset>470</StartOffset>
-													<FragmentLength>10</FragmentLength>
-													<StartLine>19</StartLine>
-													<StartColumn>14</StartColumn>
-													<FirstTokenIndex>114</FirstTokenIndex>
-													<LastTokenIndex>114</LastTokenIndex>
-												</MultiPartIdentifier>
-												<StartOffset>470</StartOffset>
-												<FragmentLength>10</FragmentLength>
-												<StartLine>19</StartLine>
-												<StartColumn>14</StartColumn>
-												<FirstTokenIndex>114</FirstTokenIndex>
-												<LastTokenIndex>114</LastTokenIndex>
-											</ColumnReferenceExpression>
-											<VariableReference memberName = 'NewValue'>
-												@HireDate<StartOffset>483</StartOffset><FragmentLength>9</FragmentLength><StartLine>19</StartLine><StartColumn>27</StartColumn><FirstTokenIndex>118</FirstTokenIndex><LastTokenIndex>118</LastTokenIndex>
-											</VariableReference>
-											<AssignmentKind.Equals/>
-											<StartOffset>470</StartOffset>
-											<FragmentLength>22</FragmentLength>
-											<StartLine>19</StartLine>
-											<StartColumn>14</StartColumn>
-											<FirstTokenIndex>114</FirstTokenIndex>
-											<LastTokenIndex>118</LastTokenIndex>
-										</AssignmentSetClause>
-										<AssignmentSetClause memberName = 'SetClauses'>
-											<ColumnReferenceExpression memberName = 'Column'>
-												<ColumnType.Regular/>
-												<MultiPartIdentifier memberName = 'MultiPartIdentifier'>
-													<Identifier memberName = 'Identifiers'>
-														CurrentFlag<QuoteType.SquareBracket/>
-														<StartOffset>508</StartOffset><FragmentLength>13</FragmentLength><StartLine>20</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>123</FirstTokenIndex><LastTokenIndex>123</LastTokenIndex>
-													</Identifier>
-													<Count>1</Count>
-													<StartOffset>508</StartOffset>
-													<FragmentLength>13</FragmentLength>
-													<StartLine>20</StartLine>
-													<StartColumn>14</StartColumn>
-													<FirstTokenIndex>123</FirstTokenIndex>
-													<LastTokenIndex>123</LastTokenIndex>
-												</MultiPartIdentifier>
-												<StartOffset>508</StartOffset>
-												<FragmentLength>13</FragmentLength>
-												<StartLine>20</StartLine>
-												<StartColumn>14</StartColumn>
-												<FirstTokenIndex>123</FirstTokenIndex>
-												<LastTokenIndex>123</LastTokenIndex>
-											</ColumnReferenceExpression>
-											<VariableReference memberName = 'NewValue'>
-												@CurrentFlag<StartOffset>524</StartOffset><FragmentLength>12</FragmentLength><StartLine>20</StartLine><StartColumn>30</StartColumn><FirstTokenIndex>127</FirstTokenIndex><LastTokenIndex>127</LastTokenIndex>
-											</VariableReference>
-											<AssignmentKind.Equals/>
-											<StartOffset>508</StartOffset>
-											<FragmentLength>28</FragmentLength>
-											<StartLine>20</StartLine>
-											<StartColumn>14</StartColumn>
-											<FirstTokenIndex>123</FirstTokenIndex>
-											<LastTokenIndex>127</LastTokenIndex>
-										</AssignmentSetClause>
-										<WhereClause memberName = 'WhereClause'>
-											<BooleanComparisonExpression memberName = 'SearchCondition'>
-												<BooleanComparisonType.Equals/>
-												<ColumnReferenceExpression memberName = 'FirstExpression'>
-													<ColumnType.Regular/>
-													<MultiPartIdentifier memberName = 'MultiPartIdentifier'>
-														<Identifier memberName = 'Identifiers'>
-															BusinessEntityID<QuoteType.SquareBracket/>
-															<StartOffset>553</StartOffset><FragmentLength>18</FragmentLength><StartLine>21</StartLine><StartColumn>15</StartColumn><FirstTokenIndex>133</FirstTokenIndex><LastTokenIndex>133</LastTokenIndex>
-														</Identifier>
-														<Count>1</Count>
-														<StartOffset>553</StartOffset>
-														<FragmentLength>18</FragmentLength>
-														<StartLine>21</StartLine>
-														<StartColumn>15</StartColumn>
-														<FirstTokenIndex>133</FirstTokenIndex>
-														<LastTokenIndex>133</LastTokenIndex>
-													</MultiPartIdentifier>
-													<StartOffset>553</StartOffset>
-													<FragmentLength>18</FragmentLength>
-													<StartLine>21</StartLine>
-													<StartColumn>15</StartColumn>
-													<FirstTokenIndex>133</FirstTokenIndex>
-													<LastTokenIndex>133</LastTokenIndex>
-												</ColumnReferenceExpression>
-												<VariableReference memberName = 'SecondExpression'>
-													@BusinessEntityID<StartOffset>574</StartOffset><FragmentLength>17</FragmentLength><StartLine>21</StartLine><StartColumn>36</StartColumn><FirstTokenIndex>137</FirstTokenIndex><LastTokenIndex>137</LastTokenIndex>
-												</VariableReference>
-												<StartOffset>553</StartOffset>
-												<FragmentLength>38</FragmentLength>
-												<StartLine>21</StartLine>
-												<StartColumn>15</StartColumn>
-												<FirstTokenIndex>133</FirstTokenIndex>
-												<LastTokenIndex>137</LastTokenIndex>
-											</BooleanComparisonExpression>
-											<StartOffset>547</StartOffset>
-											<FragmentLength>44</FragmentLength>
-											<StartLine>21</StartLine>
-											<StartColumn>9</StartColumn>
-											<FirstTokenIndex>131</FirstTokenIndex>
-											<LastTokenIndex>137</LastTokenIndex>
-										</WhereClause>
-										<NamedTableReference memberName = 'Target'>
-											<SchemaObjectName memberName = 'SchemaObject'>
-												<Identifier memberName = 'SchemaIdentifier'>
-													HumanResources<QuoteType.SquareBracket/>
-													<StartOffset>390</StartOffset><FragmentLength>16</FragmentLength><StartLine>17</StartLine><StartColumn>16</StartColumn><FirstTokenIndex>97</FirstTokenIndex><LastTokenIndex>97</LastTokenIndex>
-												</Identifier>
-												<Identifier memberName = 'BaseIdentifier'>
-													Employee<QuoteType.SquareBracket/>
-													<StartOffset>407</StartOffset><FragmentLength>10</FragmentLength><StartLine>17</StartLine><StartColumn>33</StartColumn><FirstTokenIndex>99</FirstTokenIndex><LastTokenIndex>99</LastTokenIndex>
-												</Identifier>
-												<Identifier memberName = 'Identifiers'>
-													HumanResources<QuoteType.SquareBracket/>
-													<StartOffset>390</StartOffset><FragmentLength>16</FragmentLength><StartLine>17</StartLine><StartColumn>16</StartColumn><FirstTokenIndex>97</FirstTokenIndex><LastTokenIndex>97</LastTokenIndex>
-												</Identifier>
-												<Identifier memberName = 'Identifiers'>
-													Employee<QuoteType.SquareBracket/>
-													<StartOffset>407</StartOffset><FragmentLength>10</FragmentLength><StartLine>17</StartLine><StartColumn>33</StartColumn><FirstTokenIndex>99</FirstTokenIndex><LastTokenIndex>99</LastTokenIndex>
-												</Identifier>
-												<Count>2</Count>
-												<StartOffset>390</StartOffset>
-												<FragmentLength>27</FragmentLength>
-												<StartLine>17</StartLine>
-												<StartColumn>16</StartColumn>
-												<FirstTokenIndex>97</FirstTokenIndex>
-												<LastTokenIndex>99</LastTokenIndex>
-											</SchemaObjectName>
-											<StartOffset>390</StartOffset>
-											<FragmentLength>27</FragmentLength>
-											<StartLine>17</StartLine>
-											<StartColumn>16</StartColumn>
-											<FirstTokenIndex>97</FirstTokenIndex>
-											<LastTokenIndex>99</LastTokenIndex>
-										</NamedTableReference>
-										<StartOffset>383</StartOffset>
-										<FragmentLength>208</FragmentLength>
-										<StartLine>17</StartLine>
-										<StartColumn>9</StartColumn>
-										<FirstTokenIndex>95</FirstTokenIndex>
-										<LastTokenIndex>137</LastTokenIndex>
-									</UpdateSpecification>
-									<StartOffset>383</StartOffset>
-									<FragmentLength>209</FragmentLength>
-									<StartLine>17</StartLine>
-									<StartColumn>9</StartColumn>
-									<FirstTokenIndex>95</FirstTokenIndex>
-									<LastTokenIndex>138</LastTokenIndex>
-								</UpdateStatement>
-								<InsertStatement memberName = 'Statements'>
-									<InsertSpecification memberName = 'InsertSpecification'>
-										<InsertOption.Into/>
-										<ValuesInsertSource memberName = 'InsertSource'>
-											<IsDefaultValues>False</IsDefaultValues>
-											<RowValue memberName = 'RowValues'>
-												<VariableReference memberName = 'ColumnValues'>
-													@BusinessEntityID<StartOffset>788</StartOffset><FragmentLength>17</FragmentLength><StartLine>28</StartLine><StartColumn>17</StartColumn><FirstTokenIndex>173</FirstTokenIndex><LastTokenIndex>173</LastTokenIndex>
-												</VariableReference>
-												<VariableReference memberName = 'ColumnValues'>
-													@RateChangeDate<StartOffset>807</StartOffset><FragmentLength>15</FragmentLength><StartLine>28</StartLine><StartColumn>36</StartColumn><FirstTokenIndex>176</FirstTokenIndex><LastTokenIndex>176</LastTokenIndex>
-												</VariableReference>
-												<VariableReference memberName = 'ColumnValues'>
-													@Rate<StartOffset>824</StartOffset><FragmentLength>5</FragmentLength><StartLine>28</StartLine><StartColumn>53</StartColumn><FirstTokenIndex>179</FirstTokenIndex><LastTokenIndex>179</LastTokenIndex>
-												</VariableReference>
-												<VariableReference memberName = 'ColumnValues'>
-													@PayFrequency<StartOffset>831</StartOffset><FragmentLength>13</FragmentLength><StartLine>28</StartLine><StartColumn>60</StartColumn><FirstTokenIndex>182</FirstTokenIndex><LastTokenIndex>182</LastTokenIndex>
-												</VariableReference>
-												<StartOffset>787</StartOffset>
-												<FragmentLength>58</FragmentLength>
-												<StartLine>28</StartLine>
-												<StartColumn>16</StartColumn>
-												<FirstTokenIndex>172</FirstTokenIndex>
-												<LastTokenIndex>183</LastTokenIndex>
-											</RowValue>
-											<StartOffset>780</StartOffset>
-											<FragmentLength>65</FragmentLength>
-											<StartLine>28</StartLine>
-											<StartColumn>9</StartColumn>
-											<FirstTokenIndex>170</FirstTokenIndex>
-											<LastTokenIndex>183</LastTokenIndex>
-										</ValuesInsertSource>
-										<ColumnReferenceExpression memberName = 'Columns'>
-											<ColumnType.Regular/>
-											<MultiPartIdentifier memberName = 'MultiPartIdentifier'>
-												<Identifier memberName = 'Identifiers'>
-													BusinessEntityID<QuoteType.SquareBracket/>
-													<StartOffset>669</StartOffset><FragmentLength>18</FragmentLength><StartLine>24</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>153</FirstTokenIndex><LastTokenIndex>153</LastTokenIndex>
-												</Identifier>
-												<Count>1</Count>
-												<StartOffset>669</StartOffset>
-												<FragmentLength>18</FragmentLength>
-												<StartLine>24</StartLine>
-												<StartColumn>14</StartColumn>
-												<FirstTokenIndex>153</FirstTokenIndex>
-												<LastTokenIndex>153</LastTokenIndex>
-											</MultiPartIdentifier>
-											<StartOffset>669</StartOffset>
-											<FragmentLength>18</FragmentLength>
-											<StartLine>24</StartLine>
-											<StartColumn>14</StartColumn>
-											<FirstTokenIndex>153</FirstTokenIndex>
-											<LastTokenIndex>153</LastTokenIndex>
-										</ColumnReferenceExpression>
-										<ColumnReferenceExpression memberName = 'Columns'>
-											<ColumnType.Regular/>
-											<MultiPartIdentifier memberName = 'MultiPartIdentifier'>
-												<Identifier memberName = 'Identifiers'>
-													RateChangeDate<QuoteType.SquareBracket/>
-													<StartOffset>702</StartOffset><FragmentLength>16</FragmentLength><StartLine>25</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>157</FirstTokenIndex><LastTokenIndex>157</LastTokenIndex>
-												</Identifier>
-												<Count>1</Count>
-												<StartOffset>702</StartOffset>
-												<FragmentLength>16</FragmentLength>
-												<StartLine>25</StartLine>
-												<StartColumn>14</StartColumn>
-												<FirstTokenIndex>157</FirstTokenIndex>
-												<LastTokenIndex>157</LastTokenIndex>
-											</MultiPartIdentifier>
-											<StartOffset>702</StartOffset>
-											<FragmentLength>16</FragmentLength>
-											<StartLine>25</StartLine>
-											<StartColumn>14</StartColumn>
-											<FirstTokenIndex>157</FirstTokenIndex>
-											<LastTokenIndex>157</LastTokenIndex>
-										</ColumnReferenceExpression>
-										<ColumnReferenceExpression memberName = 'Columns'>
-											<ColumnType.Regular/>
-											<MultiPartIdentifier memberName = 'MultiPartIdentifier'>
-												<Identifier memberName = 'Identifiers'>
-													Rate<QuoteType.SquareBracket/>
-													<StartOffset>733</StartOffset><FragmentLength>6</FragmentLength><StartLine>26</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>161</FirstTokenIndex><LastTokenIndex>161</LastTokenIndex>
-												</Identifier>
-												<Count>1</Count>
-												<StartOffset>733</StartOffset>
-												<FragmentLength>6</FragmentLength>
-												<StartLine>26</StartLine>
-												<StartColumn>14</StartColumn>
-												<FirstTokenIndex>161</FirstTokenIndex>
-												<LastTokenIndex>161</LastTokenIndex>
-											</MultiPartIdentifier>
-											<StartOffset>733</StartOffset>
-											<FragmentLength>6</FragmentLength>
-											<StartLine>26</StartLine>
-											<StartColumn>14</StartColumn>
-											<FirstTokenIndex>161</FirstTokenIndex>
-											<LastTokenIndex>161</LastTokenIndex>
-										</ColumnReferenceExpression>
-										<ColumnReferenceExpression memberName = 'Columns'>
-											<ColumnType.Regular/>
-											<MultiPartIdentifier memberName = 'MultiPartIdentifier'>
-												<Identifier memberName = 'Identifiers'>
-													PayFrequency<QuoteType.SquareBracket/>
-													<StartOffset>754</StartOffset><FragmentLength>14</FragmentLength><StartLine>27</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>165</FirstTokenIndex><LastTokenIndex>165</LastTokenIndex>
-												</Identifier>
-												<Count>1</Count>
-												<StartOffset>754</StartOffset>
-												<FragmentLength>14</FragmentLength>
-												<StartLine>27</StartLine>
-												<StartColumn>14</StartColumn>
-												<FirstTokenIndex>165</FirstTokenIndex>
-												<LastTokenIndex>165</LastTokenIndex>
-											</MultiPartIdentifier>
-											<StartOffset>754</StartOffset>
-											<FragmentLength>14</FragmentLength>
-											<StartLine>27</StartLine>
-											<StartColumn>14</StartColumn>
-											<FirstTokenIndex>165</FirstTokenIndex>
-											<LastTokenIndex>165</LastTokenIndex>
-										</ColumnReferenceExpression>
-										<NamedTableReference memberName = 'Target'>
-											<SchemaObjectName memberName = 'SchemaObject'>
-												<Identifier memberName = 'SchemaIdentifier'>
-													HumanResources<QuoteType.SquareBracket/>
-													<StartOffset>616</StartOffset><FragmentLength>16</FragmentLength><StartLine>23</StartLine><StartColumn>21</StartColumn><FirstTokenIndex>146</FirstTokenIndex><LastTokenIndex>146</LastTokenIndex>
-												</Identifier>
-												<Identifier memberName = 'BaseIdentifier'>
-													EmployeePayHistory<QuoteType.SquareBracket/>
-													<StartOffset>633</StartOffset><FragmentLength>20</FragmentLength><StartLine>23</StartLine><StartColumn>38</StartColumn><FirstTokenIndex>148</FirstTokenIndex><LastTokenIndex>148</LastTokenIndex>
-												</Identifier>
-												<Identifier memberName = 'Identifiers'>
-													HumanResources<QuoteType.SquareBracket/>
-													<StartOffset>616</StartOffset><FragmentLength>16</FragmentLength><StartLine>23</StartLine><StartColumn>21</StartColumn><FirstTokenIndex>146</FirstTokenIndex><LastTokenIndex>146</LastTokenIndex>
-												</Identifier>
-												<Identifier memberName = 'Identifiers'>
-													EmployeePayHistory<QuoteType.SquareBracket/>
-													<StartOffset>633</StartOffset><FragmentLength>20</FragmentLength><StartLine>23</StartLine><StartColumn>38</StartColumn><FirstTokenIndex>148</FirstTokenIndex><LastTokenIndex>148</LastTokenIndex>
-												</Identifier>
-												<Count>2</Count>
-												<StartOffset>616</StartOffset>
-												<FragmentLength>37</FragmentLength>
-												<StartLine>23</StartLine>
-												<StartColumn>21</StartColumn>
-												<FirstTokenIndex>146</FirstTokenIndex>
-												<LastTokenIndex>148</LastTokenIndex>
-											</SchemaObjectName>
-											<StartOffset>616</StartOffset>
-											<FragmentLength>37</FragmentLength>
-											<StartLine>23</StartLine>
-											<StartColumn>21</StartColumn>
-											<FirstTokenIndex>146</FirstTokenIndex>
-											<LastTokenIndex>148</LastTokenIndex>
-										</NamedTableReference>
-										<StartOffset>604</StartOffset>
-										<FragmentLength>241</FragmentLength>
-										<StartLine>23</StartLine>
-										<StartColumn>9</StartColumn>
-										<FirstTokenIndex>142</FirstTokenIndex>
-										<LastTokenIndex>183</LastTokenIndex>
-									</InsertSpecification>
-									<StartOffset>604</StartOffset>
-									<FragmentLength>242</FragmentLength>
-									<StartLine>23</StartLine>
-									<StartColumn>9</StartColumn>
-									<FirstTokenIndex>142</FirstTokenIndex>
-									<LastTokenIndex>184</LastTokenIndex>
-								</InsertStatement>
-								<CommitTransactionStatement memberName = 'Statements'>
-									<StartOffset>858</StartOffset>
-									<FragmentLength>19</FragmentLength>
-									<StartLine>30</StartLine>
-									<StartColumn>9</StartColumn>
-									<FirstTokenIndex>188</FirstTokenIndex>
-									<LastTokenIndex>191</LastTokenIndex>
-								</CommitTransactionStatement>
-								<StartOffset>353</StartOffset>
-								<FragmentLength>524</FragmentLength>
-								<StartLine>15</StartLine>
-								<StartColumn>9</StartColumn>
-								<FirstTokenIndex>88</FirstTokenIndex>
-								<LastTokenIndex>191</LastTokenIndex>
-							</StatementList>
-							<StatementList memberName = 'CatchStatements'>
-								<IfStatement memberName = 'Statements'>
-									<BooleanComparisonExpression memberName = 'Predicate'>
-										<BooleanComparisonType.GreaterThan/>
-										<GlobalVariableExpression memberName = 'FirstExpression'>
-											@@TRANCOUNT<StartOffset>1039</StartOffset><FragmentLength>11</FragmentLength><StartLine>35</StartLine><StartColumn>12</StartColumn><FirstTokenIndex>212</FirstTokenIndex><LastTokenIndex>212</LastTokenIndex>
-										</GlobalVariableExpression>
-										<IntegerLiteral memberName = 'SecondExpression'>
-											<LiteralType.Integer/>
-											0<StartOffset>1053</StartOffset><FragmentLength>1</FragmentLength><StartLine>35</StartLine><StartColumn>26</StartColumn><FirstTokenIndex>216</FirstTokenIndex><LastTokenIndex>216</LastTokenIndex>
-										</IntegerLiteral>
-										<StartOffset>1039</StartOffset>
-										<FragmentLength>15</FragmentLength>
-										<StartLine>35</StartLine>
-										<StartColumn>12</StartColumn>
-										<FirstTokenIndex>212</FirstTokenIndex>
-										<LastTokenIndex>216</LastTokenIndex>
-									</BooleanComparisonExpression>
-									<BeginEndBlockStatement memberName = 'ThenStatement'>
-										<StatementList memberName = 'StatementList'>
-											<RollbackTransactionStatement memberName = 'Statements'>
-												<StartOffset>1083</StartOffset>
-												<FragmentLength>21</FragmentLength>
-												<StartLine>37</StartLine>
-												<StartColumn>13</StartColumn>
-												<FirstTokenIndex>222</FirstTokenIndex>
-												<LastTokenIndex>225</LastTokenIndex>
-											</RollbackTransactionStatement>
-											<StartOffset>-1</StartOffset>
-											<FragmentLength>-1</FragmentLength>
-											<StartLine>-1</StartLine>
-											<StartColumn>-1</StartColumn>
-											<FirstTokenIndex>-1</FirstTokenIndex>
-											<LastTokenIndex>-1</LastTokenIndex>
-										</StatementList>
-										<StartOffset>1064</StartOffset>
-										<FragmentLength>53</FragmentLength>
-										<StartLine>36</StartLine>
-										<StartColumn>9</StartColumn>
-										<FirstTokenIndex>219</FirstTokenIndex>
-										<LastTokenIndex>228</LastTokenIndex>
-									</BeginEndBlockStatement>
-									<StartOffset>1036</StartOffset>
-									<FragmentLength>81</FragmentLength>
-									<StartLine>35</StartLine>
-									<StartColumn>9</StartColumn>
-									<FirstTokenIndex>210</FirstTokenIndex>
-									<LastTokenIndex>228</LastTokenIndex>
-								</IfStatement>
-								<ExecuteStatement memberName = 'Statements'>
-									<ExecuteSpecification memberName = 'ExecuteSpecification'>
-										<ExecutableProcedureReference memberName = 'ExecutableEntity'>
-											<ProcedureReferenceName memberName = 'ProcedureReference'>
-												<ProcedureReference memberName = 'ProcedureReference'>
-													<SchemaObjectName memberName = 'Name'>
-														<Identifier memberName = 'SchemaIdentifier'>
-															dbo<QuoteType.SquareBracket/>
-															<StartOffset>1137</StartOffset><FragmentLength>5</FragmentLength><StartLine>40</StartLine><StartColumn>17</StartColumn><FirstTokenIndex>234</FirstTokenIndex><LastTokenIndex>234</LastTokenIndex>
-														</Identifier>
-														<Identifier memberName = 'BaseIdentifier'>
-															uspLogError<QuoteType.SquareBracket/>
-															<StartOffset>1143</StartOffset><FragmentLength>13</FragmentLength><StartLine>40</StartLine><StartColumn>23</StartColumn><FirstTokenIndex>236</FirstTokenIndex><LastTokenIndex>236</LastTokenIndex>
-														</Identifier>
-														<Identifier memberName = 'Identifiers'>
-															dbo<QuoteType.SquareBracket/>
-															<StartOffset>1137</StartOffset><FragmentLength>5</FragmentLength><StartLine>40</StartLine><StartColumn>17</StartColumn><FirstTokenIndex>234</FirstTokenIndex><LastTokenIndex>234</LastTokenIndex>
-														</Identifier>
-														<Identifier memberName = 'Identifiers'>
-															uspLogError<QuoteType.SquareBracket/>
-															<StartOffset>1143</StartOffset><FragmentLength>13</FragmentLength><StartLine>40</StartLine><StartColumn>23</StartColumn><FirstTokenIndex>236</FirstTokenIndex><LastTokenIndex>236</LastTokenIndex>
-														</Identifier>
-														<Count>2</Count>
-														<StartOffset>1137</StartOffset>
-														<FragmentLength>19</FragmentLength>
-														<StartLine>40</StartLine>
-														<StartColumn>17</StartColumn>
-														<FirstTokenIndex>234</FirstTokenIndex>
-														<LastTokenIndex>236</LastTokenIndex>
-													</SchemaObjectName>
-													<StartOffset>1137</StartOffset>
-													<FragmentLength>19</FragmentLength>
-													<StartLine>40</StartLine>
-													<StartColumn>17</StartColumn>
-													<FirstTokenIndex>234</FirstTokenIndex>
-													<LastTokenIndex>236</LastTokenIndex>
-												</ProcedureReference>
-												<StartOffset>1137</StartOffset>
-												<FragmentLength>19</FragmentLength>
-												<StartLine>40</StartLine>
-												<StartColumn>17</StartColumn>
-												<FirstTokenIndex>234</FirstTokenIndex>
-												<LastTokenIndex>236</LastTokenIndex>
-											</ProcedureReferenceName>
-											<StartOffset>1137</StartOffset>
-											<FragmentLength>19</FragmentLength>
-											<StartLine>40</StartLine>
-											<StartColumn>17</StartColumn>
-											<FirstTokenIndex>234</FirstTokenIndex>
-											<LastTokenIndex>236</LastTokenIndex>
-										</ExecutableProcedureReference>
-										<StartOffset>1129</StartOffset>
-										<FragmentLength>27</FragmentLength>
-										<StartLine>40</StartLine>
-										<StartColumn>9</StartColumn>
-										<FirstTokenIndex>232</FirstTokenIndex>
-										<LastTokenIndex>236</LastTokenIndex>
-									</ExecuteSpecification>
-									<StartOffset>1129</StartOffset>
-									<FragmentLength>28</FragmentLength>
-									<StartLine>40</StartLine>
-									<StartColumn>9</StartColumn>
-									<FirstTokenIndex>232</FirstTokenIndex>
-									<LastTokenIndex>237</LastTokenIndex>
-								</ExecuteStatement>
-								<StartOffset>1036</StartOffset>
-								<FragmentLength>121</FragmentLength>
-								<StartLine>35</StartLine>
-								<StartColumn>9</StartColumn>
-								<FirstTokenIndex>210</FirstTokenIndex>
-								<LastTokenIndex>237</LastTokenIndex>
-							</StatementList>
-							<StartOffset>334</StartOffset>
-							<FragmentLength>839</FragmentLength>
-							<StartLine>14</StartLine>
-							<StartColumn>5</StartColumn>
-							<FirstTokenIndex>83</FirstTokenIndex>
-							<LastTokenIndex>243</LastTokenIndex>
-						</TryCatchStatement>
-						<StartOffset>-1</StartOffset>
-						<FragmentLength>-1</FragmentLength>
-						<StartLine>-1</StartLine>
-						<StartColumn>-1</StartColumn>
-						<FirstTokenIndex>-1</FirstTokenIndex>
-						<LastTokenIndex>-1</LastTokenIndex>
-					</StatementList>
-					<StartOffset>300</StartOffset>
-					<FragmentLength>879</FragmentLength>
-					<StartLine>11</StartLine>
-					<StartColumn>1</StartColumn>
-					<FirstTokenIndex>71</FirstTokenIndex>
-					<LastTokenIndex>246</LastTokenIndex>
-				</BeginEndBlockStatement>
-				<StartOffset>300</StartOffset>
-				<FragmentLength>879</FragmentLength>
-				<StartLine>11</StartLine>
-				<StartColumn>1</StartColumn>
-				<FirstTokenIndex>71</FirstTokenIndex>
-				<LastTokenIndex>246</LastTokenIndex>
-			</StatementList>
-			<StartOffset>0</StartOffset>
-			<FragmentLength>1179</FragmentLength>
-			<StartLine>1</StartLine>
-			<StartColumn>1</StartColumn>
-			<FirstTokenIndex>0</FirstTokenIndex>
-			<LastTokenIndex>246</LastTokenIndex>
-		</CreateProcedureStatement>
-		<StartOffset>0</StartOffset>
-		<FragmentLength>1179</FragmentLength>
-		<StartLine>1</StartLine>
-		<StartColumn>1</StartColumn>
-		<FirstTokenIndex>0</FirstTokenIndex>
-		<LastTokenIndex>246</LastTokenIndex>
-	</TSqlBatch>
-	<StartOffset>0</StartOffset>
-	<FragmentLength>1179</FragmentLength>
-	<StartLine>1</StartLine>
-	<StartColumn>1</StartColumn>
-	<FirstTokenIndex>0</FirstTokenIndex>
-	<LastTokenIndex>247</LastTokenIndex>
-</TSqlScript>
+<TSqlBatch memberName = 'Batches'>
+<AlterProcedureStatement memberName = 'Statements'>
+<ProcedureReference memberName = 'ProcedureReference'>
+<SchemaObjectName memberName = 'Name'>
+<Identifier memberName = 'SchemaIdentifier'>
+HumanResources<QuoteType.SquareBracket/>
+<StartOffset>16</StartOffset><FragmentLength>16</FragmentLength><StartLine>1</StartLine><StartColumn>17</StartColumn><FirstTokenIndex>4</FirstTokenIndex><LastTokenIndex>4</LastTokenIndex></Identifier>
+<Identifier memberName = 'BaseIdentifier'>
+uspUpdateEmployeeHireInfo<QuoteType.SquareBracket/>
+<StartOffset>33</StartOffset><FragmentLength>27</FragmentLength><StartLine>1</StartLine><StartColumn>34</StartColumn><FirstTokenIndex>6</FirstTokenIndex><LastTokenIndex>6</LastTokenIndex></Identifier>
+<Identifier memberName = 'Identifiers'>
+HumanResources<QuoteType.SquareBracket/>
+<StartOffset>16</StartOffset><FragmentLength>16</FragmentLength><StartLine>1</StartLine><StartColumn>17</StartColumn><FirstTokenIndex>4</FirstTokenIndex><LastTokenIndex>4</LastTokenIndex></Identifier>
+<Identifier memberName = 'Identifiers'>
+uspUpdateEmployeeHireInfo<QuoteType.SquareBracket/>
+<StartOffset>33</StartOffset><FragmentLength>27</FragmentLength><StartLine>1</StartLine><StartColumn>34</StartColumn><FirstTokenIndex>6</FirstTokenIndex><LastTokenIndex>6</LastTokenIndex></Identifier>
+<Count>2</Count><StartOffset>16</StartOffset><FragmentLength>44</FragmentLength><StartLine>1</StartLine><StartColumn>17</StartColumn><FirstTokenIndex>4</FirstTokenIndex><LastTokenIndex>6</LastTokenIndex></SchemaObjectName>
+<StartOffset>16</StartOffset><FragmentLength>44</FragmentLength><StartLine>1</StartLine><StartColumn>17</StartColumn><FirstTokenIndex>4</FirstTokenIndex><LastTokenIndex>6</LastTokenIndex></ProcedureReference>
+<IsForReplication>False</IsForReplication><ExecuteAsProcedureOption memberName = 'Options'>
+<ExecuteAsClause memberName = 'ExecuteAs'>
+<ExecuteAsOption.Caller/>
+<StartOffset>276</StartOffset><FragmentLength>7</FragmentLength><StartLine>9</StartLine><StartColumn>6</StartColumn><FirstTokenIndex>63</FirstTokenIndex><LastTokenIndex>63</LastTokenIndex></ExecuteAsClause>
+<ProcedureOptionKind.ExecuteAs/>
+<StartOffset>276</StartOffset><FragmentLength>7</FragmentLength><StartLine>9</StartLine><StartColumn>6</StartColumn><FirstTokenIndex>63</FirstTokenIndex><LastTokenIndex>63</LastTokenIndex></ExecuteAsProcedureOption>
+<ProcedureParameter memberName = 'Parameters'>
+<IsVarying>False</IsVarying><ParameterModifier.None/>
+<Identifier memberName = 'VariableName'>
+@BusinessEntityID<QuoteType.NotQuoted/>
+<StartOffset>66</StartOffset><FragmentLength>17</FragmentLength><StartLine>2</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>9</FirstTokenIndex><LastTokenIndex>9</LastTokenIndex></Identifier>
+<SqlDataTypeReference memberName = 'DataType'>
+<SqlDataTypeOption.Int/>
+<SchemaObjectName memberName = 'Name'>
+<Identifier memberName = 'BaseIdentifier'>
+int<QuoteType.SquareBracket/>
+<StartOffset>84</StartOffset><FragmentLength>5</FragmentLength><StartLine>2</StartLine><StartColumn>23</StartColumn><FirstTokenIndex>11</FirstTokenIndex><LastTokenIndex>11</LastTokenIndex></Identifier>
+<Identifier memberName = 'Identifiers'>
+int<QuoteType.SquareBracket/>
+<StartOffset>84</StartOffset><FragmentLength>5</FragmentLength><StartLine>2</StartLine><StartColumn>23</StartColumn><FirstTokenIndex>11</FirstTokenIndex><LastTokenIndex>11</LastTokenIndex></Identifier>
+<Count>1</Count><StartOffset>84</StartOffset><FragmentLength>5</FragmentLength><StartLine>2</StartLine><StartColumn>23</StartColumn><FirstTokenIndex>11</FirstTokenIndex><LastTokenIndex>11</LastTokenIndex></SchemaObjectName>
+<StartOffset>84</StartOffset><FragmentLength>5</FragmentLength><StartLine>2</StartLine><StartColumn>23</StartColumn><FirstTokenIndex>11</FirstTokenIndex><LastTokenIndex>11</LastTokenIndex></SqlDataTypeReference>
+<StartOffset>66</StartOffset><FragmentLength>23</FragmentLength><StartLine>2</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>9</FirstTokenIndex><LastTokenIndex>11</LastTokenIndex></ProcedureParameter>
+<ProcedureParameter memberName = 'Parameters'>
+<IsVarying>False</IsVarying><ParameterModifier.None/>
+<Identifier memberName = 'VariableName'>
+@JobTitle<QuoteType.NotQuoted/>
+<StartOffset>97</StartOffset><FragmentLength>9</FragmentLength><StartLine>3</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>16</FirstTokenIndex><LastTokenIndex>16</LastTokenIndex></Identifier>
+<SqlDataTypeReference memberName = 'DataType'>
+<SqlDataTypeOption.NVarChar/>
+<IntegerLiteral memberName = 'Parameters'>
+<LiteralType.Integer/>
+50<StartOffset>118</StartOffset><FragmentLength>2</FragmentLength><StartLine>3</StartLine><StartColumn>26</StartColumn><FirstTokenIndex>20</FirstTokenIndex><LastTokenIndex>20</LastTokenIndex></IntegerLiteral>
+<SchemaObjectName memberName = 'Name'>
+<Identifier memberName = 'BaseIdentifier'>
+nvarchar<QuoteType.SquareBracket/>
+<StartOffset>107</StartOffset><FragmentLength>10</FragmentLength><StartLine>3</StartLine><StartColumn>15</StartColumn><FirstTokenIndex>18</FirstTokenIndex><LastTokenIndex>18</LastTokenIndex></Identifier>
+<Identifier memberName = 'Identifiers'>
+nvarchar<QuoteType.SquareBracket/>
+<StartOffset>107</StartOffset><FragmentLength>10</FragmentLength><StartLine>3</StartLine><StartColumn>15</StartColumn><FirstTokenIndex>18</FirstTokenIndex><LastTokenIndex>18</LastTokenIndex></Identifier>
+<Count>1</Count><StartOffset>107</StartOffset><FragmentLength>10</FragmentLength><StartLine>3</StartLine><StartColumn>15</StartColumn><FirstTokenIndex>18</FirstTokenIndex><LastTokenIndex>18</LastTokenIndex></SchemaObjectName>
+<StartOffset>107</StartOffset><FragmentLength>14</FragmentLength><StartLine>3</StartLine><StartColumn>15</StartColumn><FirstTokenIndex>18</FirstTokenIndex><LastTokenIndex>21</LastTokenIndex></SqlDataTypeReference>
+<StartOffset>97</StartOffset><FragmentLength>24</FragmentLength><StartLine>3</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>16</FirstTokenIndex><LastTokenIndex>21</LastTokenIndex></ProcedureParameter>
+<ProcedureParameter memberName = 'Parameters'>
+<IsVarying>False</IsVarying><ParameterModifier.None/>
+<Identifier memberName = 'VariableName'>
+@HireDate<QuoteType.NotQuoted/>
+<StartOffset>129</StartOffset><FragmentLength>9</FragmentLength><StartLine>4</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>26</FirstTokenIndex><LastTokenIndex>26</LastTokenIndex></Identifier>
+<SqlDataTypeReference memberName = 'DataType'>
+<SqlDataTypeOption.DateTime/>
+<SchemaObjectName memberName = 'Name'>
+<Identifier memberName = 'BaseIdentifier'>
+datetime<QuoteType.SquareBracket/>
+<StartOffset>139</StartOffset><FragmentLength>10</FragmentLength><StartLine>4</StartLine><StartColumn>15</StartColumn><FirstTokenIndex>28</FirstTokenIndex><LastTokenIndex>28</LastTokenIndex></Identifier>
+<Identifier memberName = 'Identifiers'>
+datetime<QuoteType.SquareBracket/>
+<StartOffset>139</StartOffset><FragmentLength>10</FragmentLength><StartLine>4</StartLine><StartColumn>15</StartColumn><FirstTokenIndex>28</FirstTokenIndex><LastTokenIndex>28</LastTokenIndex></Identifier>
+<Count>1</Count><StartOffset>139</StartOffset><FragmentLength>10</FragmentLength><StartLine>4</StartLine><StartColumn>15</StartColumn><FirstTokenIndex>28</FirstTokenIndex><LastTokenIndex>28</LastTokenIndex></SchemaObjectName>
+<StartOffset>139</StartOffset><FragmentLength>10</FragmentLength><StartLine>4</StartLine><StartColumn>15</StartColumn><FirstTokenIndex>28</FirstTokenIndex><LastTokenIndex>28</LastTokenIndex></SqlDataTypeReference>
+<StartOffset>129</StartOffset><FragmentLength>20</FragmentLength><StartLine>4</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>26</FirstTokenIndex><LastTokenIndex>28</LastTokenIndex></ProcedureParameter>
+<ProcedureParameter memberName = 'Parameters'>
+<IsVarying>False</IsVarying><ParameterModifier.None/>
+<Identifier memberName = 'VariableName'>
+@RateChangeDate<QuoteType.NotQuoted/>
+<StartOffset>157</StartOffset><FragmentLength>15</FragmentLength><StartLine>5</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>33</FirstTokenIndex><LastTokenIndex>33</LastTokenIndex></Identifier>
+<SqlDataTypeReference memberName = 'DataType'>
+<SqlDataTypeOption.DateTime/>
+<SchemaObjectName memberName = 'Name'>
+<Identifier memberName = 'BaseIdentifier'>
+datetime<QuoteType.SquareBracket/>
+<StartOffset>173</StartOffset><FragmentLength>10</FragmentLength><StartLine>5</StartLine><StartColumn>21</StartColumn><FirstTokenIndex>35</FirstTokenIndex><LastTokenIndex>35</LastTokenIndex></Identifier>
+<Identifier memberName = 'Identifiers'>
+datetime<QuoteType.SquareBracket/>
+<StartOffset>173</StartOffset><FragmentLength>10</FragmentLength><StartLine>5</StartLine><StartColumn>21</StartColumn><FirstTokenIndex>35</FirstTokenIndex><LastTokenIndex>35</LastTokenIndex></Identifier>
+<Count>1</Count><StartOffset>173</StartOffset><FragmentLength>10</FragmentLength><StartLine>5</StartLine><StartColumn>21</StartColumn><FirstTokenIndex>35</FirstTokenIndex><LastTokenIndex>35</LastTokenIndex></SchemaObjectName>
+<StartOffset>173</StartOffset><FragmentLength>10</FragmentLength><StartLine>5</StartLine><StartColumn>21</StartColumn><FirstTokenIndex>35</FirstTokenIndex><LastTokenIndex>35</LastTokenIndex></SqlDataTypeReference>
+<StartOffset>157</StartOffset><FragmentLength>26</FragmentLength><StartLine>5</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>33</FirstTokenIndex><LastTokenIndex>35</LastTokenIndex></ProcedureParameter>
+<ProcedureParameter memberName = 'Parameters'>
+<IsVarying>False</IsVarying><ParameterModifier.None/>
+<Identifier memberName = 'VariableName'>
+@Rate<QuoteType.NotQuoted/>
+<StartOffset>191</StartOffset><FragmentLength>5</FragmentLength><StartLine>6</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>40</FirstTokenIndex><LastTokenIndex>40</LastTokenIndex></Identifier>
+<SqlDataTypeReference memberName = 'DataType'>
+<SqlDataTypeOption.Money/>
+<SchemaObjectName memberName = 'Name'>
+<Identifier memberName = 'BaseIdentifier'>
+money<QuoteType.SquareBracket/>
+<StartOffset>197</StartOffset><FragmentLength>7</FragmentLength><StartLine>6</StartLine><StartColumn>11</StartColumn><FirstTokenIndex>42</FirstTokenIndex><LastTokenIndex>42</LastTokenIndex></Identifier>
+<Identifier memberName = 'Identifiers'>
+money<QuoteType.SquareBracket/>
+<StartOffset>197</StartOffset><FragmentLength>7</FragmentLength><StartLine>6</StartLine><StartColumn>11</StartColumn><FirstTokenIndex>42</FirstTokenIndex><LastTokenIndex>42</LastTokenIndex></Identifier>
+<Count>1</Count><StartOffset>197</StartOffset><FragmentLength>7</FragmentLength><StartLine>6</StartLine><StartColumn>11</StartColumn><FirstTokenIndex>42</FirstTokenIndex><LastTokenIndex>42</LastTokenIndex></SchemaObjectName>
+<StartOffset>197</StartOffset><FragmentLength>7</FragmentLength><StartLine>6</StartLine><StartColumn>11</StartColumn><FirstTokenIndex>42</FirstTokenIndex><LastTokenIndex>42</LastTokenIndex></SqlDataTypeReference>
+<StartOffset>191</StartOffset><FragmentLength>13</FragmentLength><StartLine>6</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>40</FirstTokenIndex><LastTokenIndex>42</LastTokenIndex></ProcedureParameter>
+<ProcedureParameter memberName = 'Parameters'>
+<IsVarying>False</IsVarying><ParameterModifier.None/>
+<Identifier memberName = 'VariableName'>
+@PayFrequency<QuoteType.NotQuoted/>
+<StartOffset>212</StartOffset><FragmentLength>13</FragmentLength><StartLine>7</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>47</FirstTokenIndex><LastTokenIndex>47</LastTokenIndex></Identifier>
+<SqlDataTypeReference memberName = 'DataType'>
+<SqlDataTypeOption.TinyInt/>
+<SchemaObjectName memberName = 'Name'>
+<Identifier memberName = 'BaseIdentifier'>
+tinyint<QuoteType.SquareBracket/>
+<StartOffset>226</StartOffset><FragmentLength>9</FragmentLength><StartLine>7</StartLine><StartColumn>19</StartColumn><FirstTokenIndex>49</FirstTokenIndex><LastTokenIndex>49</LastTokenIndex></Identifier>
+<Identifier memberName = 'Identifiers'>
+tinyint<QuoteType.SquareBracket/>
+<StartOffset>226</StartOffset><FragmentLength>9</FragmentLength><StartLine>7</StartLine><StartColumn>19</StartColumn><FirstTokenIndex>49</FirstTokenIndex><LastTokenIndex>49</LastTokenIndex></Identifier>
+<Count>1</Count><StartOffset>226</StartOffset><FragmentLength>9</FragmentLength><StartLine>7</StartLine><StartColumn>19</StartColumn><FirstTokenIndex>49</FirstTokenIndex><LastTokenIndex>49</LastTokenIndex></SchemaObjectName>
+<StartOffset>226</StartOffset><FragmentLength>9</FragmentLength><StartLine>7</StartLine><StartColumn>19</StartColumn><FirstTokenIndex>49</FirstTokenIndex><LastTokenIndex>49</LastTokenIndex></SqlDataTypeReference>
+<StartOffset>212</StartOffset><FragmentLength>23</FragmentLength><StartLine>7</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>47</FirstTokenIndex><LastTokenIndex>49</LastTokenIndex></ProcedureParameter>
+<ProcedureParameter memberName = 'Parameters'>
+<IsVarying>False</IsVarying><ParameterModifier.None/>
+<Identifier memberName = 'VariableName'>
+@CurrentFlag<QuoteType.NotQuoted/>
+<StartOffset>243</StartOffset><FragmentLength>12</FragmentLength><StartLine>8</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>54</FirstTokenIndex><LastTokenIndex>54</LastTokenIndex></Identifier>
+<UserDataTypeReference memberName = 'DataType'>
+<SchemaObjectName memberName = 'Name'>
+<Identifier memberName = 'SchemaIdentifier'>
+dbo<QuoteType.SquareBracket/>
+<StartOffset>256</StartOffset><FragmentLength>5</FragmentLength><StartLine>8</StartLine><StartColumn>18</StartColumn><FirstTokenIndex>56</FirstTokenIndex><LastTokenIndex>56</LastTokenIndex></Identifier>
+<Identifier memberName = 'BaseIdentifier'>
+Flag<QuoteType.SquareBracket/>
+<StartOffset>262</StartOffset><FragmentLength>6</FragmentLength><StartLine>8</StartLine><StartColumn>24</StartColumn><FirstTokenIndex>58</FirstTokenIndex><LastTokenIndex>58</LastTokenIndex></Identifier>
+<Identifier memberName = 'Identifiers'>
+dbo<QuoteType.SquareBracket/>
+<StartOffset>256</StartOffset><FragmentLength>5</FragmentLength><StartLine>8</StartLine><StartColumn>18</StartColumn><FirstTokenIndex>56</FirstTokenIndex><LastTokenIndex>56</LastTokenIndex></Identifier>
+<Identifier memberName = 'Identifiers'>
+Flag<QuoteType.SquareBracket/>
+<StartOffset>262</StartOffset><FragmentLength>6</FragmentLength><StartLine>8</StartLine><StartColumn>24</StartColumn><FirstTokenIndex>58</FirstTokenIndex><LastTokenIndex>58</LastTokenIndex></Identifier>
+<Count>2</Count><StartOffset>256</StartOffset><FragmentLength>12</FragmentLength><StartLine>8</StartLine><StartColumn>18</StartColumn><FirstTokenIndex>56</FirstTokenIndex><LastTokenIndex>58</LastTokenIndex></SchemaObjectName>
+<StartOffset>256</StartOffset><FragmentLength>12</FragmentLength><StartLine>8</StartLine><StartColumn>18</StartColumn><FirstTokenIndex>56</FirstTokenIndex><LastTokenIndex>58</LastTokenIndex></UserDataTypeReference>
+<StartOffset>243</StartOffset><FragmentLength>25</FragmentLength><StartLine>8</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>54</FirstTokenIndex><LastTokenIndex>58</LastTokenIndex></ProcedureParameter>
+<StatementList memberName = 'StatementList'>
+<BeginEndBlockStatement memberName = 'Statements'>
+<StatementList memberName = 'StatementList'>
+<PredicateSetStatement memberName = 'Statements'>
+<SetOptions.NoCount/>
+<IsOn>True</IsOn><StartOffset>310</StartOffset><FragmentLength>15</FragmentLength><StartLine>12</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>74</FirstTokenIndex><LastTokenIndex>79</LastTokenIndex></PredicateSetStatement>
+<TryCatchStatement memberName = 'Statements'>
+<StatementList memberName = 'TryStatements'>
+<BeginTransactionStatement memberName = 'Statements'>
+<Distributed>False</Distributed><MarkDefined>False</MarkDefined><StartOffset>352</StartOffset><FragmentLength>18</FragmentLength><StartLine>15</StartLine><StartColumn>9</StartColumn><FirstTokenIndex>88</FirstTokenIndex><LastTokenIndex>91</LastTokenIndex></BeginTransactionStatement>
+<UpdateStatement memberName = 'Statements'>
+<UpdateSpecification memberName = 'UpdateSpecification'>
+<AssignmentSetClause memberName = 'SetClauses'>
+<ColumnReferenceExpression memberName = 'Column'>
+<ColumnType.Regular/>
+<MultiPartIdentifier memberName = 'MultiPartIdentifier'>
+<Identifier memberName = 'Identifiers'>
+JobTitle<QuoteType.SquareBracket/>
+<StartOffset>431</StartOffset><FragmentLength>10</FragmentLength><StartLine>18</StartLine><StartColumn>13</StartColumn><FirstTokenIndex>105</FirstTokenIndex><LastTokenIndex>105</LastTokenIndex></Identifier>
+<Count>1</Count><StartOffset>431</StartOffset><FragmentLength>10</FragmentLength><StartLine>18</StartLine><StartColumn>13</StartColumn><FirstTokenIndex>105</FirstTokenIndex><LastTokenIndex>105</LastTokenIndex></MultiPartIdentifier>
+<StartOffset>431</StartOffset><FragmentLength>10</FragmentLength><StartLine>18</StartLine><StartColumn>13</StartColumn><FirstTokenIndex>105</FirstTokenIndex><LastTokenIndex>105</LastTokenIndex></ColumnReferenceExpression>
+<VariableReference memberName = 'NewValue'>
+@JobTitle<StartOffset>444</StartOffset><FragmentLength>9</FragmentLength><StartLine>18</StartLine><StartColumn>26</StartColumn><FirstTokenIndex>109</FirstTokenIndex><LastTokenIndex>109</LastTokenIndex></VariableReference>
+<AssignmentKind.Equals/>
+<StartOffset>431</StartOffset><FragmentLength>22</FragmentLength><StartLine>18</StartLine><StartColumn>13</StartColumn><FirstTokenIndex>105</FirstTokenIndex><LastTokenIndex>109</LastTokenIndex></AssignmentSetClause>
+<AssignmentSetClause memberName = 'SetClauses'>
+<ColumnReferenceExpression memberName = 'Column'>
+<ColumnType.Regular/>
+<MultiPartIdentifier memberName = 'MultiPartIdentifier'>
+<Identifier memberName = 'Identifiers'>
+HireDate<QuoteType.SquareBracket/>
+<StartOffset>469</StartOffset><FragmentLength>10</FragmentLength><StartLine>19</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>114</FirstTokenIndex><LastTokenIndex>114</LastTokenIndex></Identifier>
+<Count>1</Count><StartOffset>469</StartOffset><FragmentLength>10</FragmentLength><StartLine>19</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>114</FirstTokenIndex><LastTokenIndex>114</LastTokenIndex></MultiPartIdentifier>
+<StartOffset>469</StartOffset><FragmentLength>10</FragmentLength><StartLine>19</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>114</FirstTokenIndex><LastTokenIndex>114</LastTokenIndex></ColumnReferenceExpression>
+<VariableReference memberName = 'NewValue'>
+@HireDate<StartOffset>482</StartOffset><FragmentLength>9</FragmentLength><StartLine>19</StartLine><StartColumn>27</StartColumn><FirstTokenIndex>118</FirstTokenIndex><LastTokenIndex>118</LastTokenIndex></VariableReference>
+<AssignmentKind.Equals/>
+<StartOffset>469</StartOffset><FragmentLength>22</FragmentLength><StartLine>19</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>114</FirstTokenIndex><LastTokenIndex>118</LastTokenIndex></AssignmentSetClause>
+<AssignmentSetClause memberName = 'SetClauses'>
+<ColumnReferenceExpression memberName = 'Column'>
+<ColumnType.Regular/>
+<MultiPartIdentifier memberName = 'MultiPartIdentifier'>
+<Identifier memberName = 'Identifiers'>
+CurrentFlag<QuoteType.SquareBracket/>
+<StartOffset>507</StartOffset><FragmentLength>13</FragmentLength><StartLine>20</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>123</FirstTokenIndex><LastTokenIndex>123</LastTokenIndex></Identifier>
+<Count>1</Count><StartOffset>507</StartOffset><FragmentLength>13</FragmentLength><StartLine>20</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>123</FirstTokenIndex><LastTokenIndex>123</LastTokenIndex></MultiPartIdentifier>
+<StartOffset>507</StartOffset><FragmentLength>13</FragmentLength><StartLine>20</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>123</FirstTokenIndex><LastTokenIndex>123</LastTokenIndex></ColumnReferenceExpression>
+<VariableReference memberName = 'NewValue'>
+@CurrentFlag<StartOffset>523</StartOffset><FragmentLength>12</FragmentLength><StartLine>20</StartLine><StartColumn>30</StartColumn><FirstTokenIndex>127</FirstTokenIndex><LastTokenIndex>127</LastTokenIndex></VariableReference>
+<AssignmentKind.Equals/>
+<StartOffset>507</StartOffset><FragmentLength>28</FragmentLength><StartLine>20</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>123</FirstTokenIndex><LastTokenIndex>127</LastTokenIndex></AssignmentSetClause>
+<WhereClause memberName = 'WhereClause'>
+<BooleanComparisonExpression memberName = 'SearchCondition'>
+<BooleanComparisonType.Equals/>
+<ColumnReferenceExpression memberName = 'FirstExpression'>
+<ColumnType.Regular/>
+<MultiPartIdentifier memberName = 'MultiPartIdentifier'>
+<Identifier memberName = 'Identifiers'>
+BusinessEntityID<QuoteType.SquareBracket/>
+<StartOffset>552</StartOffset><FragmentLength>18</FragmentLength><StartLine>21</StartLine><StartColumn>15</StartColumn><FirstTokenIndex>133</FirstTokenIndex><LastTokenIndex>133</LastTokenIndex></Identifier>
+<Count>1</Count><StartOffset>552</StartOffset><FragmentLength>18</FragmentLength><StartLine>21</StartLine><StartColumn>15</StartColumn><FirstTokenIndex>133</FirstTokenIndex><LastTokenIndex>133</LastTokenIndex></MultiPartIdentifier>
+<StartOffset>552</StartOffset><FragmentLength>18</FragmentLength><StartLine>21</StartLine><StartColumn>15</StartColumn><FirstTokenIndex>133</FirstTokenIndex><LastTokenIndex>133</LastTokenIndex></ColumnReferenceExpression>
+<VariableReference memberName = 'SecondExpression'>
+@BusinessEntityID<StartOffset>573</StartOffset><FragmentLength>17</FragmentLength><StartLine>21</StartLine><StartColumn>36</StartColumn><FirstTokenIndex>137</FirstTokenIndex><LastTokenIndex>137</LastTokenIndex></VariableReference>
+<StartOffset>552</StartOffset><FragmentLength>38</FragmentLength><StartLine>21</StartLine><StartColumn>15</StartColumn><FirstTokenIndex>133</FirstTokenIndex><LastTokenIndex>137</LastTokenIndex></BooleanComparisonExpression>
+<StartOffset>546</StartOffset><FragmentLength>44</FragmentLength><StartLine>21</StartLine><StartColumn>9</StartColumn><FirstTokenIndex>131</FirstTokenIndex><LastTokenIndex>137</LastTokenIndex></WhereClause>
+<NamedTableReference memberName = 'Target'>
+<SchemaObjectName memberName = 'SchemaObject'>
+<Identifier memberName = 'SchemaIdentifier'>
+HumanResources<QuoteType.SquareBracket/>
+<StartOffset>389</StartOffset><FragmentLength>16</FragmentLength><StartLine>17</StartLine><StartColumn>16</StartColumn><FirstTokenIndex>97</FirstTokenIndex><LastTokenIndex>97</LastTokenIndex></Identifier>
+<Identifier memberName = 'BaseIdentifier'>
+Employee<QuoteType.SquareBracket/>
+<StartOffset>406</StartOffset><FragmentLength>10</FragmentLength><StartLine>17</StartLine><StartColumn>33</StartColumn><FirstTokenIndex>99</FirstTokenIndex><LastTokenIndex>99</LastTokenIndex></Identifier>
+<Identifier memberName = 'Identifiers'>
+HumanResources<QuoteType.SquareBracket/>
+<StartOffset>389</StartOffset><FragmentLength>16</FragmentLength><StartLine>17</StartLine><StartColumn>16</StartColumn><FirstTokenIndex>97</FirstTokenIndex><LastTokenIndex>97</LastTokenIndex></Identifier>
+<Identifier memberName = 'Identifiers'>
+Employee<QuoteType.SquareBracket/>
+<StartOffset>406</StartOffset><FragmentLength>10</FragmentLength><StartLine>17</StartLine><StartColumn>33</StartColumn><FirstTokenIndex>99</FirstTokenIndex><LastTokenIndex>99</LastTokenIndex></Identifier>
+<Count>2</Count><StartOffset>389</StartOffset><FragmentLength>27</FragmentLength><StartLine>17</StartLine><StartColumn>16</StartColumn><FirstTokenIndex>97</FirstTokenIndex><LastTokenIndex>99</LastTokenIndex></SchemaObjectName>
+<StartOffset>389</StartOffset><FragmentLength>27</FragmentLength><StartLine>17</StartLine><StartColumn>16</StartColumn><FirstTokenIndex>97</FirstTokenIndex><LastTokenIndex>99</LastTokenIndex></NamedTableReference>
+<StartOffset>382</StartOffset><FragmentLength>208</FragmentLength><StartLine>17</StartLine><StartColumn>9</StartColumn><FirstTokenIndex>95</FirstTokenIndex><LastTokenIndex>137</LastTokenIndex></UpdateSpecification>
+<StartOffset>382</StartOffset><FragmentLength>209</FragmentLength><StartLine>17</StartLine><StartColumn>9</StartColumn><FirstTokenIndex>95</FirstTokenIndex><LastTokenIndex>138</LastTokenIndex></UpdateStatement>
+<InsertStatement memberName = 'Statements'>
+<InsertSpecification memberName = 'InsertSpecification'>
+<InsertOption.Into/>
+<ValuesInsertSource memberName = 'InsertSource'>
+<IsDefaultValues>False</IsDefaultValues><RowValue memberName = 'RowValues'>
+<VariableReference memberName = 'ColumnValues'>
+@BusinessEntityID<StartOffset>787</StartOffset><FragmentLength>17</FragmentLength><StartLine>28</StartLine><StartColumn>17</StartColumn><FirstTokenIndex>173</FirstTokenIndex><LastTokenIndex>173</LastTokenIndex></VariableReference>
+<VariableReference memberName = 'ColumnValues'>
+@RateChangeDate<StartOffset>806</StartOffset><FragmentLength>15</FragmentLength><StartLine>28</StartLine><StartColumn>36</StartColumn><FirstTokenIndex>176</FirstTokenIndex><LastTokenIndex>176</LastTokenIndex></VariableReference>
+<VariableReference memberName = 'ColumnValues'>
+@Rate<StartOffset>823</StartOffset><FragmentLength>5</FragmentLength><StartLine>28</StartLine><StartColumn>53</StartColumn><FirstTokenIndex>179</FirstTokenIndex><LastTokenIndex>179</LastTokenIndex></VariableReference>
+<VariableReference memberName = 'ColumnValues'>
+@PayFrequency<StartOffset>830</StartOffset><FragmentLength>13</FragmentLength><StartLine>28</StartLine><StartColumn>60</StartColumn><FirstTokenIndex>182</FirstTokenIndex><LastTokenIndex>182</LastTokenIndex></VariableReference>
+<StartOffset>786</StartOffset><FragmentLength>58</FragmentLength><StartLine>28</StartLine><StartColumn>16</StartColumn><FirstTokenIndex>172</FirstTokenIndex><LastTokenIndex>183</LastTokenIndex></RowValue>
+<StartOffset>779</StartOffset><FragmentLength>65</FragmentLength><StartLine>28</StartLine><StartColumn>9</StartColumn><FirstTokenIndex>170</FirstTokenIndex><LastTokenIndex>183</LastTokenIndex></ValuesInsertSource>
+<ColumnReferenceExpression memberName = 'Columns'>
+<ColumnType.Regular/>
+<MultiPartIdentifier memberName = 'MultiPartIdentifier'>
+<Identifier memberName = 'Identifiers'>
+BusinessEntityID<QuoteType.SquareBracket/>
+<StartOffset>668</StartOffset><FragmentLength>18</FragmentLength><StartLine>24</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>153</FirstTokenIndex><LastTokenIndex>153</LastTokenIndex></Identifier>
+<Count>1</Count><StartOffset>668</StartOffset><FragmentLength>18</FragmentLength><StartLine>24</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>153</FirstTokenIndex><LastTokenIndex>153</LastTokenIndex></MultiPartIdentifier>
+<StartOffset>668</StartOffset><FragmentLength>18</FragmentLength><StartLine>24</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>153</FirstTokenIndex><LastTokenIndex>153</LastTokenIndex></ColumnReferenceExpression>
+<ColumnReferenceExpression memberName = 'Columns'>
+<ColumnType.Regular/>
+<MultiPartIdentifier memberName = 'MultiPartIdentifier'>
+<Identifier memberName = 'Identifiers'>
+RateChangeDate<QuoteType.SquareBracket/>
+<StartOffset>701</StartOffset><FragmentLength>16</FragmentLength><StartLine>25</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>157</FirstTokenIndex><LastTokenIndex>157</LastTokenIndex></Identifier>
+<Count>1</Count><StartOffset>701</StartOffset><FragmentLength>16</FragmentLength><StartLine>25</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>157</FirstTokenIndex><LastTokenIndex>157</LastTokenIndex></MultiPartIdentifier>
+<StartOffset>701</StartOffset><FragmentLength>16</FragmentLength><StartLine>25</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>157</FirstTokenIndex><LastTokenIndex>157</LastTokenIndex></ColumnReferenceExpression>
+<ColumnReferenceExpression memberName = 'Columns'>
+<ColumnType.Regular/>
+<MultiPartIdentifier memberName = 'MultiPartIdentifier'>
+<Identifier memberName = 'Identifiers'>
+Rate<QuoteType.SquareBracket/>
+<StartOffset>732</StartOffset><FragmentLength>6</FragmentLength><StartLine>26</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>161</FirstTokenIndex><LastTokenIndex>161</LastTokenIndex></Identifier>
+<Count>1</Count><StartOffset>732</StartOffset><FragmentLength>6</FragmentLength><StartLine>26</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>161</FirstTokenIndex><LastTokenIndex>161</LastTokenIndex></MultiPartIdentifier>
+<StartOffset>732</StartOffset><FragmentLength>6</FragmentLength><StartLine>26</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>161</FirstTokenIndex><LastTokenIndex>161</LastTokenIndex></ColumnReferenceExpression>
+<ColumnReferenceExpression memberName = 'Columns'>
+<ColumnType.Regular/>
+<MultiPartIdentifier memberName = 'MultiPartIdentifier'>
+<Identifier memberName = 'Identifiers'>
+PayFrequency<QuoteType.SquareBracket/>
+<StartOffset>753</StartOffset><FragmentLength>14</FragmentLength><StartLine>27</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>165</FirstTokenIndex><LastTokenIndex>165</LastTokenIndex></Identifier>
+<Count>1</Count><StartOffset>753</StartOffset><FragmentLength>14</FragmentLength><StartLine>27</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>165</FirstTokenIndex><LastTokenIndex>165</LastTokenIndex></MultiPartIdentifier>
+<StartOffset>753</StartOffset><FragmentLength>14</FragmentLength><StartLine>27</StartLine><StartColumn>14</StartColumn><FirstTokenIndex>165</FirstTokenIndex><LastTokenIndex>165</LastTokenIndex></ColumnReferenceExpression>
+<NamedTableReference memberName = 'Target'>
+<SchemaObjectName memberName = 'SchemaObject'>
+<Identifier memberName = 'SchemaIdentifier'>
+HumanResources<QuoteType.SquareBracket/>
+<StartOffset>615</StartOffset><FragmentLength>16</FragmentLength><StartLine>23</StartLine><StartColumn>21</StartColumn><FirstTokenIndex>146</FirstTokenIndex><LastTokenIndex>146</LastTokenIndex></Identifier>
+<Identifier memberName = 'BaseIdentifier'>
+EmployeePayHistory<QuoteType.SquareBracket/>
+<StartOffset>632</StartOffset><FragmentLength>20</FragmentLength><StartLine>23</StartLine><StartColumn>38</StartColumn><FirstTokenIndex>148</FirstTokenIndex><LastTokenIndex>148</LastTokenIndex></Identifier>
+<Identifier memberName = 'Identifiers'>
+HumanResources<QuoteType.SquareBracket/>
+<StartOffset>615</StartOffset><FragmentLength>16</FragmentLength><StartLine>23</StartLine><StartColumn>21</StartColumn><FirstTokenIndex>146</FirstTokenIndex><LastTokenIndex>146</LastTokenIndex></Identifier>
+<Identifier memberName = 'Identifiers'>
+EmployeePayHistory<QuoteType.SquareBracket/>
+<StartOffset>632</StartOffset><FragmentLength>20</FragmentLength><StartLine>23</StartLine><StartColumn>38</StartColumn><FirstTokenIndex>148</FirstTokenIndex><LastTokenIndex>148</LastTokenIndex></Identifier>
+<Count>2</Count><StartOffset>615</StartOffset><FragmentLength>37</FragmentLength><StartLine>23</StartLine><StartColumn>21</StartColumn><FirstTokenIndex>146</FirstTokenIndex><LastTokenIndex>148</LastTokenIndex></SchemaObjectName>
+<StartOffset>615</StartOffset><FragmentLength>37</FragmentLength><StartLine>23</StartLine><StartColumn>21</StartColumn><FirstTokenIndex>146</FirstTokenIndex><LastTokenIndex>148</LastTokenIndex></NamedTableReference>
+<StartOffset>603</StartOffset><FragmentLength>241</FragmentLength><StartLine>23</StartLine><StartColumn>9</StartColumn><FirstTokenIndex>142</FirstTokenIndex><LastTokenIndex>183</LastTokenIndex></InsertSpecification>
+<StartOffset>603</StartOffset><FragmentLength>242</FragmentLength><StartLine>23</StartLine><StartColumn>9</StartColumn><FirstTokenIndex>142</FirstTokenIndex><LastTokenIndex>184</LastTokenIndex></InsertStatement>
+<CommitTransactionStatement memberName = 'Statements'>
+<StartOffset>857</StartOffset><FragmentLength>19</FragmentLength><StartLine>30</StartLine><StartColumn>9</StartColumn><FirstTokenIndex>188</FirstTokenIndex><LastTokenIndex>191</LastTokenIndex></CommitTransactionStatement>
+<StartOffset>352</StartOffset><FragmentLength>524</FragmentLength><StartLine>15</StartLine><StartColumn>9</StartColumn><FirstTokenIndex>88</FirstTokenIndex><LastTokenIndex>191</LastTokenIndex></StatementList>
+<StatementList memberName = 'CatchStatements'>
+<IfStatement memberName = 'Statements'>
+<BooleanComparisonExpression memberName = 'Predicate'>
+<BooleanComparisonType.GreaterThan/>
+<GlobalVariableExpression memberName = 'FirstExpression'>
+@@TRANCOUNT<StartOffset>1038</StartOffset><FragmentLength>11</FragmentLength><StartLine>35</StartLine><StartColumn>12</StartColumn><FirstTokenIndex>212</FirstTokenIndex><LastTokenIndex>212</LastTokenIndex></GlobalVariableExpression>
+<IntegerLiteral memberName = 'SecondExpression'>
+<LiteralType.Integer/>
+0<StartOffset>1052</StartOffset><FragmentLength>1</FragmentLength><StartLine>35</StartLine><StartColumn>26</StartColumn><FirstTokenIndex>216</FirstTokenIndex><LastTokenIndex>216</LastTokenIndex></IntegerLiteral>
+<StartOffset>1038</StartOffset><FragmentLength>15</FragmentLength><StartLine>35</StartLine><StartColumn>12</StartColumn><FirstTokenIndex>212</FirstTokenIndex><LastTokenIndex>216</LastTokenIndex></BooleanComparisonExpression>
+<BeginEndBlockStatement memberName = 'ThenStatement'>
+<StatementList memberName = 'StatementList'>
+<RollbackTransactionStatement memberName = 'Statements'>
+<StartOffset>1082</StartOffset><FragmentLength>21</FragmentLength><StartLine>37</StartLine><StartColumn>13</StartColumn><FirstTokenIndex>222</FirstTokenIndex><LastTokenIndex>225</LastTokenIndex></RollbackTransactionStatement>
+<StartOffset>-1</StartOffset><FragmentLength>-1</FragmentLength><StartLine>-1</StartLine><StartColumn>-1</StartColumn><FirstTokenIndex>-1</FirstTokenIndex><LastTokenIndex>-1</LastTokenIndex></StatementList>
+<StartOffset>1063</StartOffset><FragmentLength>53</FragmentLength><StartLine>36</StartLine><StartColumn>9</StartColumn><FirstTokenIndex>219</FirstTokenIndex><LastTokenIndex>228</LastTokenIndex></BeginEndBlockStatement>
+<StartOffset>1035</StartOffset><FragmentLength>81</FragmentLength><StartLine>35</StartLine><StartColumn>9</StartColumn><FirstTokenIndex>210</FirstTokenIndex><LastTokenIndex>228</LastTokenIndex></IfStatement>
+<ExecuteStatement memberName = 'Statements'>
+<ExecuteSpecification memberName = 'ExecuteSpecification'>
+<ExecutableProcedureReference memberName = 'ExecutableEntity'>
+<ProcedureReferenceName memberName = 'ProcedureReference'>
+<ProcedureReference memberName = 'ProcedureReference'>
+<SchemaObjectName memberName = 'Name'>
+<Identifier memberName = 'SchemaIdentifier'>
+dbo<QuoteType.SquareBracket/>
+<StartOffset>1136</StartOffset><FragmentLength>5</FragmentLength><StartLine>40</StartLine><StartColumn>17</StartColumn><FirstTokenIndex>234</FirstTokenIndex><LastTokenIndex>234</LastTokenIndex></Identifier>
+<Identifier memberName = 'BaseIdentifier'>
+uspLogError<QuoteType.SquareBracket/>
+<StartOffset>1142</StartOffset><FragmentLength>13</FragmentLength><StartLine>40</StartLine><StartColumn>23</StartColumn><FirstTokenIndex>236</FirstTokenIndex><LastTokenIndex>236</LastTokenIndex></Identifier>
+<Identifier memberName = 'Identifiers'>
+dbo<QuoteType.SquareBracket/>
+<StartOffset>1136</StartOffset><FragmentLength>5</FragmentLength><StartLine>40</StartLine><StartColumn>17</StartColumn><FirstTokenIndex>234</FirstTokenIndex><LastTokenIndex>234</LastTokenIndex></Identifier>
+<Identifier memberName = 'Identifiers'>
+uspLogError<QuoteType.SquareBracket/>
+<StartOffset>1142</StartOffset><FragmentLength>13</FragmentLength><StartLine>40</StartLine><StartColumn>23</StartColumn><FirstTokenIndex>236</FirstTokenIndex><LastTokenIndex>236</LastTokenIndex></Identifier>
+<Count>2</Count><StartOffset>1136</StartOffset><FragmentLength>19</FragmentLength><StartLine>40</StartLine><StartColumn>17</StartColumn><FirstTokenIndex>234</FirstTokenIndex><LastTokenIndex>236</LastTokenIndex></SchemaObjectName>
+<StartOffset>1136</StartOffset><FragmentLength>19</FragmentLength><StartLine>40</StartLine><StartColumn>17</StartColumn><FirstTokenIndex>234</FirstTokenIndex><LastTokenIndex>236</LastTokenIndex></ProcedureReference>
+<StartOffset>1136</StartOffset><FragmentLength>19</FragmentLength><StartLine>40</StartLine><StartColumn>17</StartColumn><FirstTokenIndex>234</FirstTokenIndex><LastTokenIndex>236</LastTokenIndex></ProcedureReferenceName>
+<StartOffset>1136</StartOffset><FragmentLength>19</FragmentLength><StartLine>40</StartLine><StartColumn>17</StartColumn><FirstTokenIndex>234</FirstTokenIndex><LastTokenIndex>236</LastTokenIndex></ExecutableProcedureReference>
+<StartOffset>1128</StartOffset><FragmentLength>27</FragmentLength><StartLine>40</StartLine><StartColumn>9</StartColumn><FirstTokenIndex>232</FirstTokenIndex><LastTokenIndex>236</LastTokenIndex></ExecuteSpecification>
+<StartOffset>1128</StartOffset><FragmentLength>28</FragmentLength><StartLine>40</StartLine><StartColumn>9</StartColumn><FirstTokenIndex>232</FirstTokenIndex><LastTokenIndex>237</LastTokenIndex></ExecuteStatement>
+<StartOffset>1035</StartOffset><FragmentLength>121</FragmentLength><StartLine>35</StartLine><StartColumn>9</StartColumn><FirstTokenIndex>210</FirstTokenIndex><LastTokenIndex>237</LastTokenIndex></StatementList>
+<StartOffset>333</StartOffset><FragmentLength>839</FragmentLength><StartLine>14</StartLine><StartColumn>5</StartColumn><FirstTokenIndex>83</FirstTokenIndex><LastTokenIndex>243</LastTokenIndex></TryCatchStatement>
+<StartOffset>-1</StartOffset><FragmentLength>-1</FragmentLength><StartLine>-1</StartLine><StartColumn>-1</StartColumn><FirstTokenIndex>-1</FirstTokenIndex><LastTokenIndex>-1</LastTokenIndex></StatementList>
+<StartOffset>299</StartOffset><FragmentLength>879</FragmentLength><StartLine>11</StartLine><StartColumn>1</StartColumn><FirstTokenIndex>71</FirstTokenIndex><LastTokenIndex>246</LastTokenIndex></BeginEndBlockStatement>
+<StartOffset>299</StartOffset><FragmentLength>879</FragmentLength><StartLine>11</StartLine><StartColumn>1</StartColumn><FirstTokenIndex>71</FirstTokenIndex><LastTokenIndex>246</LastTokenIndex></StatementList>
+<StartOffset>0</StartOffset><FragmentLength>1178</FragmentLength><StartLine>1</StartLine><StartColumn>1</StartColumn><FirstTokenIndex>0</FirstTokenIndex><LastTokenIndex>246</LastTokenIndex></AlterProcedureStatement>
+<StartOffset>0</StartOffset><FragmentLength>1178</FragmentLength><StartLine>1</StartLine><StartColumn>1</StartColumn><FirstTokenIndex>0</FirstTokenIndex><LastTokenIndex>246</LastTokenIndex></TSqlBatch>
+<StartOffset>0</StartOffset><FragmentLength>1178</FragmentLength><StartLine>1</StartLine><StartColumn>1</StartColumn><FirstTokenIndex>0</FirstTokenIndex><LastTokenIndex>247</LastTokenIndex></TSqlScript>

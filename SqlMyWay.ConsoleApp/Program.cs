@@ -12,14 +12,25 @@ namespace SqlMyWay.ConsoleApp
 	{
 		static void Main(string[] args)
 		{
-			//get args
-			string sqlFilePath = args[0]; //default value provided by project: "..\..\testsql.sql"
+			//paths
+			const string sqlInput = "..\\..\\SqlInput.sql";
+			const string sqlOutput = "..\\..\\SqlOutput.sql";
+
+			//Microsoft Default Style
+			string ms = Utility.GetMicrosoftFormattedSql(sqlInput);
+			File.WriteAllText(sqlOutput, ms);
+			
+			//Poor Man's Default Style
+			string pm = Utility.GetPoorMansFormattedSql(sqlInput);
+			File.WriteAllText(sqlOutput, pm);
 
 			//debug
-			//CreateDebugFiles(sqlFilePath);
+			CreateDebugFiles(sqlInput);
 
 			//write formatted sql to console window
-			Console.Write(Utility.FormatSql(sqlFilePath));
+			Console.WriteLine(ms);
+			Console.WriteLine("\n\n------------------------------------------------\n\n");
+			Console.WriteLine(pm);
 			Console.Read();
 		}
 
@@ -29,7 +40,6 @@ namespace SqlMyWay.ConsoleApp
 			CreateTokenListCsv(tree);
 			CreateXmlVisualizer(tree);
 		}
-
 		private static void CreateTokenListCsv(TSqlFragment tree)
 		{
 			var sb = new StringBuilder();
@@ -54,7 +64,6 @@ namespace SqlMyWay.ConsoleApp
 
 			File.WriteAllText("..\\..\\TokenListCsv.csv", sb.ToString());
 		}
-
 		private static void CreateXmlVisualizer(TSqlFragment tree)
 		{
 			File.WriteAllText("..\\..\\XmlVisualiser.xml", tree.ToXml(true));

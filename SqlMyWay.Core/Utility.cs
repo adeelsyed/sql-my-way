@@ -9,16 +9,16 @@ namespace SqlMyWay.Core
 {
 	public static class Utility
 	{
-		public static string FormatSql(string path)
+		public static string GetMicrosoftFormattedSql(string path)
 		{
-			TSqlFragment tree = GetTSqlFragmentTree(path);
-			AcceptVisitors(tree);
-			return tree.ToText();
+			var tree = GetTSqlFragmentTree(path);
+			return GenerateMicrosoftTSqlScript(tree);
+		}
+		public static string GetPoorMansFormattedSql(string path)
+		{
+			return PoorMansTSqlFormatterLib.SqlFormattingManager.DefaultFormat(File.ReadAllText(path));
 		}
 
-		/// <summary>
-		/// Takes a SQL script and parses it into a hierarchy of TSQLFragments.
-		/// </summary>
 		public static TSqlFragment GetTSqlFragmentTree(string path)
 		{
 			using (TextReader txtRdr = new StreamReader(path))
@@ -38,13 +38,15 @@ namespace SqlMyWay.Core
 				}
 			}
 		}
-
-		/// <summary>
-		/// Allows specialized classes to visit parts of the code and make changes
-		/// </summary>
-		private static void AcceptVisitors(TSqlFragment tree)
+		private static string GenerateMicrosoftTSqlScript(TSqlFragment tree)
 		{
-			//tree.Accept(new OrderByClauseVisitor());
+			var gen = new Sql110ScriptGenerator(new SqlScriptGeneratorOptions() { SqlVersion = SqlVersion.Sql110 });
+
+			string output;
+			gen.GenerateScript(tree, out output);
+			return output;
 		}
+
+
 	}
 }
