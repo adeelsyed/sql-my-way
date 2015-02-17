@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="SqlInput.sql" />
+    <Content Include="SqlOutput.sql" />
     <Content Include="XmlVisualiser.xml" />
   </ItemGroup>
   <ItemGroup>
