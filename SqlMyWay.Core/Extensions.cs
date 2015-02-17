@@ -11,6 +11,7 @@ namespace SqlMyWay.Core
 	public static class Extensions
 	{
 		static private readonly StringBuilder XmlBuilder = new StringBuilder();
+		private static readonly List<string> CharPosInfoFields = new List<string> {"StartOffset", "FragmentLength", "StartLine", "StartColumn", "FirstTokenIndex", "LastTokenIndex"};
 
 		/// <summary>
 		/// Converts the fragment to SQL text.
@@ -26,16 +27,19 @@ namespace SqlMyWay.Core
 		/// <summary>
 		/// Converts the fragment into an XML representation. Useful for visualizing the ScriptDom.
 		/// </summary>
-		public static string ToXml(this TSqlFragment fragment)
+		/// <param name="fragment"></param>
+		/// <param name="outputCharPosInfo">Includes details about the line, column, offset, length, and token range of each fragment</param>
+		public static string ToXml(this TSqlFragment fragment, bool outputCharPosInfo = false)
 		{
-			XmlVisualizerRecursiveScriptDomWalk(fragment, "root");
+			XmlVisualizerRecursiveScriptDomWalk(fragment, "root", outputCharPosInfo);
 			return XmlBuilder.ToString();
 		}
 
 		/// <summary>
 		/// Courtesy of Arvind Shyamsundar (http://blogs.msdn.com/b/arvindsh/archive/2013/10/30/xml-visualizer-for-the-transactsql-scriptdom-parse-tree.aspx)
+		/// Added tha ability to ignore 
 		/// </summary>
-		private static void XmlVisualizerRecursiveScriptDomWalk(object fragment, string memberName)
+		private static void XmlVisualizerRecursiveScriptDomWalk(object fragment, string memberName, bool outputCharPosInfo)
 		{
 			if (fragment.GetType().BaseType.Name != "Enum")
 			{
@@ -61,7 +65,7 @@ namespace SqlMyWay.Core
 
 			foreach (PropertyInfo pi in t.GetProperties())
 			{
-				if (pi.GetIndexParameters().Length != 0)
+				if (pi.GetIndexParameters().Length != 0 || !outputCharPosInfo && CharPosInfoFields.Contains(pi.Name))
 				{
 					continue;
 				}
@@ -83,7 +87,7 @@ namespace SqlMyWay.Core
 
 						foreach (object listItem in listMembers)
 						{
-							XmlVisualizerRecursiveScriptDomWalk(listItem, pi.Name);
+							XmlVisualizerRecursiveScriptDomWalk(listItem, pi.Name, outputCharPosInfo);
 						}
 					}
 				}
@@ -99,7 +103,7 @@ namespace SqlMyWay.Core
 						}
 						else
 						{
-							XmlVisualizerRecursiveScriptDomWalk(childObj, pi.Name);
+							XmlVisualizerRecursiveScriptDomWalk(childObj, pi.Name, outputCharPosInfo);
 						}
 					}
 				}

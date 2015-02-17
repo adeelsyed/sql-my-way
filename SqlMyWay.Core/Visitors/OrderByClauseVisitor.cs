@@ -7,13 +7,13 @@ namespace SqlMyWay.Core.Visitors
 {
 	public class OrderByClauseVisitor : TSqlFragmentVisitor
 	{
-		public override void Visit(OrderByClause f)
+		public override void ExplicitVisit(OrderByClause node)
 		{
 			//get tokens
 			var sb = new StringBuilder();
-			for (int i = f.FirstTokenIndex; i <= f.LastTokenIndex; i++)
+			for (int i = node.FirstTokenIndex; i <= node.LastTokenIndex; i++)
 			{
-				var t = f.ScriptTokenStream[i];
+				var t = node.ScriptTokenStream[i];
 				switch (t.TokenType)
 				{
 					case TSqlTokenType.Order:
