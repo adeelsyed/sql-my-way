@@ -15,7 +15,7 @@ namespace SqlMyWay.WebApp
 
 			string sql = FileUploader.HasFile ? Encoding.Default.GetString(FileUploader.FileBytes) : InputSqlTextBox.Text;
 
-			OutputSqlTextBox.Text = Utility.GetPoorMansFormattedSql(sql);
+			OutputSqlTextBox.Text = MicrosoftScriptGeneratorFormatStyleOption.Checked ? Utility.GetMicrosoftFormattedSql(sql) : Utility.GetPoorMansFormattedSql(sql);
 		}
 
 		private bool ValidateInput()
