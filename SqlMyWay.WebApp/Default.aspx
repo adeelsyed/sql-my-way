@@ -8,11 +8,19 @@
 </head>
 <body>
     <form id="form1" runat="server">
-	    <p>Enter the SQL code here</p>
+	    <p>Browse for a file or paste your unformatted SQL below</p>
+		<asp:Panel runat="server" ID="ErrorPanel" Visible="False">
+			<asp:Label runat="server" ID="ErrorMsg" ForeColor="Red"></asp:Label>
+			<br/><br/>
+		</asp:Panel>
+		<asp:FileUpload runat="server" ID="FileUploader" Width="750" />
+		<br/><br/>
 	    <asp:TextBox runat="server" ID="InputSqlTextBox" TextMode="MultiLine" Rows="20" Width="100%"></asp:TextBox>
+		<br/><br/>
 		<asp:Button runat="server" ID="FormatButton" Text="Format SQL" OnClick="FormatButton_Click" />
 		<p>Formatted SQL:</p>
 		<asp:TextBox runat="server" ID="OutputSqlTextBox" TextMode="MultiLine" Rows="20" Width="100%"></asp:TextBox>
+		<br/>
     </form>
 </body>
 </html>
