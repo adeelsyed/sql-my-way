@@ -4,7 +4,15 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+	<title>SQL My Way</title>
+	<script type="text/javascript">
+		function CopyToClipboard()
+		{
+			var formattedSql = document.getElementById('<%=OutputSqlTextBox.ClientID%>').value;
+			window.clipboardData.setData('Text', formattedSql);
+			alert('Copied formatted SQL to clipboard');
+		}
+	</script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -18,8 +26,15 @@
 	    <asp:TextBox runat="server" ID="InputSqlTextBox" TextMode="MultiLine" Rows="20" Width="100%"></asp:TextBox>
 		<br/><br/>
 		<asp:Button runat="server" ID="FormatButton" Text="Format SQL" OnClick="FormatButton_Click" />
-		<p>Formatted SQL:</p>
-		<asp:TextBox runat="server" ID="OutputSqlTextBox" TextMode="MultiLine" Rows="20" Width="100%"></asp:TextBox>
+		<br/><br/>
+		<div>
+			<div style="float: left">Formatted SQL:</div>
+			<div style="float: right">
+				<input type="button" value="Copy Formatted SQL to Clipboard" onclick="CopyToClipboard()" />
+			</div>
+		</div>
+		<br/><br/>
+		<asp:TextBox runat="server" ID="OutputSqlTextBox" TextMode="MultiLine" Rows="20" Width="100%" ReadOnly="True"></asp:TextBox>
 		<br/>
     </form>
 </body>
