@@ -5,10 +5,14 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2494C003-5128-41F0-AAD2-2A12B0484E11}"
 	ProjectSection(SolutionItems) = preProject
-		About.txt = About.txt
 		Documentation.txt = Documentation.txt
 		License.txt = License.txt
+		ReadMe.txt = ReadMe.txt
+		SqlInput.sql = SqlInput.sql
+		SqlOutput.sql = SqlOutput.sql
 		To-do.txt = To-do.txt
+		TokenListCsv.csv = TokenListCsv.csv
+		XmlVisualiser.xml = XmlVisualiser.xml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlMyWay.Core", "SqlMyWay.Core\SqlMyWay.Core.csproj", "{21C7A0A7-63C5-4920-8361-29CA2D59EC77}"

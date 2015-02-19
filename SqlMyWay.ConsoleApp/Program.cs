@@ -1,7 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
-using System.Net;
 using System.Text;
 using SqlMyWay.Core;
 using Microsoft.SqlServer.TransactSql.ScriptDom;
@@ -10,11 +8,13 @@ namespace SqlMyWay.ConsoleApp
 {
 	static class Program
 	{
-		static void Main(string[] args)
+		const string workingDirectory = "..\\..\\..\\";
+
+		static void Main()
 		{
 			//paths
-			const string sqlInput = "..\\..\\SqlInput.sql";
-			const string sqlOutput = "..\\..\\SqlOutput.sql";
+			const string sqlInput = workingDirectory + "SqlInput.sql";
+			const string sqlOutput = workingDirectory + "SqlOutput.sql";
 
 			//input
 			string sql = File.ReadAllText(sqlInput);
@@ -65,11 +65,11 @@ namespace SqlMyWay.ConsoleApp
 				sb.AppendLine(token.IsKeyword().ToString());
 			}
 
-			File.WriteAllText("..\\..\\TokenListCsv.csv", sb.ToString());
+			File.WriteAllText(workingDirectory + "TokenListCsv.csv", sb.ToString());
 		}
 		private static void CreateXmlVisualizer(TSqlFragment tree)
 		{
-			File.WriteAllText("..\\..\\XmlVisualiser.xml", tree.ToXml(true));
+			File.WriteAllText(workingDirectory + "XmlVisualiser.xml", tree.ToXml(true));
 		}
 	}
 }

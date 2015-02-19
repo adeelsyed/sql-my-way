@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Runtime.Remoting.Messaging;
 using System.Text;
 using SqlMyWay.Core;
 
