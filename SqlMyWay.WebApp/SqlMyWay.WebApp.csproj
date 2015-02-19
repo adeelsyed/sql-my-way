@@ -64,6 +64,12 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SqlMyWay.Core\SqlMyWay.Core.csproj">
+      <Project>{21c7a0a7-63c5-4920-8361-29ca2d59ec77}</Project>
+      <Name>SqlMyWay.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

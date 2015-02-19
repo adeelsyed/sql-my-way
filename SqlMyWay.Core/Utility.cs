@@ -3,40 +3,38 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using Microsoft.SqlServer.TransactSql.ScriptDom;
-using SqlMyWay.Core.Visitors;
+using PoorMansTSqlFormatterLib;
 
 namespace SqlMyWay.Core
 {
 	public static class Utility
 	{
-		public static string GetMicrosoftFormattedSql(string path)
+		public static string GetMicrosoftFormattedSql(string sql)
 		{
-			var tree = GetTSqlFragmentTree(path);
+			var tree = GetTSqlFragmentTree(sql);
 			return GenerateMicrosoftTSqlScript(tree);
 		}
-		public static string GetPoorMansFormattedSql(string path)
+		public static string GetPoorMansFormattedSql(string sql)
 		{
-			return PoorMansTSqlFormatterLib.SqlFormattingManager.DefaultFormat(File.ReadAllText(path));
+			return SqlFormattingManager.DefaultFormat(sql);
 		}
 
-		public static TSqlFragment GetTSqlFragmentTree(string path)
+		public static TSqlFragment GetTSqlFragmentTree(string sql)
 		{
-			using (TextReader txtRdr = new StreamReader(path))
+			IList<ParseError> errors;
+			using (var txtRdr = new StringReader(sql))
 			{
-				IList<ParseError> errors;
 				TSqlFragment sqlFragment = new TSql110Parser(true).Parse(txtRdr, out errors);
 				if (errors.Count == 0)
 					return sqlFragment;
-				else
-				{
-					var sb = new StringBuilder(string.Format("The SQL has {0} errors.", errors.Count));
-					sb.AppendLine();
-					foreach (var parseError in errors)
-						sb.AppendFormat("--Error {0} on line {2}, column {3}: {1}\n", parseError.Number, parseError.Message, parseError.Line, parseError.Column);
-
-					throw new Exception(sb.ToString());
-				}
 			}
+
+			//error handling
+			var sb = new StringBuilder(string.Format("The SQL has {0} errors:\n", errors.Count));
+			foreach (var parseError in errors)
+				sb.AppendFormat("--Error {0} on line {1}, column {2}: {3}\n", parseError.Number, parseError.Line, parseError.Column, parseError.Message);
+
+			throw new Exception(sb.ToString());
 		}
 		private static string GenerateMicrosoftTSqlScript(TSqlFragment tree)
 		{

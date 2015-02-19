@@ -16,16 +16,19 @@ namespace SqlMyWay.ConsoleApp
 			const string sqlInput = "..\\..\\SqlInput.sql";
 			const string sqlOutput = "..\\..\\SqlOutput.sql";
 
+			//input
+			string sql = File.ReadAllText(sqlInput);
+
 			//Microsoft Default Style
-			string ms = Utility.GetMicrosoftFormattedSql(sqlInput);
+			string ms = Utility.GetMicrosoftFormattedSql(sql);
 			File.WriteAllText(sqlOutput, ms);
 			
 			//Poor Man's Default Style
-			string pm = Utility.GetPoorMansFormattedSql(sqlInput);
+			string pm = Utility.GetPoorMansFormattedSql(sql);
 			File.WriteAllText(sqlOutput, pm);
 
 			//debug
-			CreateDebugFiles(sqlInput);
+			CreateDebugFiles(sql);
 
 			//write formatted sql to console window
 			Console.WriteLine(ms);
@@ -34,9 +37,9 @@ namespace SqlMyWay.ConsoleApp
 			Console.Read();
 		}
 
-		private static void CreateDebugFiles(string sqlFilePath)
+		private static void CreateDebugFiles(string sql)
 		{
-			var tree = Utility.GetTSqlFragmentTree(sqlFilePath);
+			var tree = Utility.GetTSqlFragmentTree(sql);
 			CreateTokenListCsv(tree);
 			CreateXmlVisualizer(tree);
 		}

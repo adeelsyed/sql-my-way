@@ -22,12 +22,30 @@ namespace SqlMyWay.WebApp {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// GreeteeLabel control.
+        /// InputSqlTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label GreeteeLabel;
+        protected global::System.Web.UI.WebControls.TextBox InputSqlTextBox;
+        
+        /// <summary>
+        /// FormatButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button FormatButton;
+        
+        /// <summary>
+        /// OutputSqlTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox OutputSqlTextBox;
     }
 }

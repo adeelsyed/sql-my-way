@@ -8,9 +8,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-		Hello, <asp:Label runat="server" ID="GreeteeLabel">World!</asp:Label>
-    </div>
+	    <p>Enter the SQL code here</p>
+	    <asp:TextBox runat="server" ID="InputSqlTextBox" TextMode="MultiLine" Rows="20" Width="100%"></asp:TextBox>
+		<asp:Button runat="server" ID="FormatButton" Text="Format SQL" OnClick="FormatButton_Click" />
+		<p>Formatted SQL:</p>
+		<asp:TextBox runat="server" ID="OutputSqlTextBox" TextMode="MultiLine" Rows="20" Width="100%"></asp:TextBox>
     </form>
 </body>
 </html>
