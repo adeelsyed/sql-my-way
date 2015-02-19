@@ -15,6 +15,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlMyWay.Core", "SqlMyWay.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlMyWay.ConsoleApp", "SqlMyWay.ConsoleApp\SqlMyWay.ConsoleApp.csproj", "{7BB2769A-7C38-4229-A1F1-BBBD9B1915DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlMyWay.WebApp", "SqlMyWay.WebApp\SqlMyWay.WebApp.csproj", "{95AC652B-C743-4043-8341-D24EB3BD8238}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{0CAD60CD-2F06-4371-85C4-0B15D6B0128A}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{E5F9DB8A-E1FC-46A4-9448-3C5398CD617A}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\SqlMyWayWebApp-WAWS-dev.json = PublishScripts\Configurations\SqlMyWayWebApp-WAWS-dev.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,8 +42,15 @@ Global
 		{7BB2769A-7C38-4229-A1F1-BBBD9B1915DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BB2769A-7C38-4229-A1F1-BBBD9B1915DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BB2769A-7C38-4229-A1F1-BBBD9B1915DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95AC652B-C743-4043-8341-D24EB3BD8238}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95AC652B-C743-4043-8341-D24EB3BD8238}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95AC652B-C743-4043-8341-D24EB3BD8238}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95AC652B-C743-4043-8341-D24EB3BD8238}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E5F9DB8A-E1FC-46A4-9448-3C5398CD617A} = {0CAD60CD-2F06-4371-85C4-0B15D6B0128A}
 	EndGlobalSection
 EndGlobal
