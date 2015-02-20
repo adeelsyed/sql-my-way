@@ -16,7 +16,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SqlMyWay.SsmsAddIn</RootNamespace>
     <AssemblyName>SqlMyWay.SsmsAddIn</AssemblyName>
-    <SignAssembly>True</SignAssembly>
+    <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
@@ -161,6 +161,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Package.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SqlMyWay.Core\SqlMyWay.Core.csproj">
+      <Project>{21c7a0a7-63c5-4920-8361-29ca2d59ec77}</Project>
+      <Name>SqlMyWay.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <UseCodebase>true</UseCodebase>

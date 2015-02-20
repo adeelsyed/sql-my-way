@@ -3,11 +3,10 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Runtime.InteropServices;
 using System.ComponentModel.Design;
-using Microsoft.Win32;
-using Microsoft.VisualStudio;
-using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.OLE.Interop;
+using EnvDTE;
+using EnvDTE80;
 using Microsoft.VisualStudio.Shell;
+using SqlMyWay.Core;
 
 namespace SqlMyWay.SsmsAddIn
 {
@@ -78,23 +77,33 @@ namespace SqlMyWay.SsmsAddIn
         /// </summary>
         private void MenuItemCallback(object sender, EventArgs e)
         {
-            // Show a Message Box to prove we were here
-            IVsUIShell uiShell = (IVsUIShell)GetService(typeof(SVsUIShell));
-            Guid clsid = Guid.Empty;
-            int result;
-            Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(uiShell.ShowMessageBox(
-                       0,
-                       ref clsid,
-                       "SsmsAddIn",
-                       string.Format(CultureInfo.CurrentCulture, "Inside {0}.MenuItemCallback()", this.ToString()),
-                       string.Empty,
-                       0,
-                       OLEMSGBUTTON.OLEMSGBUTTON_OK,
-                       OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST,
-                       OLEMSGICON.OLEMSGICON_INFO,
-                       0,        // false
-                       out result));
-        }
+			DTE2 dte = (DTE2)GetService(typeof(DTE));
+	        var activeDocument = dte.ActiveDocument;		
+			var unformattedSql = SelectAllCodeFromDocument(activeDocument);
+			var formattedSql = Utility.GetPoorMansFormattedSql(unformattedSql);
+			ReplaceAllCodeInDocument(activeDocument, formattedSql);
+		}
+
+		//Nice clean methods avoiding slow selection-editing, from online post at:
+		//  http://www.visualstudiodev.com/visual-studio-extensibility/how-can-i-edit-documents-programatically-22319.shtml
+		private static string SelectAllCodeFromDocument(Document targetDoc)
+		{
+			string outText = "";
+			TextDocument textDoc = targetDoc.Object("TextDocument") as TextDocument;
+			if (textDoc != null)
+				outText = textDoc.StartPoint.CreateEditPoint().GetText(textDoc.EndPoint);
+			return outText;
+		}
+
+		private static void ReplaceAllCodeInDocument(Document targetDoc, string newText)
+		{
+			TextDocument textDoc = targetDoc.Object("TextDocument") as TextDocument;
+			if (textDoc != null)
+			{
+				textDoc.StartPoint.CreateEditPoint().Delete(textDoc.EndPoint);
+				textDoc.StartPoint.CreateEditPoint().Insert(newText);
+			}
+		}
 
     }
 }
