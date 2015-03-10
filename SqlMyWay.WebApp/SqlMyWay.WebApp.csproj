@@ -42,9 +42,10 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\sqlmyway %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\sqlmyway.pubxml" />
-    <Content Include="SqlMyWayAddIn.AddIn" />
     <Content Include="web.config" />
+    <Content Include="SqlMyWayAddIn.zip" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
