@@ -8,9 +8,9 @@ namespace SqlMyWay.ConsoleApp
 {
 	static class Program
 	{
-		const string workingDirectory = "..\\..\\..\\";
+        const string workingDirectory = "..\\..\\..\\"; //the solution folder, relative to the bin directory
 
-		static void Main()
+		static void Main(string[] args)
 		{
 			//paths
 			const string sqlInput = workingDirectory + "SqlInput.sql";
@@ -39,7 +39,7 @@ namespace SqlMyWay.ConsoleApp
 
 		private static void CreateDebugFiles(string sql)
 		{
-			var tree = Utility.GetTSqlFragmentTree(sql);
+            var tree = Utility.GetMicrosoftTSqlFragmentTree(sql);
 			CreateTokenListCsv(tree);
 			CreateXmlVisualizer(tree);
 		}

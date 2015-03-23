@@ -28,9 +28,11 @@
     <form id="form1" runat="server">
 		<div id="right" style="float: right; width: 300px">
 			<p style="font-weight: bold">Formatting Options</p>
-			<asp:RadioButton runat="server" GroupName="FormatStyle" ID="MicrosoftScriptGeneratorFormatStyleOption"  Text="Microsoft Script Generator" />
+			<asp:RadioButton runat="server" GroupName="FormatStyle" ID="EditorsChoiceOption"  Text="SQL My Way Editor's Choice" Checked="True" />
 			<br/>
-			<asp:RadioButton runat="server" GroupName="FormatStyle" ID="PoorMansTSqlFormatterFormatStyleOption"  Text="Poor Man's T-SQL Formatter" Checked="True" />
+			<asp:RadioButton runat="server" GroupName="FormatStyle" ID="PoorMansOption"  Text="Poor Man's T-SQL Formatter" />
+			<br/>
+			<asp:RadioButton runat="server" GroupName="FormatStyle" ID="MicrosoftOption"  Text="Microsoft Script Generator" />
 		</div>
 		<div id="left" style="margin-right: 320px;">
 			<p>Browse for a file or paste your unformatted SQL below</p>
