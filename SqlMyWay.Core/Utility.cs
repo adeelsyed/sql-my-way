@@ -13,7 +13,7 @@ namespace SqlMyWay.Core
 	{
         public static string GetSqlMyWayEditorsChoiceFormattedSql(string sql)
 		{
-            //USE WHAT IS AVAILABLE IN POOR MAN
+            //USE POOR MAN TO GET TO BEAUTY BASE ZERO
 			var options = new TSqlStandardFormatterOptions 
             {
                 ExpandCommaLists = true,
@@ -36,25 +36,60 @@ namespace SqlMyWay.Core
             //put first item in a comma list on a new line
             sql = Regex.Replace(sql, @"^(\s*)(([A-Z]+ )+)([^\(]*),", "$1$2\n$1    $4,", RegexOptions.Multiline);
             
-            //put first multi-line parens on a new line
+            //put first multi-line parens on a new line.
             sql = Regex.Replace(sql, @"((\n\s*)[^\(\n]+)\((\n)", "$1$2($3");
-            sql = Regex.Replace(sql, @"\((\n\s*?)\n\s*\(", "($1(");
 
-            //make closing parens line up with opening parens
-            var stackOfSpaceCounts = new Stack<int>();
+            //now fix indentation. lines between parens are over-indented
             string[] lines = sql.Split('\n');
             for (int i = 0; i < lines.Length; i++)
             {
                 var line = lines[i];
-                if(line.Trim() == "(")
+                if (line.Trim() == "(")
                 {
-                    //count leading stackOfSpaceCounts before opening parens
+                    //count leading spaces before opening parens
+                    int leadingSpaces = line.Split('(')[0].Length;
+
+                    //count leading spaces of following line
+                    int nextLineLeadingSpaces = Regex.Match(lines[i + 1], @"\s*").Length;
+
+                    //if next line is overindented, unindent until next close parens
+                    if (nextLineLeadingSpaces - leadingSpaces > "    ".Length)
+                    {
+                        int overIndent = nextLineLeadingSpaces - leadingSpaces - "    ".Length;
+                        int curParen = 0;
+                        for (int j = i + 1; j < lines.Length; j++)
+                        {
+                            if (lines[j].Trim() == "(")
+                                curParen++;
+                            else if (lines[j].Trim().StartsWith(")"))
+                                curParen--;
+
+                            lines[j] = lines[j].Substring(overIndent);
+
+                            if (curParen == -1)
+                                break;
+                        }
+                    }
+                }
+            }
+            sql = string.Join("\n", lines);
+
+
+            //make closing parens line up with opening parens
+            var stackOfSpaceCounts = new Stack<int>();
+            lines = sql.Split('\n');
+            for (int i = 0; i < lines.Length; i++)
+            {
+                var line = lines[i];
+                if (line.Trim() == "(")
+                {
+                    //count leading spaces before opening parens
                     int leadingSpaces = line.Split('(')[0].Length;
                     stackOfSpaceCounts.Push(leadingSpaces);
                 }
                 else if (line.Trim().StartsWith(")"))
                 {
-                    //add leading stackOfSpaceCounts before corresponding closing parens
+                    //add leading spaces before corresponding closing parens
                     lines[i] = new string(' ', stackOfSpaceCounts.Pop()) + line.Trim();
                 }
             }

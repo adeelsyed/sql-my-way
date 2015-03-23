@@ -12,6 +12,11 @@
 			window.clipboardData.setData('Text', formattedSql);
 			alert('Copied formatted SQL to clipboard');
 		}
+	    function InsertSampleScript()
+	    {
+	        var unformattedSql = 'aa';
+            document.getElementById('<%=InputSqlTextBox.ClientID%>').value = unformattedSql;
+	    }
 	</script>
     <script type="text/javascript">
         var appInsights=window.appInsights||function(config){
@@ -35,7 +40,7 @@
 			<asp:RadioButton runat="server" GroupName="FormatStyle" ID="MicrosoftOption"  Text="Microsoft Script Generator" />
 		</div>
 		<div id="left" style="margin-right: 320px;">
-			<p>Browse for a file or paste your unformatted SQL below</p>
+			<p>Choose a SQL file to format, paste SQL directly into the textbox below, or <a href="javascript:InsertSampleScript()">use a sample script</a>.</p>
 			<asp:Panel runat="server" ID="ErrorPanel" Visible="False">
 				<asp:Label runat="server" ID="ErrorMsg" ForeColor="Red"></asp:Label>
 				<br/><br/>
