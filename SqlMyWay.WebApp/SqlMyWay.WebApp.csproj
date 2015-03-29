@@ -42,8 +42,12 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\stepnumber.pdn" />
     <None Include="Properties\PublishProfiles\sqlmyway %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\sqlmyway.pubxml" />
+    <Content Include="img\stepone.png" />
+    <Content Include="img\stepthree.png" />
+    <Content Include="img\steptwo.png" />
     <Content Include="web.config" />
     <Content Include="SqlMyWayAddIn.zip" />
     <None Include="web.Debug.config">

@@ -56,17 +56,17 @@ namespace SqlMyWay.Core
                     if (nextLineLeadingSpaces - leadingSpaces > "    ".Length)
                     {
                         int overIndent = nextLineLeadingSpaces - leadingSpaces - "    ".Length;
-                        int curParen = 0;
+                        int parenCount = 1;
                         for (int j = i + 1; j < lines.Length; j++)
                         {
                             if (lines[j].Trim() == "(")
-                                curParen++;
+                                parenCount++;
                             else if (lines[j].Trim().StartsWith(")"))
-                                curParen--;
+                                parenCount--;
 
                             lines[j] = lines[j].Substring(overIndent);
 
-                            if (curParen == -1)
+                            if (parenCount == 0)
                                 break;
                         }
                     }
@@ -106,7 +106,10 @@ namespace SqlMyWay.Core
         {
             return SqlFormattingManager.DefaultFormat(sql);
         }
-
+        public static string GetSqlMyWay(string sql, SqlMyWayOptions sqlMyWayOptions)
+        {
+            throw new NotImplementedException();
+        }
         
 		public static TSqlFragment GetMicrosoftTSqlFragmentTree(string sql)
 		{
@@ -139,5 +142,6 @@ namespace SqlMyWay.Core
             var manager = new SqlFormattingManager(formatter);
             return manager.Format(sql);
         }
-	}
+
+    }
 }

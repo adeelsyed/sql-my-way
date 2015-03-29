@@ -49,6 +49,60 @@ namespace SqlMyWay.WebApp {
         protected global::System.Web.UI.WebControls.RadioButton MicrosoftOption;
         
         /// <summary>
+        /// CustomOption control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton CustomOption;
+        
+        /// <summary>
+        /// OptionsPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel OptionsPanel;
+        
+        /// <summary>
+        /// optNLineBreaksBetweenStatements control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox optNLineBreaksBetweenStatements;
+        
+        /// <summary>
+        /// optNLineBreaksBetweenClauses control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox optNLineBreaksBetweenClauses;
+        
+        /// <summary>
+        /// optExcludeClausesWithLessThanNCharacters control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox optExcludeClausesWithLessThanNCharacters;
+        
+        /// <summary>
+        /// UseSampleScriptLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton UseSampleScriptLink;
+        
+        /// <summary>
         /// ErrorPanel control.
         /// </summary>
         /// <remarks>
