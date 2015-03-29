@@ -48,6 +48,7 @@
     <Content Include="img\stepone.png" />
     <Content Include="img\stepthree.png" />
     <Content Include="img\steptwo.png" />
+    <Content Include="SqlInput.sql" />
     <Content Include="web.config" />
     <Content Include="SqlMyWayAddIn.zip" />
     <None Include="web.Debug.config">

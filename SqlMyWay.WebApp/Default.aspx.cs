@@ -38,7 +38,7 @@ namespace SqlMyWay.WebApp
 		}
         protected void UseSampleScriptLink_Click(object sender, EventArgs e)
         {
-            InputSqlTextBox.Text = File.ReadAllText("C:\\Users\\Adeel\\Documents\\Visual Studio 2013\\Projects\\SqlMyWay\\SqlInput.sql");
+            InputSqlTextBox.Text = File.ReadAllText(Server.MapPath("~\\SqlInput.sql"));
         }
         protected void FormatOption_Changed(object sender, EventArgs e)
         {
