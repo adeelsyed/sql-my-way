@@ -67,31 +67,22 @@ namespace SqlMyWay.WebApp {
         protected global::System.Web.UI.WebControls.Panel OptionsPanel;
         
         /// <summary>
-        /// optNLineBreaksBetweenStatements control.
+        /// NLineBreaksBetweenStatements control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox optNLineBreaksBetweenStatements;
+        protected global::System.Web.UI.WebControls.TextBox NLineBreaksBetweenStatements;
         
         /// <summary>
-        /// optNLineBreaksBetweenClauses control.
+        /// NLineBreaksBetweenClauses control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox optNLineBreaksBetweenClauses;
-        
-        /// <summary>
-        /// optExcludeClausesWithLessThanNCharacters control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox optExcludeClausesWithLessThanNCharacters;
+        protected global::System.Web.UI.WebControls.TextBox NLineBreaksBetweenClauses;
         
         /// <summary>
         /// UseSampleScriptLink control.

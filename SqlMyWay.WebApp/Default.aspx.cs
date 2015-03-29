@@ -7,26 +7,34 @@ namespace SqlMyWay.WebApp
 {
 	public partial class Default : System.Web.UI.Page
 	{      
-#if DEBUG
-        protected void Page_Load(EventArgs e)
-        {          
-            UseSampleScriptLink_Click(null, null);
-            FormatButton_Click(null, null);
+        protected override void OnLoad(EventArgs e)
+        {
+            //first page load; set defaults
+            if(!IsPostBack)
+            {
+                CustomOption.Checked = true;
+                SetDefaultMyWayOptions();
+
+                //testing only
+                //UseSampleScriptLink_Click(null, null);
+                //FormatButton_Click(null, null);
+            }
+
         }
-#endif
         
         protected void FormatButton_Click(object sender, EventArgs e)
 		{
-			if (!ValidateInput())
+            //get sql
+			if (!ValidateSqlInput())
 				return;
-
             string sql = FileUploader.HasFile ? Encoding.Default.GetString(FileUploader.FileBytes) : InputSqlTextBox.Text;
 
+            //format sql based on selected style
             OutputSqlTextBox.Text =
                 EditorsChoiceOption.Checked ? Utility.GetSqlMyWayEditorsChoiceFormattedSql(sql) :
                 PoorMansOption.Checked ? Utility.GetPoorMansFormattedSql(sql) :
                 MicrosoftOption.Checked ? Utility.GetMicrosoftFormattedSql(sql) :
-                Utility.GetSqlMyWay(sql, GetOptions());
+                Utility.GetSqlMyWay(sql, GetMyWayOptions());
 		}
         protected void UseSampleScriptLink_Click(object sender, EventArgs e)
         {
@@ -37,7 +45,12 @@ namespace SqlMyWay.WebApp
             OptionsPanel.Enabled = CustomOption.Checked;
         }
 
-        private bool ValidateInput()
+        private void SetDefaultMyWayOptions()
+        {
+            NLineBreaksBetweenStatements.Text = "2";
+            NLineBreaksBetweenClauses.Text = "1";
+        }
+        private bool ValidateSqlInput()
         {
             if (FileUploader.HasFile && InputSqlTextBox.Text.Trim().Length > 0)
             {
@@ -58,9 +71,14 @@ namespace SqlMyWay.WebApp
                 return true;
             }
         }
-        private SqlMyWayOptions GetOptions()
+        private SqlMyWayOptions GetMyWayOptions()
         {
-            throw new NotImplementedException();
+            var options = new SqlMyWayOptions();
+
+            int.TryParse(NLineBreaksBetweenStatements.Text, out options.NLineBreaksBetweenStatements);
+            int.TryParse(NLineBreaksBetweenClauses.Text, out options.NLineBreaksBetweenClauses);
+
+            return options;
         }
 
 

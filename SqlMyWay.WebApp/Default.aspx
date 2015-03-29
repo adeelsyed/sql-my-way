@@ -32,7 +32,7 @@
                 <b>Select Formatting Style</b>
 			</p>
             <p>
-			    <asp:RadioButton runat="server" GroupName="FormatStyle" ID="EditorsChoiceOption" Text="SQL My Way Editor's Choice" Checked="True"  OnCheckedChanged="FormatOption_Changed" AutoPostBack="true" />
+			    <asp:RadioButton runat="server" GroupName="FormatStyle" ID="EditorsChoiceOption" Text="SQL My Way Editor's Choice" OnCheckedChanged="FormatOption_Changed" AutoPostBack="true" />
 			    <br />
 			    <asp:RadioButton runat="server" GroupName="FormatStyle" ID="PoorMansOption" Text="Poor Man's T-SQL Formatter"  OnCheckedChanged="FormatOption_Changed" AutoPostBack="true" />
 			    <br />
@@ -44,13 +44,8 @@
 
                 <b>Statements</b>
                 <ul>
-                    <li>Place <asp:TextBox ID="optNLineBreaksBetweenStatements" runat="server" CssClass="tbNum" Text="2" /> line breaks between statements</li>
-                    <li>
-                        Place <asp:TextBox ID="optNLineBreaksBetweenClauses" runat="server" CssClass="tbNum" Text="1" /> line breaks between clauses
-                        <ul>
-                            <li>Exclude clauses with less than <asp:TextBox ID="optExcludeClausesWithLessThanNCharacters" runat="server" CssClass="tbNum" /> characters</li>
-                        </ul>
-                    </li>
+                    <li>Place <asp:TextBox ID="NLineBreaksBetweenStatements" runat="server" CssClass="tbNum" /> line breaks between statements</li>
+                    <li>Place <asp:TextBox ID="NLineBreaksBetweenClauses" runat="server" CssClass="tbNum" /> line breaks between clauses</li>
                 </ul>
 
             </asp:Panel>

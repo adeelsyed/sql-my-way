@@ -1,4 +1,4 @@
-SELECT  
+select * from enrollment; SELECT  
 	term, 
 	student_id,
     CASE
