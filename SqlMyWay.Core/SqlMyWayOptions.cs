@@ -10,5 +10,10 @@ namespace SqlMyWay.Core
         //not using automatic properties because they cannot be used as out parameters
         public int NLineBreaksBetweenStatements;
         public int NLineBreaksBetweenClauses;
+        public bool CapitalizeKeywords;
+        public bool CapitalizeDataTypes;
+        public bool CapitalizeBuiltInFunctions;
+
     }
+
 }

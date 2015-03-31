@@ -47,6 +47,12 @@
                     <li>Place <asp:TextBox ID="NLineBreaksBetweenStatements" runat="server" CssClass="tbNum" /> line breaks between statements</li>
                     <li>Place <asp:TextBox ID="NLineBreaksBetweenClauses" runat="server" CssClass="tbNum" /> line breaks between clauses</li>
                 </ul>
+                <b>Capitalization</b>
+                <ul>
+                    <li><asp:CheckBox ID="CapitalizeKeywords" runat="server" /> Capitalize keywords</li>                    
+                    <li><asp:CheckBox ID="CapitalizeDataTypes" runat="server" /> Capitalize data types</li>                    
+                    <li><asp:CheckBox ID="CapitalizeBuiltInFunctions" runat="server" /> Capitalize built-in functions</li>                    
+                </ul>
 
             </asp:Panel>
 		</div>

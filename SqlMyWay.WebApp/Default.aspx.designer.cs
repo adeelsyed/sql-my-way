@@ -85,6 +85,33 @@ namespace SqlMyWay.WebApp {
         protected global::System.Web.UI.WebControls.TextBox NLineBreaksBetweenClauses;
         
         /// <summary>
+        /// CapitalizeKeywords control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CapitalizeKeywords;
+        
+        /// <summary>
+        /// CapitalizeDataTypes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CapitalizeDataTypes;
+        
+        /// <summary>
+        /// CapitalizeBuiltInFunctions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CapitalizeBuiltInFunctions;
+        
+        /// <summary>
         /// UseSampleScriptLink control.
         /// </summary>
         /// <remarks>

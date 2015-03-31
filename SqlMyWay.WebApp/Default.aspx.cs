@@ -49,6 +49,9 @@ namespace SqlMyWay.WebApp
         {
             NLineBreaksBetweenStatements.Text = "2";
             NLineBreaksBetweenClauses.Text = "1";
+            CapitalizeKeywords.Checked = true;
+            CapitalizeDataTypes.Checked = true;
+            CapitalizeBuiltInFunctions.Checked = true;
         }
         private bool ValidateSqlInput()
         {
@@ -73,12 +76,15 @@ namespace SqlMyWay.WebApp
         }
         private SqlMyWayOptions GetMyWayOptions()
         {
-            var options = new SqlMyWayOptions();
+            var o = new SqlMyWayOptions();
 
-            int.TryParse(NLineBreaksBetweenStatements.Text, out options.NLineBreaksBetweenStatements);
-            int.TryParse(NLineBreaksBetweenClauses.Text, out options.NLineBreaksBetweenClauses);
+            int.TryParse(NLineBreaksBetweenStatements.Text, out o.NLineBreaksBetweenStatements);
+            int.TryParse(NLineBreaksBetweenClauses.Text, out o.NLineBreaksBetweenClauses);
+            o.CapitalizeKeywords = CapitalizeKeywords.Checked;
+            o.CapitalizeDataTypes = CapitalizeDataTypes.Checked;
+            o.CapitalizeBuiltInFunctions = CapitalizeBuiltInFunctions.Checked;
 
-            return options;
+            return o;
         }
 
 

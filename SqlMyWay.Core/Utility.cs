@@ -6,6 +6,7 @@ using Microsoft.SqlServer.TransactSql.ScriptDom;
 using PoorMansTSqlFormatterLib;
 using PoorMansTSqlFormatterLib.Formatters;
 using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace SqlMyWay.Core
 {
@@ -35,7 +36,21 @@ namespace SqlMyWay.Core
             //line breaks between clauses: put a \n bf every clause keyword            
             pat = @"\n(\s*(" + string.Join("|", Const.ClauseKeywords) + @")\s*\n)";
             sql = Regex.Replace(sql, pat, new string('\n', o.NLineBreaksBetweenClauses) + @"$1");
-                        
+            
+            //keyword capitalization
+            var kw = Const.AllKeywords.Except(Const.BuiltInFunctions).Except(Const.DataTypeKeywords);
+            pat = @"\b(" + string.Join("|", kw) + @")\b";
+            sql = Regex.Replace(sql, pat, x => o.CapitalizeKeywords ? x.Groups[1].ToString().ToUpper() : x.Groups[1].ToString().ToLower(), RegexOptions.IgnoreCase);
+
+            //datatype capitalization
+            pat = @"\b(" + string.Join("|", Const.DataTypeKeywords) + @")\b";
+            sql = Regex.Replace(sql, pat, x => o.CapitalizeDataTypes ? x.Groups[1].ToString().ToUpper() : x.Groups[1].ToString().ToLower(), RegexOptions.IgnoreCase);
+
+            //built-in function capitalization
+            pat = @"\b(" + string.Join("|", Const.BuiltInFunctions.Except(Const.DataTypeKeywords)) + @")\(";
+            sql = Regex.Replace(sql, pat, x => o.CapitalizeBuiltInFunctions ? x.Groups[1].ToString().ToUpper() + "(" : x.Groups[1].ToString().ToLower() + "(", RegexOptions.IgnoreCase);
+
+
             return sql;
         }
         
@@ -79,7 +94,7 @@ namespace SqlMyWay.Core
                 TrailingCommas = true,
                 BreakJoinOnSections = false,
                 ExpandBetweenConditions = false,
-                IndentString = "    ",
+                IndentString = Const.Tab,
                 HTMLColoring = false
             };
             sql = GetPoorMansFormattedSql(sql, options);
@@ -111,9 +126,9 @@ namespace SqlMyWay.Core
                     int nextLineLeadingSpaces = Regex.Match(lines[i + 1], @"\s*").Length;
 
                     //if next line is overindented, unindent until next close parens
-                    if (nextLineLeadingSpaces - leadingSpaces > "    ".Length)
+                    if (nextLineLeadingSpaces - leadingSpaces > Const.Tab.Length)
                     {
-                        int overIndent = nextLineLeadingSpaces - leadingSpaces - "    ".Length;
+                        int overIndent = nextLineLeadingSpaces - leadingSpaces - Const.Tab.Length;
                         int parenCount = 1;
                         for (int j = i + 1; j < lines.Length; j++)
                         {
@@ -157,9 +172,9 @@ namespace SqlMyWay.Core
 
             //put each clause keyword on its own line
             pat = @"^( *)(" + string.Join("|", Const.ClauseKeywords) + @") (.+)";
-            sql = Regex.Replace(sql, pat, "$1$2\n$1" + "@#SQLMYWAY" + "    " + "$3", RegexOptions.Multiline);
+            sql = Regex.Replace(sql, pat, "$1$2\n$1" + "@#SQLMYWAY" + Const.Tab + "$3", RegexOptions.Multiline);
             sql = sql.Replace("@#SQLMYWAY    (", "(");
-            sql = sql.Replace("@#SQLMYWAY    ", "    ");
+            sql = sql.Replace("@#SQLMYWAY    ", Const.Tab);
 
             //fix parentheses blocks to be indented the same as prior line
             lines = sql.Split('\n');

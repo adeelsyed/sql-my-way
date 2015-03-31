@@ -19,9 +19,9 @@ FROM
 				SELECT  
 					e.term, 
 					e.student_id, 
-					NVL(o.credits, 0) credits,
+					ISNULL(o.credits, 0) credits,
 					CASE
-						WHEN NVL(o.weeks, 0) > 5 THEN (NVL(o.lect_hours, 0) + NVL(o.lab_hours, 0) + NVL(o.ext_hours, 0)) / NVL(o.weeks, 0)
+						WHEN ISNULL(o.weeks, 0) > 5 THEN (ISNULL(o.lect_hours, 0) + ISNULL(o.lab_hours, 0)) / ISNULL(o.weeks, 0)
 						ELSE 0
 						END AS hours_per_week
 				FROM    
