@@ -40,19 +40,27 @@ namespace SqlMyWay.WebApp
         {
             InputSqlTextBox.Text = File.ReadAllText(Server.MapPath("~\\SqlInput.sql"));
         }
-        protected void FormatOption_Changed(object sender, EventArgs e)
-        {
-            OptionsPanel.Enabled = CustomOption.Checked;
-        }
+		protected void FormatOption_Changed(object sender, EventArgs e)
+		{
+			OptionsPanel.Enabled = CustomOption.Checked;
+		}
+		protected void CommaListStyle_Changed(object sender, EventArgs e)
+		{
+			CommaListTrailingCommas.Enabled = CommaListStacked.Checked;
+			CommaListTrailingCommas.Checked = true;
+		}
 
-        private void SetDefaultMyWayOptions()
+		private void SetDefaultMyWayOptions()
         {
             NLineBreaksBetweenStatements.Text = "2";
             NLineBreaksBetweenClauses.Text = "1";
             CapitalizeKeywords.Checked = true;
             CapitalizeDataTypes.Checked = true;
             CapitalizeBuiltInFunctions.Checked = true;
-        }
+			CommaListInline.Checked = false;
+			CommaListStacked.Checked = true;
+			CommaListTrailingCommas.Checked = true;
+     }
         private bool ValidateSqlInput()
         {
             if (FileUploader.HasFile && InputSqlTextBox.Text.Trim().Length > 0)
@@ -83,6 +91,8 @@ namespace SqlMyWay.WebApp
             o.CapitalizeKeywords = CapitalizeKeywords.Checked;
             o.CapitalizeDataTypes = CapitalizeDataTypes.Checked;
             o.CapitalizeBuiltInFunctions = CapitalizeBuiltInFunctions.Checked;
+			o.CommaListStacked = CommaListStacked.Checked;
+			o.CommaListTrailingCommas = CommaListTrailingCommas.Checked;
 
             return o;
         }

@@ -29,6 +29,7 @@ namespace SqlMyWay.Core
         {
             sql = GetSqlBeautyBaseZero(sql);
             string pat;
+	        string[] lines;
 
             //line breaks between statements.
             sql = sql.Replace("\n\n", new string('\n', o.NLineBreaksBetweenStatements));
@@ -50,8 +51,54 @@ namespace SqlMyWay.Core
             pat = @"\b(" + string.Join("|", Const.BuiltInFunctions.Except(Const.DataTypeKeywords)) + @")\(";
             sql = Regex.Replace(sql, pat, x => o.CapitalizeBuiltInFunctions ? x.Groups[1].ToString().ToUpper() + "(" : x.Groups[1].ToString().ToLower() + "(", RegexOptions.IgnoreCase);
 
+	        //leading commas or inline comma lists
+	        if (!o.CommaListTrailingCommas || !o.CommaListStacked)
+	        {
+		        lines = sql.Split('\n');
+		        for (int i = 0; i < lines.Length; i++)
+		        {
+					//find comma list
+			        if (Regex.IsMatch(lines[i].Trim(), "SELECT|GROUP BY|ORDER BY") || (lines[i-1].Trim().EndsWith("IN") && lines[i].Trim() == "("))
+			        {
+				        int listIndent = -1;
+				        for (int j = i + 1; j < lines.Length; j++)
+				        {
+					        //get indent of next line. everything with the same indent is part of the list
+					        int indent = Regex.Match(lines[j], @"^\s*").Length;
 
-            return sql;
+					        //save indent of first item in select list
+					        if (listIndent == -1)
+						        listIndent = indent;
+
+					        //only process commas for items that have the same indent as the first item
+							if (indent == listIndent && !o.CommaListTrailingCommas)
+					        {
+						        pat = @"^(\s+)(.+?),{0,1}$"; //$1 is indent, $2 is item without comma
+						        string repl = j == i + 1 ? "$1$2" : "$1,$2";
+						        lines[j] = Regex.Replace(lines[j], pat, repl, RegexOptions.Multiline);
+					        }
+
+							//process inline for lines with same indent or more
+							if (indent >= listIndent && !o.CommaListStacked)
+					        {
+						        lines[j] += "::LAST LINE. REMOVE THIS::";
+						        lines[j - 1] = lines[j - 1].Replace("::LAST LINE. REMOVE THIS::", "::REPLACE THIS AND THE FOLLOWING WHITESPACE::");
+					        }
+
+					        //break if indent is ever less than first indent
+					        if (indent < listIndent)
+						        break;
+				        }
+			        }
+		        }
+		        sql = string.Join("\n", lines);
+		        sql = sql.Replace("::LAST LINE. REMOVE THIS::", "");
+				sql = Regex.Replace(sql, @"::REPLACE THIS AND THE FOLLOWING WHITESPACE::\s*", " ");
+				
+	        }
+
+
+	        return sql;
         }
         
 		public static TSqlFragment GetMicrosoftTSqlFragmentTree(string sql)
@@ -104,6 +151,7 @@ namespace SqlMyWay.Core
 
             //to make patterns simpler, convert CRLF to LF
             sql = sql.Replace("\r\n", "\n");
+			sql = sql.Replace(" +\n", "\n");
 
             //do not break before the then in a case statement
             sql = Regex.Replace(sql, @"\n\s*(THEN)", " THEN");

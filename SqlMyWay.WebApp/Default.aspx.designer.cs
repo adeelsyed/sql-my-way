@@ -112,6 +112,33 @@ namespace SqlMyWay.WebApp {
         protected global::System.Web.UI.WebControls.CheckBox CapitalizeBuiltInFunctions;
         
         /// <summary>
+        /// CommaListStacked control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton CommaListStacked;
+        
+        /// <summary>
+        /// CommaListInline control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton CommaListInline;
+        
+        /// <summary>
+        /// CommaListTrailingCommas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CommaListTrailingCommas;
+        
+        /// <summary>
         /// UseSampleScriptLink control.
         /// </summary>
         /// <remarks>

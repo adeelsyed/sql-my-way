@@ -9,7 +9,7 @@ namespace SqlMyWay.Core
     static class Const
     {
         public const string Tab = "    ";
-        public static string[] AllKeywords = new string[]
+        public static readonly string[] AllKeywords = new string[]
         {
             //courtesy of Poor Man
             #region
@@ -568,7 +568,7 @@ namespace SqlMyWay.Core
             "YEAR" 
 	        #endregion
         };
-        public static string[] ClauseKeywords = new string[]
+        public static readonly string[] ClauseKeywords = new string[]
         {
             #region
             "WITH",
@@ -603,7 +603,7 @@ namespace SqlMyWay.Core
             "GO"
   	        #endregion
         };
-        public static string[] DataTypeKeywords = new string[]
+		public static readonly string[] DataTypeKeywords = new string[]
         {
             #region
             "CHAR",
@@ -640,7 +640,7 @@ namespace SqlMyWay.Core
             "CURSOR"
             #endregion
         };
-        public static string[] BuiltInFunctions = new string[]
+		public static readonly string[] BuiltInFunctions = new string[]
         {
             #region
             "OPENDATASOURCE",

@@ -53,6 +53,14 @@
                     <li><asp:CheckBox ID="CapitalizeDataTypes" runat="server" /> Capitalize data types</li>                    
                     <li><asp:CheckBox ID="CapitalizeBuiltInFunctions" runat="server" /> Capitalize built-in functions</li>                    
                 </ul>
+                <b>Comma-Separated Lists</b>
+                <ul>
+                    <li>
+						<asp:RadioButton runat="server" GroupName="ListStyle" ID="CommaListStacked" Text="Stacked" OnCheckedChanged="CommaListStyle_Changed" AutoPostBack="true" />
+						<asp:RadioButton runat="server" GroupName="ListStyle" ID="CommaListInline" Text="Inline" OnCheckedChanged="CommaListStyle_Changed" AutoPostBack="true" />
+                    </li>                    
+                    <li><asp:CheckBox ID="CommaListTrailingCommas" runat="server" /> Trailing commas</li>                    
+                </ul>
 
             </asp:Panel>
 		</div>

@@ -13,7 +13,8 @@ namespace SqlMyWay.Core
         public bool CapitalizeKeywords;
         public bool CapitalizeDataTypes;
         public bool CapitalizeBuiltInFunctions;
-
+		public bool CommaListStacked;
+		public bool CommaListTrailingCommas;
     }
 
 }
