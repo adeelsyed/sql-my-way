@@ -21,7 +21,9 @@ namespace SqlMyWay.WebApp
             }
 
         }
-        
+
+        #region event handlers
+
         protected void FormatButton_Click(object sender, EventArgs e)
 		{
             //get sql
@@ -46,21 +48,28 @@ namespace SqlMyWay.WebApp
 		}
 		protected void CommaListStyle_Changed(object sender, EventArgs e)
 		{
-			CommaListTrailingCommas.Enabled = CommaListStacked.Checked;
-			CommaListTrailingCommas.Checked = true;
+			CommaLists_TrailingCommas.Enabled = CommaLists_Stacked.Checked;
+			CommaLists_TrailingCommas.Checked = true;
 		}
 
-		private void SetDefaultMyWayOptions()
+        #endregion
+
+        #region private methods
+
+        private void SetDefaultMyWayOptions()
         {
-            NLineBreaksBetweenStatements.Text = "2";
-            NLineBreaksBetweenClauses.Text = "1";
-            CapitalizeKeywords.Checked = true;
-            CapitalizeDataTypes.Checked = true;
-            CapitalizeBuiltInFunctions.Checked = true;
-			CommaListInline.Checked = false;
-			CommaListStacked.Checked = true;
-			CommaListTrailingCommas.Checked = true;
-     }
+            LineBreaks_BetweenStatements.Text = "2";
+            LineBreaks_BetweenClauses.Text = "1";
+            Capitalize_Keywords.Checked = true;
+            Capitalize_DataTypes.Checked = true;
+            Capitalize_BuiltInFunctions.Checked = true;
+			CommaLists_Inline.Checked = false;
+			CommaLists_Stacked.Checked = true;
+			CommaLists_TrailingCommas.Checked = true;
+            Joins_Indented.Checked = true;
+            Joins_TableOnSameLine.Checked = true;
+            Joins_OnClauseOnSameLine.Checked = true;
+        }
         private bool ValidateSqlInput()
         {
             if (FileUploader.HasFile && InputSqlTextBox.Text.Trim().Length > 0)
@@ -86,17 +95,20 @@ namespace SqlMyWay.WebApp
         {
             var o = new SqlMyWayOptions();
 
-            int.TryParse(NLineBreaksBetweenStatements.Text, out o.NLineBreaksBetweenStatements);
-            int.TryParse(NLineBreaksBetweenClauses.Text, out o.NLineBreaksBetweenClauses);
-            o.CapitalizeKeywords = CapitalizeKeywords.Checked;
-            o.CapitalizeDataTypes = CapitalizeDataTypes.Checked;
-            o.CapitalizeBuiltInFunctions = CapitalizeBuiltInFunctions.Checked;
-			o.CommaListStacked = CommaListStacked.Checked;
-			o.CommaListTrailingCommas = CommaListTrailingCommas.Checked;
+            int.TryParse(LineBreaks_BetweenStatements.Text, out o.LineBreaks_BetweenStatements);
+            int.TryParse(LineBreaks_BetweenClauses.Text, out o.LineBreaks_BetweenClauses);
+            o.Capitalize_Keywords = Capitalize_Keywords.Checked;
+            o.Capitalize_DataTypes = Capitalize_DataTypes.Checked;
+            o.Capitalize_BuiltInFunctions = Capitalize_BuiltInFunctions.Checked;
+			o.CommaLists_Stacked = CommaLists_Stacked.Checked;
+			o.CommaLists_TrailingCommas = CommaLists_TrailingCommas.Checked;
+            o.Joins_Indented = Joins_Indented.Checked;
+            o.Joins_TableOnSameLine = Joins_TableOnSameLine.Checked;
+            o.Joins_OnClauseOnSameLine = Joins_OnClauseOnSameLine.Checked;
 
             return o;
         }
-
+        #endregion
 
     }
 }

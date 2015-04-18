@@ -8,13 +8,16 @@ namespace SqlMyWay.Core
     public struct SqlMyWayOptions
     {
         //not using automatic properties because they cannot be used as out parameters
-        public int NLineBreaksBetweenStatements;
-        public int NLineBreaksBetweenClauses;
-        public bool CapitalizeKeywords;
-        public bool CapitalizeDataTypes;
-        public bool CapitalizeBuiltInFunctions;
-		public bool CommaListStacked;
-		public bool CommaListTrailingCommas;
+        public int LineBreaks_BetweenStatements;
+        public int LineBreaks_BetweenClauses;
+        public bool Capitalize_Keywords;
+        public bool Capitalize_DataTypes;
+        public bool Capitalize_BuiltInFunctions;
+		public bool CommaLists_Stacked;
+		public bool CommaLists_TrailingCommas;
+        public bool Joins_Indented;
+        public bool Joins_TableOnSameLine;
+        public bool Joins_OnClauseOnSameLine;
     }
 
 }

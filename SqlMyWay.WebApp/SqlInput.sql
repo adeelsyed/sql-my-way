@@ -26,11 +26,11 @@ FROM
 						END AS hours_per_week
 				FROM    
 					enrollment AS e
-					INNER JOIN program_enrollment AS pe ON e.student_id = pe.student_id AND e.term = pe.term AND e.offering_id = pe.offering_id
+					INNER JOIN program_enrollment AS pe ON e.student_id = pe.student_id
 				WHERE   
 					e.registration_code NOT IN ('A7', 'D0', 'WL')
 			) as A
-			INNER JOIN program_major AS pm ON sh.major_code_1 = pm._major_code AND sh.division_code_1 = pm.division_code
+			INNER JOIN program_major AS pm ON sh.major_code_1 = pm._major_code
         WHERE
 			sh.eff_term = 
 				(

@@ -32,27 +32,28 @@ namespace SqlMyWay.Core
 	        string[] lines;
 
             //line breaks between statements.
-            sql = sql.Replace("\n\n", new string('\n', o.NLineBreaksBetweenStatements));
+            sql = sql.Replace("\n\n", new string('\n', o.LineBreaks_BetweenStatements));
 
             //line breaks between clauses: put a \n bf every clause keyword            
             pat = @"\n(\s*(" + string.Join("|", Const.ClauseKeywords) + @")\s*\n)";
-            sql = Regex.Replace(sql, pat, new string('\n', o.NLineBreaksBetweenClauses) + @"$1");
+            sql = Regex.Replace(sql, pat, new string('\n', o.LineBreaks_BetweenClauses) + @"$1");
             
             //keyword capitalization
             var kw = Const.AllKeywords.Except(Const.BuiltInFunctions).Except(Const.DataTypeKeywords);
             pat = @"\b(" + string.Join("|", kw) + @")\b";
-            sql = Regex.Replace(sql, pat, x => o.CapitalizeKeywords ? x.Groups[1].ToString().ToUpper() : x.Groups[1].ToString().ToLower(), RegexOptions.IgnoreCase);
+            sql = Regex.Replace(sql, pat, x => o.Capitalize_Keywords ? x.Groups[1].ToString().ToUpper() : x.Groups[1].ToString().ToLower(), RegexOptions.IgnoreCase);
 
             //datatype capitalization
             pat = @"\b(" + string.Join("|", Const.DataTypeKeywords) + @")\b";
-            sql = Regex.Replace(sql, pat, x => o.CapitalizeDataTypes ? x.Groups[1].ToString().ToUpper() : x.Groups[1].ToString().ToLower(), RegexOptions.IgnoreCase);
+            sql = Regex.Replace(sql, pat, x => o.Capitalize_DataTypes ? x.Groups[1].ToString().ToUpper() : x.Groups[1].ToString().ToLower(), RegexOptions.IgnoreCase);
 
             //built-in function capitalization
             pat = @"\b(" + string.Join("|", Const.BuiltInFunctions.Except(Const.DataTypeKeywords)) + @")\(";
-            sql = Regex.Replace(sql, pat, x => o.CapitalizeBuiltInFunctions ? x.Groups[1].ToString().ToUpper() + "(" : x.Groups[1].ToString().ToLower() + "(", RegexOptions.IgnoreCase);
+            sql = Regex.Replace(sql, pat, x => o.Capitalize_BuiltInFunctions ? x.Groups[1].ToString().ToUpper() + "(" : x.Groups[1].ToString().ToLower() + "(", RegexOptions.IgnoreCase);
 
-	        //leading commas or inline comma lists
-	        if (!o.CommaListTrailingCommas || !o.CommaListStacked)
+            //leading commas or inline comma lists
+            #region
+            if (!o.CommaLists_TrailingCommas || !o.CommaLists_Stacked)
 	        {
 		        lines = sql.Split('\n');
 		        for (int i = 0; i < lines.Length; i++)
@@ -71,7 +72,7 @@ namespace SqlMyWay.Core
 						        listIndent = indent;
 
 					        //only process commas for items that have the same indent as the first item
-							if (indent == listIndent && !o.CommaListTrailingCommas)
+							if (indent == listIndent && !o.CommaLists_TrailingCommas)
 					        {
 						        pat = @"^(\s+)(.+?),{0,1}$"; //$1 is indent, $2 is item without comma
 						        string repl = j == i + 1 ? "$1$2" : "$1,$2";
@@ -79,7 +80,7 @@ namespace SqlMyWay.Core
 					        }
 
 							//process inline for lines with same indent or more
-							if (indent >= listIndent && !o.CommaListStacked)
+							if (indent >= listIndent && !o.CommaLists_Stacked)
 					        {
 						        lines[j] += "::LAST LINE. REMOVE THIS::";
 						        lines[j - 1] = lines[j - 1].Replace("::LAST LINE. REMOVE THIS::", "::REPLACE THIS AND THE FOLLOWING WHITESPACE::");
@@ -94,11 +95,29 @@ namespace SqlMyWay.Core
 		        sql = string.Join("\n", lines);
 		        sql = sql.Replace("::LAST LINE. REMOVE THIS::", "");
 				sql = Regex.Replace(sql, @"::REPLACE THIS AND THE FOLLOWING WHITESPACE::\s*", " ");
-				
-	        }
 
+            }
+            #endregion
 
-	        return sql;
+            //indent joins
+            if (o.Joins_Indented)
+            {
+                pat = @"^(\s*)(" + string.Join("|", Const.JoinKeywords) + @")$";
+                sql = Regex.Replace(sql, pat, "$1" + Const.Tab + "$2", RegexOptions.Multiline);
+            }
+
+            //table on same line
+            pat = @"^(\s*)(" + string.Join("|", Const.JoinKeywords) + @")(\n\s*)";
+            sql = Regex.Replace(sql, pat, "$1$2" + (o.Joins_TableOnSameLine ? " " : "$3" + Const.Tab), RegexOptions.Multiline);
+
+            //on clause on same line
+            if (!o.Joins_OnClauseOnSameLine)
+            {
+                pat = @"^(\s*)(.+?) ON ";
+                sql = Regex.Replace(sql, pat, "$1$2\n$1" + Const.Tab + "ON ", RegexOptions.Multiline);
+            }
+
+            return sql;
         }
         
 		public static TSqlFragment GetMicrosoftTSqlFragmentTree(string sql)

@@ -4,6 +4,7 @@
 <head runat="server">
 	<title>SQL My Way</title>
     <style>
+        body { margin: 0 10px; }
         .myWay { font-family:'Freestyle Script', 'Comic Sans MS', cursive }
         .optionsPanel { background-color: #ddd; border-radius: 10px; padding: 10px }
         .optionsPanel > ul { margin : 5px 0; padding: 0 0 0 15px}
@@ -42,24 +43,30 @@
             </p>
             <asp:Panel ID="OptionsPanel" runat="server" Enabled="true" CssClass="optionsPanel">
 
-                <b>Statements</b>
+                <b>Line Breaks</b>
                 <ul>
-                    <li>Place <asp:TextBox ID="NLineBreaksBetweenStatements" runat="server" CssClass="tbNum" /> line breaks between statements</li>
-                    <li>Place <asp:TextBox ID="NLineBreaksBetweenClauses" runat="server" CssClass="tbNum" /> line breaks between clauses</li>
+                    <li>Place <asp:TextBox ID="LineBreaks_BetweenStatements" runat="server" CssClass="tbNum" /> line breaks between statements</li>
+                    <li>Place <asp:TextBox ID="LineBreaks_BetweenClauses" runat="server" CssClass="tbNum" /> line breaks between clauses</li>
                 </ul>
                 <b>Capitalization</b>
                 <ul>
-                    <li><asp:CheckBox ID="CapitalizeKeywords" runat="server" /> Capitalize keywords</li>                    
-                    <li><asp:CheckBox ID="CapitalizeDataTypes" runat="server" /> Capitalize data types</li>                    
-                    <li><asp:CheckBox ID="CapitalizeBuiltInFunctions" runat="server" /> Capitalize built-in functions</li>                    
+                    <li><asp:CheckBox ID="Capitalize_Keywords" runat="server" /> Capitalize keywords</li>                    
+                    <li><asp:CheckBox ID="Capitalize_DataTypes" runat="server" /> Capitalize data types</li>                    
+                    <li><asp:CheckBox ID="Capitalize_BuiltInFunctions" runat="server" /> Capitalize built-in functions</li>                    
                 </ul>
                 <b>Comma-Separated Lists</b>
                 <ul>
                     <li>
-						<asp:RadioButton runat="server" GroupName="ListStyle" ID="CommaListStacked" Text="Stacked" OnCheckedChanged="CommaListStyle_Changed" AutoPostBack="true" />
-						<asp:RadioButton runat="server" GroupName="ListStyle" ID="CommaListInline" Text="Inline" OnCheckedChanged="CommaListStyle_Changed" AutoPostBack="true" />
+						<asp:RadioButton runat="server" GroupName="ListStyle" ID="CommaLists_Stacked" Text="Stacked" OnCheckedChanged="CommaListStyle_Changed" AutoPostBack="true" />
+						<asp:RadioButton runat="server" GroupName="ListStyle" ID="CommaLists_Inline" Text="Inline" OnCheckedChanged="CommaListStyle_Changed" AutoPostBack="true" />
                     </li>                    
-                    <li><asp:CheckBox ID="CommaListTrailingCommas" runat="server" /> Trailing commas</li>                    
+                    <li><asp:CheckBox ID="CommaLists_TrailingCommas" runat="server" /> Trailing commas</li>                    
+                </ul>
+                <b>Joins</b>
+                <ul>
+                    <li><asp:CheckBox ID="Joins_Indented" runat="server" /> Indent joins</li>
+                    <li><asp:CheckBox ID="Joins_TableOnSameLine" runat="server" /> Put table on same line</li>
+                    <li><asp:CheckBox ID="Joins_OnClauseOnSameLine" runat="server" /> Put ON clause on same line</li>
                 </ul>
 
             </asp:Panel>

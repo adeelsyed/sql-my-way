@@ -67,76 +67,103 @@ namespace SqlMyWay.WebApp {
         protected global::System.Web.UI.WebControls.Panel OptionsPanel;
         
         /// <summary>
-        /// NLineBreaksBetweenStatements control.
+        /// LineBreaks_BetweenStatements control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NLineBreaksBetweenStatements;
+        protected global::System.Web.UI.WebControls.TextBox LineBreaks_BetweenStatements;
         
         /// <summary>
-        /// NLineBreaksBetweenClauses control.
+        /// LineBreaks_BetweenClauses control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NLineBreaksBetweenClauses;
+        protected global::System.Web.UI.WebControls.TextBox LineBreaks_BetweenClauses;
         
         /// <summary>
-        /// CapitalizeKeywords control.
+        /// Capitalize_Keywords control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CapitalizeKeywords;
+        protected global::System.Web.UI.WebControls.CheckBox Capitalize_Keywords;
         
         /// <summary>
-        /// CapitalizeDataTypes control.
+        /// Capitalize_DataTypes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CapitalizeDataTypes;
+        protected global::System.Web.UI.WebControls.CheckBox Capitalize_DataTypes;
         
         /// <summary>
-        /// CapitalizeBuiltInFunctions control.
+        /// Capitalize_BuiltInFunctions control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CapitalizeBuiltInFunctions;
+        protected global::System.Web.UI.WebControls.CheckBox Capitalize_BuiltInFunctions;
         
         /// <summary>
-        /// CommaListStacked control.
+        /// CommaLists_Stacked control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton CommaListStacked;
+        protected global::System.Web.UI.WebControls.RadioButton CommaLists_Stacked;
         
         /// <summary>
-        /// CommaListInline control.
+        /// CommaLists_Inline control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton CommaListInline;
+        protected global::System.Web.UI.WebControls.RadioButton CommaLists_Inline;
         
         /// <summary>
-        /// CommaListTrailingCommas control.
+        /// CommaLists_TrailingCommas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CommaListTrailingCommas;
+        protected global::System.Web.UI.WebControls.CheckBox CommaLists_TrailingCommas;
+        
+        /// <summary>
+        /// Joins_Indented control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox Joins_Indented;
+        
+        /// <summary>
+        /// Joins_TableOnSameLine control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox Joins_TableOnSameLine;
+        
+        /// <summary>
+        /// Joins_OnClauseOnSameLine control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox Joins_OnClauseOnSameLine;
         
         /// <summary>
         /// UseSampleScriptLink control.

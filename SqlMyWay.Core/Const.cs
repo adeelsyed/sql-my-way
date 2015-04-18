@@ -603,7 +603,7 @@ namespace SqlMyWay.Core
             "GO"
   	        #endregion
         };
-		public static readonly string[] DataTypeKeywords = new string[]
+        public static readonly string[] DataTypeKeywords = new string[]
         {
             #region
             "CHAR",
@@ -640,7 +640,20 @@ namespace SqlMyWay.Core
             "CURSOR"
             #endregion
         };
-		public static readonly string[] BuiltInFunctions = new string[]
+        public static readonly string[] JoinKeywords = new string[]
+        {
+            #region
+            "JOIN",
+            "INNER JOIN",
+            "LEFT JOIN",
+            "LEFT OUTER JOIN",
+            "RIGHT JOIN",
+            "RIGHT OUTER JOIN",
+            "FULL OUTER JOIN",
+            "CROSS JOIN"
+            #endregion
+        };
+        public static readonly string[] BuiltInFunctions = new string[]
         {
             #region
             "OPENDATASOURCE",
