@@ -27,7 +27,7 @@
         <div id="header">
             <h1>SQL <span class="myWay">My Way</span></h1>
         </div>
-		<div id="right" style="float: right; width: 400px">
+		<div id="right" style="float: right; width: 350px">
 			<p style="margin-top:0">
                 <img src="img/steptwo.png" style="vertical-align:middle; margin-right: 5px;" />
                 <b>Select Formatting Style</b>
@@ -77,10 +77,14 @@
                 <ul>
                     <li><asp:CheckBox ID="Semicolons_Add" runat="server" /> Add semicolon at end of each statement</li>
                 </ul>
-                
+                <b>Comments</b>
+                <ul>
+                    <li><asp:CheckBox ID="Comments_ExtraLineBeforeBlocks" runat="server" /> Add extra line before block comments</li>
+                    <li><asp:CheckBox ID="Comments_ExtraLineAfterBlocks" runat="server" /> Add extra line after block comments</li>
+                </ul>
             </asp:Panel>
 		</div>
-		<div id="left" style="margin-right: 420px;">	
+		<div id="left" style="margin-right: 370px;">	
             <p>
                 <img src="img/stepone.png" style="vertical-align:middle; margin-right: 5px;" />
                 <b>Input SQL</b>: Choose a SQL file to format, <b>or</b> paste SQL directly into the textbox below, <b>or</b> <asp:LinkButton ID="UseSampleScriptLink" runat="server" OnClick="UseSampleScriptLink_Click" Text="try out a sample script" />.

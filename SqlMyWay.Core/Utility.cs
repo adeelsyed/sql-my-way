@@ -165,6 +165,22 @@ namespace SqlMyWay.Core
 
             #endregion
 
+            #region comments
+
+            if(o.Comments_ExtraLineBeforeBlocks)
+            {
+                pat = @"\n{0,2}/\*";
+                sql = Regex.Replace(sql, pat, "\n\n/*");
+            }
+
+            if (o.Comments_ExtraLineAfterBlocks)
+            {
+                pat = @"\*/\n{0,2}";
+                sql = Regex.Replace(sql, pat, "*/\n\n");
+            }
+
+            #endregion
+
             return sql;
         }
         

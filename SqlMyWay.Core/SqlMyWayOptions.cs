@@ -21,6 +21,8 @@ namespace SqlMyWay.Core
         public bool Parentheses_SpacesOutside;
         public bool Parentheses_SpacesInside;
         public bool Semicolons_Add;
+        public bool Comments_ExtraLineBeforeBlocks;
+        public bool Comments_ExtraLineAfterBlocks;
     }
 
 }

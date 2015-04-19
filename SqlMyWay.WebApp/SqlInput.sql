@@ -1,4 +1,7 @@
-select * from enrollment; SELECT  
+select * from student s join enrollment e on e.studentid = s.studentid join course c on c.courseid = e.courseid;
+/* I added this block comment and 
+   the line above for extra testing */
+SELECT  
 	term, 
 	student_id,
     CASE

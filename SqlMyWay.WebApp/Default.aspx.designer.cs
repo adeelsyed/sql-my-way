@@ -193,6 +193,24 @@ namespace SqlMyWay.WebApp {
         protected global::System.Web.UI.WebControls.CheckBox Semicolons_Add;
         
         /// <summary>
+        /// Comments_ExtraLineBeforeBlocks control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox Comments_ExtraLineBeforeBlocks;
+        
+        /// <summary>
+        /// Comments_ExtraLineAfterBlocks control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox Comments_ExtraLineAfterBlocks;
+        
+        /// <summary>
         /// UseSampleScriptLink control.
         /// </summary>
         /// <remarks>

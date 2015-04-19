@@ -72,6 +72,8 @@ namespace SqlMyWay.WebApp
             Parentheses_SpacesOutside.Checked = true;
             Parentheses_SpacesInside.Checked = false;
             Semicolons_Add.Checked = false;
+            Comments_ExtraLineBeforeBlocks.Checked = false;
+            Comments_ExtraLineAfterBlocks.Checked = false;
         }
         private bool ValidateSqlInput()
         {
@@ -111,6 +113,8 @@ namespace SqlMyWay.WebApp
             o.Parentheses_SpacesOutside = Parentheses_SpacesOutside.Checked;
             o.Parentheses_SpacesInside = Parentheses_SpacesInside.Checked;
             o.Semicolons_Add = Semicolons_Add.Checked;
+            o.Comments_ExtraLineBeforeBlocks = Comments_ExtraLineBeforeBlocks.Checked;
+            o.Comments_ExtraLineAfterBlocks = Comments_ExtraLineAfterBlocks.Checked;
 
             return o;
         }
