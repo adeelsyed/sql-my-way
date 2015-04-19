@@ -73,6 +73,11 @@
                     <li><asp:CheckBox ID="Parentheses_SpacesOutside" runat="server" /> Spaces outside</li>
                     <li><asp:CheckBox ID="Parentheses_SpacesInside" runat="server" /> Spaces inside</li>
                 </ul>
+                <b>Semicolon</b>
+                <ul>
+                    <li><asp:CheckBox ID="Semicolons_Add" runat="server" /> Add semicolon at end of each statement</li>
+                </ul>
+                
             </asp:Panel>
 		</div>
 		<div id="left" style="margin-right: 420px;">	

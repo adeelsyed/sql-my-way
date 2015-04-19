@@ -153,6 +153,18 @@ namespace SqlMyWay.Core
 
             #endregion
 
+            #region semicolons
+
+            if(o.Semicolons_Add)
+            {
+                pat = @"[^;]\n\n";
+                sql = Regex.Replace(sql, pat, ";\n\n");
+                if (!sql.Trim().EndsWith(";"))
+                    sql = sql.Trim() + ";";
+            }
+
+            #endregion
+
             return sql;
         }
         

@@ -20,6 +20,7 @@ namespace SqlMyWay.Core
         public bool Joins_OnClauseOnSameLine;
         public bool Parentheses_SpacesOutside;
         public bool Parentheses_SpacesInside;
+        public bool Semicolons_Add;
     }
 
 }

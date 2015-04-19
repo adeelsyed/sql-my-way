@@ -71,6 +71,7 @@ namespace SqlMyWay.WebApp
             Joins_OnClauseOnSameLine.Checked = true;
             Parentheses_SpacesOutside.Checked = true;
             Parentheses_SpacesInside.Checked = false;
+            Semicolons_Add.Checked = false;
         }
         private bool ValidateSqlInput()
         {
@@ -109,6 +110,7 @@ namespace SqlMyWay.WebApp
             o.Joins_OnClauseOnSameLine = Joins_OnClauseOnSameLine.Checked;
             o.Parentheses_SpacesOutside = Parentheses_SpacesOutside.Checked;
             o.Parentheses_SpacesInside = Parentheses_SpacesInside.Checked;
+            o.Semicolons_Add = Semicolons_Add.Checked;
 
             return o;
         }
