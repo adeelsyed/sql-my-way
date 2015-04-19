@@ -68,7 +68,11 @@
                     <li><asp:CheckBox ID="Joins_TableOnSameLine" runat="server" /> Put table on same line</li>
                     <li><asp:CheckBox ID="Joins_OnClauseOnSameLine" runat="server" /> Put ON clause on same line</li>
                 </ul>
-
+                <b>Parentheses</b>
+                <ul>
+                    <li><asp:CheckBox ID="Parentheses_SpacesOutside" runat="server" /> Spaces outside</li>
+                    <li><asp:CheckBox ID="Parentheses_SpacesInside" runat="server" /> Spaces inside</li>
+                </ul>
             </asp:Panel>
 		</div>
 		<div id="left" style="margin-right: 420px;">	

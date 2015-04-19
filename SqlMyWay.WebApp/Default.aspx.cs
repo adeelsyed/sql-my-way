@@ -69,6 +69,8 @@ namespace SqlMyWay.WebApp
             Joins_Indented.Checked = true;
             Joins_TableOnSameLine.Checked = true;
             Joins_OnClauseOnSameLine.Checked = true;
+            Parentheses_SpacesOutside.Checked = true;
+            Parentheses_SpacesInside.Checked = false;
         }
         private bool ValidateSqlInput()
         {
@@ -105,6 +107,8 @@ namespace SqlMyWay.WebApp
             o.Joins_Indented = Joins_Indented.Checked;
             o.Joins_TableOnSameLine = Joins_TableOnSameLine.Checked;
             o.Joins_OnClauseOnSameLine = Joins_OnClauseOnSameLine.Checked;
+            o.Parentheses_SpacesOutside = Parentheses_SpacesOutside.Checked;
+            o.Parentheses_SpacesInside = Parentheses_SpacesInside.Checked;
 
             return o;
         }

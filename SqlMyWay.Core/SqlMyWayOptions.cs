@@ -18,6 +18,8 @@ namespace SqlMyWay.Core
         public bool Joins_Indented;
         public bool Joins_TableOnSameLine;
         public bool Joins_OnClauseOnSameLine;
+        public bool Parentheses_SpacesOutside;
+        public bool Parentheses_SpacesInside;
     }
 
 }

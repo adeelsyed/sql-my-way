@@ -31,13 +31,19 @@ namespace SqlMyWay.Core
             string pat;
 	        string[] lines;
 
+            #region line breaks
+
             //line breaks between statements.
             sql = sql.Replace("\n\n", new string('\n', o.LineBreaks_BetweenStatements));
 
             //line breaks between clauses: put a \n bf every clause keyword            
             pat = @"\n(\s*(" + string.Join("|", Const.ClauseKeywords) + @")\s*\n)";
             sql = Regex.Replace(sql, pat, new string('\n', o.LineBreaks_BetweenClauses) + @"$1");
-            
+
+            #endregion
+
+            #region capitalization
+
             //keyword capitalization
             var kw = Const.AllKeywords.Except(Const.BuiltInFunctions).Except(Const.DataTypeKeywords);
             pat = @"\b(" + string.Join("|", kw) + @")\b";
@@ -51,8 +57,11 @@ namespace SqlMyWay.Core
             pat = @"\b(" + string.Join("|", Const.BuiltInFunctions.Except(Const.DataTypeKeywords)) + @")\(";
             sql = Regex.Replace(sql, pat, x => o.Capitalize_BuiltInFunctions ? x.Groups[1].ToString().ToUpper() + "(" : x.Groups[1].ToString().ToLower() + "(", RegexOptions.IgnoreCase);
 
+            #endregion
+
+            #region comma-separated values
+
             //leading commas or inline comma lists
-            #region
             if (!o.CommaLists_TrailingCommas || !o.CommaLists_Stacked)
 	        {
 		        lines = sql.Split('\n');
@@ -97,7 +106,10 @@ namespace SqlMyWay.Core
 				sql = Regex.Replace(sql, @"::REPLACE THIS AND THE FOLLOWING WHITESPACE::\s*", " ");
 
             }
+
             #endregion
+
+            #region joins
 
             //indent joins
             if (o.Joins_Indented)
@@ -116,6 +128,30 @@ namespace SqlMyWay.Core
                 pat = @"^(\s*)(.+?) ON ";
                 sql = Regex.Replace(sql, pat, "$1$2\n$1" + Const.Tab + "ON ", RegexOptions.Multiline);
             }
+
+            #endregion
+
+            #region parentheses
+
+            //spaces inside
+            if(o.Parentheses_SpacesInside)
+            {
+                pat = @"\(([^\s])";
+                sql = Regex.Replace(sql, pat, "( $1");
+                pat = @"([^\s])\)";
+                sql = Regex.Replace(sql, pat, "$1 )");
+            }
+
+            //spaces outside
+            if(!o.Parentheses_SpacesOutside)
+            {
+                pat = @"\) ([^\s])";
+                sql = Regex.Replace(sql, pat, ")$1");
+                pat = @"([^\s]) \(";
+                sql = Regex.Replace(sql, pat, "$1(");
+            }
+
+            #endregion
 
             return sql;
         }
