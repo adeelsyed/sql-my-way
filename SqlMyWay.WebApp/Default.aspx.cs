@@ -7,13 +7,15 @@ namespace SqlMyWay.WebApp
 {
 	public partial class Default : System.Web.UI.Page
 	{      
+		private SqlMyWayOptions sqlMyWayOptions = new SqlMyWayOptions();
+
         protected override void OnLoad(EventArgs e)
         {
             //first page load; set defaults
             if(!IsPostBack)
             {
                 CustomOption.Checked = true;
-                SetDefaultMyWayOptions();
+				SetOptionsForm(new SqlMyWayOptions()); //default values
 
                 //testing only
                 //UseSampleScriptLink_Click(null, null);
@@ -36,7 +38,7 @@ namespace SqlMyWay.WebApp
                 EditorsChoiceOption.Checked ? Utility.GetSqlMyWayEditorsChoiceFormattedSql(sql) :
                 PoorMansOption.Checked ? Utility.GetPoorMansFormattedSql(sql) :
                 MicrosoftOption.Checked ? Utility.GetMicrosoftFormattedSql(sql) :
-                Utility.GetSqlMyWay(sql, GetMyWayOptions());
+                Utility.GetSqlMyWay(sql, GetOptionsFromForm());
 		}
         protected void UseSampleScriptLink_Click(object sender, EventArgs e)
         {
@@ -56,25 +58,6 @@ namespace SqlMyWay.WebApp
 
         #region private methods
 
-        private void SetDefaultMyWayOptions()
-        {
-            LineBreaks_BetweenStatements.Text = "2";
-            LineBreaks_BetweenClauses.Text = "1";
-            Capitalize_Keywords.Checked = true;
-            Capitalize_DataTypes.Checked = true;
-            Capitalize_BuiltInFunctions.Checked = true;
-			CommaLists_Inline.Checked = false;
-			CommaLists_Stacked.Checked = true;
-			CommaLists_TrailingCommas.Checked = true;
-            Joins_Indented.Checked = true;
-            Joins_TableOnSameLine.Checked = true;
-            Joins_OnClauseOnSameLine.Checked = true;
-            Parentheses_SpacesOutside.Checked = true;
-            Parentheses_SpacesInside.Checked = false;
-            Semicolons_Add.Checked = false;
-            Comments_ExtraLineBeforeBlocks.Checked = false;
-            Comments_ExtraLineAfterBlocks.Checked = false;
-        }
         private bool ValidateSqlInput()
         {
             if (FileUploader.HasFile && InputSqlTextBox.Text.Trim().Length > 0)
@@ -96,8 +79,29 @@ namespace SqlMyWay.WebApp
                 return true;
             }
         }
-        private SqlMyWayOptions GetMyWayOptions()
+		private void SetOptionsForm(SqlMyWayOptions o)
+		{
+			//set form using passed options
+			LineBreaks_BetweenStatements.Text = o.LineBreaks_BetweenStatements.ToString();
+			LineBreaks_BetweenClauses.Text = o.LineBreaks_BetweenClauses.ToString();
+			Capitalize_Keywords.Checked = o.Capitalize_Keywords;
+			Capitalize_DataTypes.Checked = o.Capitalize_DataTypes;
+			Capitalize_BuiltInFunctions.Checked = o.Capitalize_BuiltInFunctions;
+			CommaLists_Inline.Checked = !o.CommaLists_Stacked;
+			CommaLists_Stacked.Checked = o.CommaLists_Stacked;
+			CommaLists_TrailingCommas.Checked = o.CommaLists_TrailingCommas;
+			Joins_Indented.Checked = o.Joins_Indented;
+			Joins_TableOnSameLine.Checked = o.Joins_TableOnSameLine;
+			Joins_OnClauseOnSameLine.Checked = o.Joins_OnClauseOnSameLine;
+			Parentheses_SpacesOutside.Checked = o.Parentheses_SpacesOutside;
+			Parentheses_SpacesInside.Checked = o.Parentheses_SpacesInside;
+			Semicolons_Add.Checked = o.Semicolons_Add;
+			Comments_ExtraLineBeforeBlocks.Checked = o.Comments_ExtraLineBeforeBlocks;
+			Comments_ExtraLineAfterBlocks.Checked = o.Comments_ExtraLineAfterBlocks;
+		}
+		private SqlMyWayOptions GetOptionsFromForm()
         {
+			//return options object using values from form
             var o = new SqlMyWayOptions();
 
             int.TryParse(LineBreaks_BetweenStatements.Text, out o.LineBreaks_BetweenStatements);

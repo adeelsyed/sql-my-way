@@ -27,5 +27,22 @@
             <param term='addInInst'>Object representing this Add-in.</param>
             <seealso class='IDTExtensibility2' />
         </member>
+        <member name="F:SqlMyWayAddIn.OptionsForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SqlMyWayAddIn.OptionsForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SqlMyWayAddIn.OptionsForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
     </members>
 </doc>

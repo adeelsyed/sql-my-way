@@ -5,8 +5,28 @@ using System.Text;
 
 namespace SqlMyWay.Core
 {
-    public struct SqlMyWayOptions
+    public class SqlMyWayOptions
     {
+	    public SqlMyWayOptions()
+	    {
+			//set defaults
+			LineBreaks_BetweenStatements = 2;
+			LineBreaks_BetweenClauses = 1;
+			Capitalize_Keywords = true;
+			Capitalize_DataTypes = true;
+			Capitalize_BuiltInFunctions = true;
+			CommaLists_Stacked = true;
+			CommaLists_TrailingCommas = true;
+			Joins_Indented = true;
+			Joins_TableOnSameLine = true;
+			Joins_OnClauseOnSameLine = true;
+			Parentheses_SpacesOutside = true;
+			Parentheses_SpacesInside = false;
+			Semicolons_Add = false;
+			Comments_ExtraLineBeforeBlocks = false;
+			Comments_ExtraLineAfterBlocks = false;
+		}
+
         //not using automatic properties because they cannot be used as out parameters
         public int LineBreaks_BetweenStatements;
         public int LineBreaks_BetweenClauses;

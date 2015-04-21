@@ -17,6 +17,7 @@ namespace SqlMyWayAddIn
 	{
 		private AddIn _addInInstance;
 		private DTE2 _applicationObject;
+		private SqlMyWayOptions sqlMyWayOptions;
 
 		//command event handler
 		/// <summary>Implements the Exec method of the IDTCommandTarget interface. This is called when the command is invoked.</summary>
@@ -43,18 +44,16 @@ namespace SqlMyWayAddIn
 
 					Document activeDocument = _applicationObject.ActiveDocument;
 					string unformattedSql = SelectAllCodeFromDocument(activeDocument);
-					string formattedSql = Utility.GetPoorMansFormattedSql(unformattedSql);
+					string formattedSql = Utility.GetSqlMyWay(unformattedSql, GetOptionsFromApplicationSettings());
 					ReplaceAllCodeInDocument(activeDocument, formattedSql);
 
 					handled = true;
 				}
 				if (commandName == "SqlMyWayAddIn.Connect.SqlMyWayOptions")
 				{
-					string save = _applicationObject.StatusBar.Text;
-					_applicationObject.StatusBar.Text = "Options pressed";
-					Thread.Sleep(2000);
-					_applicationObject.StatusBar.Text = save;
-
+					OptionsForm form = new OptionsForm(SqlMyWayOptionSettings.Default);
+					form.ShowDialog(); //will take care of saving options to application settings
+					form.Dispose();
 					handled = true;
 				}
 			}
@@ -164,6 +163,29 @@ namespace SqlMyWayAddIn
 			if (textDoc != null)
 				outText = textDoc.StartPoint.CreateEditPoint().GetText(textDoc.EndPoint);
 			return outText;
+		}
+		private SqlMyWayOptions GetOptionsFromApplicationSettings()
+		{
+			var o = new SqlMyWayOptions();
+			var app = SqlMyWayOptionSettings.Default;
+
+			o.LineBreaks_BetweenStatements = app.LineBreaks_BetweenStatements;
+			o.LineBreaks_BetweenClauses = app.LineBreaks_BetweenClauses;
+			o.Capitalize_Keywords = app.Capitalize_Keywords;
+			o.Capitalize_DataTypes = app.Capitalize_DataTypes;
+			o.Capitalize_BuiltInFunctions = app.Capitalize_BuiltInFunctions;
+			o.CommaLists_Stacked = app.CommaLists_Stacked;
+			o.CommaLists_TrailingCommas = app.CommaLists_TrailingCommas;
+			o.Joins_Indented = app.Joins_Indented;
+			o.Joins_TableOnSameLine = app.Joins_TableOnSameLine;
+			o.Joins_OnClauseOnSameLine = app.Joins_OnClauseOnSameLine;
+			o.Parentheses_SpacesOutside = app.Parentheses_SpacesOutside;
+			o.Parentheses_SpacesInside = app.Parentheses_SpacesInside;
+			o.Semicolons_Add = app.Semicolons_Add;
+			o.Comments_ExtraLineBeforeBlocks = app.Comments_ExtraLineBeforeBlocks;
+			o.Comments_ExtraLineAfterBlocks = app.Comments_ExtraLineAfterBlocks;
+
+			return o;
 		}
 	}
 }
