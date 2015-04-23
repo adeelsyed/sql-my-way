@@ -43,14 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\stepnumber.pdn" />
-    <None Include="Properties\PublishProfiles\sqlmyway %282%29.pubxml" />
-    <None Include="Properties\PublishProfiles\sqlmyway.pubxml" />
     <Content Include="img\stepone.png" />
     <Content Include="img\stepthree.png" />
     <Content Include="img\steptwo.png" />
     <Content Include="SqlInput.sql" />
     <Content Include="web.config" />
     <Content Include="SqlMyWayAddIn.zip" />
+    <None Include="Properties\PublishProfiles\sqlmyway.pubxml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
