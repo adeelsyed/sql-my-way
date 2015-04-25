@@ -12,6 +12,13 @@
         .tbNum { width: 30px }
     </style>
     <script type="text/javascript">
+        //Copy to Clipboard
+        function CopyToClipboard() {
+            var formattedSql = document.getElementById('<%=OutputSqlTextBox.ClientID%>').value;
+            window.clipboardData.setData('Text', formattedSql);
+            alert('Copied formatted SQL to clipboard');
+        }
+
         //azure application insights
         var appInsights=window.appInsights||function(config){
             function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
@@ -96,13 +103,28 @@
 			<asp:FileUpload runat="server" ID="FileUploader" Width="750" />
 			<br/><br/>
 			<asp:TextBox runat="server" ID="InputSqlTextBox" TextMode="MultiLine" Rows="20" Width="100%"></asp:TextBox>
-            <p>
-                <img src="img/stepthree.png" style="vertical-align:middle; margin-right: 5px;" />
-			    <asp:Button runat="server" ID="FormatButton" Text="Format SQL" Font-Bold="true" OnClick="FormatButton_Click" />  
-            </p>
+			<br/><br/>
+            <div>
+                <div style="float: left">
+                    <img src="img/stepthree.png" style="vertical-align:middle; margin-right: 5px;" />
+			        <asp:Button runat="server" ID="FormatButton" Text="Format SQL" Font-Bold="true" OnClick="FormatButton_Click" />  
+                </div>
+			    <div id="divCopyToClipboard" style="float: right">
+     			    <input type="button" value="Copy Formatted SQL to Clipboard" onclick="CopyToClipboard()" style="font-weight:bold" />
+			    </div>
+            </div>
+			<br/><br/><br/>
 			<asp:TextBox runat="server" ID="OutputSqlTextBox" TextMode="MultiLine" Rows="20" Width="100%" ReadOnly="True"></asp:TextBox>
 			<br/>
 		</div>
     </form>
+    <script type="text/javascript">
+        //Copy to Clipboard -- IE only
+        var ua = window.navigator.userAgent;
+        if (ua.indexOf("MSIE ") + ua.indexOf('Trident/') + ua.indexOf('Edge/') <= 0) {
+            //not ie
+            divCopyToClipboard.style.display = 'none';
+        }
+    </script>
 </body>
 </html>

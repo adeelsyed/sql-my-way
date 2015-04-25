@@ -1,0 +1,41 @@
+-------------------------
+INSTALLATION INSTRUCTIONS
+-------------------------
+
+System Requirements
+-------------------
+The only prerequisite to using the website is the installation of a browser. There are no notable CPU, memory, or disk space requirements.
+As for the SSMS add-in, the user must have SSMS installed on a Windows computer. The software has so far only been tested on SSMS 2012. The minimal system requirements for SSMS are more than sufficient for the add-in.
+
+Installation Instructions
+-------------------------
+To use www.sqlmyway.me, simply navigate to the website using your browser. No installation is required.
+As for the SSMS add-in, until an installation package is created, please follow the simple instructions below:
+1.	Download the compressed add-in file to your computer by visiting the following URL in your browser: http://sqlmyway.azurewebsites.net/SqlMyWayAddIn.zip
+2.	Extract the contents to your computer
+3.	Copy the extracted file (SqlMyWayAddIn.AddIn) to the following directory: C:\ProgramData\Application Data\Microsoft\MSEnvShared\Addins. 
+Note: this folder will exist only after installation of SSMS 2012.
+The add-in functionality will be available the next time you start SSMS 2012.
+
+
+----------------------
+OPERATING INSTRUCTIONS
+----------------------
+
+Website
+-------
+1.	Navigate to www.sqlmyway.me
+2.	Click the button at the top of the screen to choose an existing .sql file to format. The button may say “Browse” or “Choose File,” depending on your browser.
+3.	If you do not have an existing SQL file handy, you may paste or type SQL directly into the textbox. For example, try pasting “selEct Column1 from taBLe1 where Column2 is null”
+4.	Click the button labeled “Format SQL”. You should see the formatted SQL code appear in the lower textbox.
+5.	Try changing the formatting options on the right of the screen and re-clicking the “Format SQL” button again to see the output change. Selecting “Microsoft Script Generator” will format your script using the SqlScriptGenerator library. Selecting “Poor Man's T-SQL Formatter” will reformat your script using the default options of the opensource library of the same name. More pre-defined formats and customizations are targeted for a future release.
+6.	If you are using Internet Explorer, you may click the button labeled “Copy Formatted SQL to Clipboard”. Otherwise, until this functionality is added for all browsers, you can simply select the text in the textbox on the bottom half of the screen and copy it manually.
+
+SSMS Add-In
+-----------
+1.	Start SSMS 2012
+2.	Either open an existing SQL file (Ctrl+O) or open a new query window (Ctrl+N) and type some SQL code into it.
+3.	Click Tools in the menu bar. In the dropdown, select “SQL My Way Options...”
+4.	Adjust the formatting options to your taste
+5.	Now click Tools in the menu bar again. This time, select the “Format SQL My Way” option in the dropdown to format the SQL code in the active window.
+6.	In a future release, you will be able to use a keyboard shortcut to format the SQL.
