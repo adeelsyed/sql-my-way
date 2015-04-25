@@ -4,16 +4,18 @@ INSTALLATION INSTRUCTIONS
 
 System Requirements
 -------------------
-The only prerequisite to using the website is the installation of a browser. There are no notable CPU, memory, or disk space requirements.
-As for the SSMS add-in, the user must have SSMS installed on a Windows computer. The software has so far only been tested on SSMS 2012. The minimal system requirements for SSMS are more than sufficient for the add-in.
+-The only prerequisite to using the website is the installation of a browser. There are no notable CPU, memory, or disk space requirements.
+-As for the SSMS add-in, the user must have SSMS installed on a Windows computer. The software has so far only been tested on SSMS 2012. The minimal system requirements for SSMS are more than sufficient for the add-in.
 
 Installation Instructions
 -------------------------
 To use www.sqlmyway.me, simply navigate to the website using your browser. No installation is required.
-As for the SSMS add-in, until an installation package is created, please follow the simple instructions below:
-1.	Download the compressed add-in file to your computer by visiting the following URL in your browser: http://sqlmyway.azurewebsites.net/SqlMyWayAddIn.zip
-2.	Extract the contents to your computer
-3.	Copy the extracted file (SqlMyWayAddIn.AddIn) to the following directory: C:\ProgramData\Application Data\Microsoft\MSEnvShared\Addins. 
+As for the SSMS add-in, please follow the simple instructions below:
+1.	Navigate to http://www.sqlmyway/me .
+2.	Click the link in the upper right-hand corner that says “Download SSMS add-in”.
+3.	Save the zip file to your computer.
+4.	Extract the contents to your computer.
+5.	Copy the following two files (SqlMyWayAddIn.dll, SqlMyWayAddIn.AddIn) to the following directory: C:\ProgramData\Application Data\Microsoft\MSEnvShared\Addins. 
 Note: this folder will exist only after installation of SSMS 2012.
 The add-in functionality will be available the next time you start SSMS 2012.
 
@@ -38,4 +40,3 @@ SSMS Add-In
 3.	Click Tools in the menu bar. In the dropdown, select “SQL My Way Options...”
 4.	Adjust the formatting options to your taste
 5.	Now click Tools in the menu bar again. This time, select the “Format SQL My Way” option in the dropdown to format the SQL code in the active window.
-6.	In a future release, you will be able to use a keyboard shortcut to format the SQL.
