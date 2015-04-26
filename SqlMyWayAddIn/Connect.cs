@@ -85,7 +85,7 @@ namespace SqlMyWayAddIn
 				try
 				{
 					//add command to commands collection
-					Command command = commands.AddNamedCommand2(_addInInstance, "SqlMyWayFormat", "Format T-SQL My Way", null, true);
+					Command command = commands.AddNamedCommand2(_addInInstance, "SqlMyWayFormat", "Format SQL My Way", null, true);
 
 					//Add a control for the command to the tools menu:
 					if ((command != null) && (toolsPopup != null))

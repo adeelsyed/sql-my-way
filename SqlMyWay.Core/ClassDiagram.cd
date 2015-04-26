@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="SqlMyWay.Core.Utility">
+    <Position X="3.75" Y="0.5" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAABAAAAAAKCAAAAAAAAAAQAAAAAAAAAAAg=</HashCode>
+      <FileName>Utility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SqlMyWay.Core.Const">
+    <Position X="0.5" Y="5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAQgAAAAAAIAAAAQAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Const.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SqlMyWay.Core.Extensions">
+    <Position X="3.75" Y="3.25" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAEAAAAAAAAAAAABMAAAAAAAAAAA=</HashCode>
+      <FileName>Extensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SqlMyWay.Core.SqlMyWayOptions">
+    <Position X="0.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AACAAABAAAAAAAAAAAAgAgEAFCAAAAAAQgASIBAAAAg=</HashCode>
+      <FileName>SqlMyWayOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
