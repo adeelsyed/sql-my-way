@@ -33,7 +33,10 @@
     <form id="form1" runat="server">
         <div id="header">
             <h1>SQL <span class="myWay">My Way</span></h1>
-            <span style="position:absolute; right: 20px; top: 20px;"><a href="SqlMyWayAddIn.zip">Download SSMS Add-in</a></span>
+			<ul style="position:absolute; right: 30px; top: 20px; padding: 0; margin: 0;">
+				<li><a href="SqlMyWayAddIn.zip">Download SSMS add-in</a></li>
+				<li><a href="https://github.com/adeelsyed/sql-my-way">Download/view source code</a></li>
+			</ul>
         </div>
 		<div id="right" style="float: right; width: 350px">
 			<p style="margin-top:0">
